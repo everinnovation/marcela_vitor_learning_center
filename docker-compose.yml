@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  learning-center-database: 
+    image: postgres:latest 
+    container_name: learning-center-database 
+    ports:
+      - "5432:${DB_PORT}"
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    restart: always
+    networks:
+      - learning-center-network
+
+  web-project:
+    hostname: "${HOSTNAME}"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /usr/src/platform
+    command: >
+      bash -c "
+        python manage.py runserver ${HOSTNAME}:${PORT}
+      "
+    volumes:
+      - ./platform/:/usr/src/platform
+    ports:
+      - "${PORT}:${PORT}"
+    environment:
+      - PYTHONUNBUFFERED=True
+      - OAUTHLIB_INSECURE_TRANSPORT=False
+    env_file:
+      .env
+    depends_on:
+      - learning-center-database
+    networks:
+      - learning-center-network
+
+networks:
+  learning-center-network:
+    external: true
