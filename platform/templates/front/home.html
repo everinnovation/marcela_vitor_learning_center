@@ -9,16 +9,30 @@
     <style>
         /* Variáveis CSS para cores do protótipo - podem ser ajustadas se houver elementos que não estejam na imagem de fundo */
         :root {
-            --school-text-color: #FFFFFF; /* Texto branco */
+            --school-primary-blue: #0A0A9C; /* Um azul mais escuro, próximo ao do protótipo */
+            --school-text-color-light: #FFFFFF; /* Texto branco para fundos escuros */
+            --school-text-color-dark: #333333; /* Texto escuro para fundos claros */
+            --school-section-bg-color-light: #F8F8F8; /* Um cinza claro para o fundo das seções claras (quase branco) */
             --school-button-hover-bg: #FFFFFF; /* Fundo do botão no hover */
             --school-button-hover-text: #0A0A9C; /* Cor do texto do botão no hover, similar ao azul do protótipo */
+            --school-heading-color-dark: #0A0A9C; /* Cor para títulos em seções de fundo claro */
+            --school-program-bg-yellow: #fadb2d; /* Novo: Cor amarela para o fundo da seção OUR PROGRAMS */
+            --secondary-color-dark: #0A0A9C; /* Cor para o botão 'Leia mais' nos cards, ajustado para um azul escuro */
         }
+        /* Ajuste de fonte, se você estiver usando "Piepie W01 Regular" */
+        /* @font-face {
+            font-family: 'Piepie W01 Regular';
+            src: url('{% static 'fonts/PiepieW01Regular.woff2' %}') format('woff2'),
+                 url('{% static 'fonts/PiepieW01Regular.woff' %}') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        } */
     </style>
 {% endblock %}
 
 {% block content %}
 <div class="relative min-h-screen text-white flex flex-col items-center overflow-hidden bg-cover bg-center" 
-     style="background-image: url('{% static 'assets/fundo_site.png' %}'); background-color: #0A0A9C;"> {# Fallback color if image fails #}
+     style="background-image: url('{% static 'assets/FUNDO_SITE.png' %}'); background-color: var(--school-primary-blue);"> {# Fallback color if image fails #}
 
     <header class="relative flex items-center justify-between w-full max-w-7xl h-20 p-6 mx-auto z-10">
         <div class="flex-shrink-0">
@@ -39,37 +53,168 @@
         
         <div class="max-w-md mb-10 md:mb-0 text-center md:text-left flex-shrink-0 md:mr-10">
             <h1 class="text-4xl lg:text-5xl font-bold mb-4" style="font-family: 'Piepie W01 Regular', sans-serif;">BRIGHT BEGINNINGS!</h1>
-            <p class="text-base lg:text-lg" style="color: var(--school-text-color);">
+            <p class="text-base lg:text-lg" style="color: var(--school-text-color-light);">
                 Every great journey starts with a bright beginning. <br class="hidden md:block" />
-                Join a place where curiosity shines and every child is celebrated.
+                Join a place where curiosity shines and every child is celebrated. 
             </p>
         </div>
 
         <div class="relative my-10 md:my-0 flex-shrink-0">
-            <img src="{% static 'img/meninas.png' %}" alt="Duas meninas sorrindo com livros" 
-                 class="w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] 
-                        mx-auto object-cover rounded-full shadow-2xl border-4 border-white">
+            <img src="{% static 'assets/imagem_fundo.png' %}" alt="Duas crianças sorrindo" 
+                 class="w-full h-auto md:w-[800px] md:h-[800px] lg:w-[600px] lg:h-[500px] 
+                        mx-auto object-contain">
         </div>
 
         <div class="max-w-sm text-center md:text-right mt-10 md:mt-0 flex-shrink-0 md:ml-10">
             <h2 class="text-2xl lg:text-3xl font-bold">JOIN US!</h2>
-            <p class="text-base lg:text-lg mb-6" style="color: var(--school-text-color);">
-                Discover a bilingual world full of play,<br />
+            <p class="text-base lg:text-lg mb-6" style="color: var(--school-text-color-light);">
+                Discover a bilingual world full of play, <br />
                 learning, love, and meaningful.
             </p>
             <a href="#" 
                class="border-2 border-white px-6 py-3 font-bold rounded-lg transition-all duration-300" 
-               style="color: var(--school-text-color); border-color: var(--school-text-color); 
+               style="color: var(--school-text-color-light); border-color: var(--school-text-color-light); 
                       background-color: transparent; /* Inicialmente transparente */
                       --tw-bg-opacity: 1; /* Garante que a opacidade seja 1 */
                       --tw-text-opacity: 1; /* Garante que a opacidade seja 1 */
                       transition: background-color 0.3s ease, color 0.3s ease;"
                onmouseover="this.style.backgroundColor = 'var(--school-button-hover-bg)'; this.style.color = 'var(--school-button-hover-text)';"
-               onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color)';">
+               onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color-light)';">
                LEARN MORE
             </a>
         </div>
+    </section>
 
+    <section class="w-full text-gray-800 py-16 px-4 md:px-10 relative z-10 flex items-center justify-center" style="background-color: var(--school-section-bg-color-light);">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+            
+            <div class="flex-shrink-0">
+                <img src="{% static 'assets/criancas.png' %}" alt="Duas crianças se abraçando" 
+                     class="w-[400px] h-[400px] md:w-[800px] md:h-[500px] object-contain">
+            </div>
+
+            <div class="max-w-xl text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-6" style="color: var(--school-heading-color-dark);">OUR PHILOSOPHY</h2>
+                <p class="text-lg mb-4" style="color: var(--school-text-color-dark);">
+                    We value individual development, respecting each child's pace and interests.
+                </p>
+                <p class="text-lg mb-6" style="color: var(--school-text-color-dark);">
+                    Our bilingual approach (Portuguese-English) follows Montessori principles, promoting learning through play, cultural awareness, and meaningful interactions.
+                </p>
+                <a href="#" 
+                   class="border-2 border-blue-600 px-6 py-3 font-bold rounded-lg transition-all duration-300" 
+                   style="color: var(--school-heading-color-dark); border-color: var(--school-heading-color-dark); 
+                          background-color: transparent;
+                          transition: background-color 0.3s ease, color 0.3s ease;"
+                   onmouseover="this.style.backgroundColor = 'var(--school-heading-color-dark)'; this.style.color = 'var(--school-text-color-light)';"
+                   onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-heading-color-dark)';">
+                   LEARN MORE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full text-white py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-primary-blue);">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+            
+            <div class="flex-shrink-0">
+                <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor, Diretora" 
+                     class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] object-cover rounded-xl shadow-lg border-4 border-white">
+            </div>
+
+            <div class="max-w-xl text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-6" style="color: var(--school-text-color-light);">OUR TEACHERS</h2>
+                <p class="text-lg mb-4" style="color: var(--school-text-color-light);">
+                    Our team is made up of educators with over 5 years of experience and academic training in Massachusetts.
+                </p>
+                <p class="text-lg mb-4" style="color: var(--school-text-color-light);">
+                    The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools.
+                </p>
+                <p class="text-lg" style="color: var(--school-text-color-light);">
+                    Today, she leads her own center and is personally committed to children's education.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full text-gray-800 py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-program-bg-yellow);">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h2 class="text-4xl font-bold" style="color: var(--school-heading-color-dark);">OUR PROGRAMS</h2>
+            <p class="text-base mb-6" style="color: var(--school-text-color-dark);">
+                We cater for babies from 12 months to preschool. We combine quality education and language development.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden transition-transform duration-700 cursor-pointer md:hover:scale-105 hover:shadow-lg flex flex-col h-full">
+                <a href="#" class="block"> {# Link para a imagem #}
+                    <div class="h-60 w-full">
+                        <img src="{% static 'assets/musica.jpg' %}" alt="Ícone de música" class="w-full h-full object-cover rounded-t-xl">
+                    </div>
+                </a>
+                <div class="p-6 flex flex-col text-center flex-grow"> {# Conteúdo do card: texto e botão #}
+                    <a href="#" class="block space-y-4"> {# Link para o título e texto #}
+                        <h3 class="text-2xl font-semibold text-gray-900">Weekly music classes</h3>
+                        <p class="text-gray-600">At our daycare, tiny toes tap and little voices shine in our weekly music lessons!</p>
+                    </a>
+                    <a href="#"
+                       class="mt-4 w-full flex justify-center items-center px-6 py-3 font-bold rounded-lg transition-all duration-300"
+                       style="color: var(--school-heading-color-dark); border-color: var(--school-heading-color-dark);
+                              background-color: transparent;
+                              transition: background-color 0.3s ease, color 0.3s ease;"
+                       onmouseover="this.style.backgroundColor = 'var(--school-heading-color-dark)'; this.style.color = 'var(--school-text-color-light)';"
+                       onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-heading-color-dark)';">
+                       LEARN MORE
+                    </a>
+                </div>
+            </div>
+
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden transition-transform duration-700 cursor-pointer md:hover:scale-105 hover:shadow-lg flex flex-col h-full">
+                <a href="#" class="block"> {# Link para a imagem #}
+                    <div class="h-60 w-full">
+                        <img src="{% static 'assets/futebol.jpg' %}" alt="Football icon" class="w-full h-full object-cover rounded-t-xl">
+                    </div>
+                </a>
+                <div class="p-6 flex flex-col text-center flex-grow"> {# Conteúdo do card: texto e botão #}
+                    <a href="#" class="block space-y-4"> {# Link para o título e texto #}
+                        <h3 class="text-2xl font-semibold text-gray-900">Seasonal Football</h3>
+                        <p class="text-gray-600">A playful sport that builds teamwork and motor skills with lots of joy, movement, and healthy fun!</p>
+                    </a>
+                    <a href="#"
+                       class="mt-4 w-full flex justify-center items-center px-6 py-3 font-bold rounded-lg transition-all duration-300"
+                       style="color: var(--school-heading-color-dark); border-color: var(--school-heading-color-dark);
+                              background-color: transparent;
+                              transition: background-color 0.3s ease, color 0.3s ease;"
+                       onmouseover="this.style.backgroundColor = 'var(--school-heading-color-dark)'; this.style.color = 'var(--school-text-color-light)';"
+                       onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-heading-color-dark)';">
+                       LEARN MORE
+                    </a>
+                </div>
+            </div>
+
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden transition-transform duration-700 cursor-pointer md:hover:scale-105 hover:shadow-lg flex flex-col h-full">
+                <a href="#" class="block"> {# Link para a imagem #}
+                    <div class="h-60 w-full">
+                        <img src="{% static 'assets/eventos.jpg' %}" alt="Cultural Celebrations icon" class="w-full h-full object-cover rounded-t-xl">
+                    </div>
+                </a>
+                <div class="p-6 flex flex-col text-center flex-grow"> {# Conteúdo do card: texto e botão #}
+                    <a href="#" class="block space-y-4"> {# Link para o título e texto #}
+                        <h3 class="text-2xl font-semibold text-gray-900">Cultural Celebrations</h3>
+                        <p class="text-gray-600">Through cultural celebrations, children explore traditions, build empathy, and embrace diversity in joyful and meaningful ways.</p>
+                    </a>
+                    <a href="#"
+                       class="mt-4 w-full flex justify-center items-center px-6 py-3 font-bold rounded-lg transition-all duration-300"
+                       style="color: var(--school-heading-color-dark); border-color: var(--school-heading-color-dark);
+                              background-color: transparent;
+                              transition: background-color 0.3s ease, color 0.3s ease;"
+                       onmouseover="this.style.backgroundColor = 'var(--school-heading-color-dark)'; this.style.color = 'var(--school-text-color-light)';"
+                       onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-heading-color-dark)';">
+                       LEARN MORE
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
 </div>
