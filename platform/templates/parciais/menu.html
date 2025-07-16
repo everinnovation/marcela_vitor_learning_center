@@ -1,82 +1,38 @@
 {% load static %}
-<header class="{% if navbar_start_color %}bg-[{{ navbar_start_color }}]{% else %}bg-transparent{% endif %} w-full transition duration-800 ease-in-out fixed left-0 z-50" id="navbar" style="top: -2px;">
-    <nav class="container mx-auto flex justify-between items-center px-8 md:px-4 py-20 h-24">
-        <button id="menu-toggle" class="flex items-center md:hidden focus:outline-none ml-2">
-            <span class="material-symbols-outlined text-white text-4xl">
-                menu
-            </span>
+<header class="bg-transparent w-full fixed top-0 left-0 z-50 transition duration-800 ease-in-out" id="navbar" style="top: -2px;">
+    <nav class="container mx-auto flex justify-between items-center px-6 md:px-4 py-5 h-20 max-w-7xl">
+        <button id="menu-toggle" class="flex items-center md:hidden focus:outline-none">
+            <span class="material-symbols-outlined text-white text-4xl">menu</span>
         </button>
 
-        <a href="{% url 'home' %}" class="md:flex-grow-0 mx-auto md:mx-0 md:ml-4 min-w-[150px] flex justify-center items-center">
-            <img class="hidden md:flex w-8 md:w-20 mx-auto md:mx-0" src="{% static 'assets/logo.png' %}" alt="logo">
-            <img class="flex md:hidden w-16 md:w-8 mr-6 md:mx-0" src="{% static 'assets/logo.png' %}" alt="logo">
+        <a href="#" class="md:flex-grow-0 mx-auto md:mx-0 md:ml-4 flex justify-center items-center min-w-[150px]">
+            <img src="{% static 'assets/logo.png' %}" alt="School Logo" class="h-10 md:h-12" />
         </a>
 
-        <a href="https://www.instagram.com/pine.creativestudio/" target="_blank" class="md:hidden text-3xl mr-2 flex justify-center">
-            <ion-icon name="logo-instagram" style="color: var(--secondary-color-light);"></ion-icon>
-        </a>
+        <nav class="hidden md:flex flex-grow justify-center space-x-8 font-semibold uppercase text-sm text-white">
+            <a href="#" class="border-b-2 border-white pb-1">Home</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">About Us</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">The School</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">Programs</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">Contact Us</a>
+        </nav>
 
-        <div class="hidden md:flex md:flex-grow md:items-center justify-end gap-8">
-            <ul class="flex space-x-12">
-                <li><a href="{% url 'home' %}" class="text-[1.1rem] hover:font-semibold transition duration-800 hover:font-semibold" style="color: var(--secondary-color-light);">Home</a></li>
-                <li>
-                    <button id="areas-toggle-desktop" class="text-[1.1rem] hover:font-semibold transition duration-800 hover:font-semibold" style="color: var(--secondary-color-light);">
-                        Engage
-                    </button>
-                    <ul id="areas-submenu-desktop" class="absolute hidden group-hover:block bg-[{{ navbar_scroll_color|default:'var(--primary-color)' }}] rounded-md w-64 mt-4">
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Church Planter Pathway</a></li>
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Existing Church Pathway</a></li>
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Marketplace Leader Pathway</a></li>
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Coaching</a></li>
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Consulting</a></li>
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Conferences</a></li>
-                        <li><a href="" class="block px-6 py-4 text-[0.9rem] hover:bg-[#2E9DD0] text-white">Care</a></li>
-                    </ul>
-                </li>
-                <li><a href="" class="text-[1.1rem] hover:font-semibold transition duration-800 hover:font-semibold" style="color: var(--secondary-color-light);">Collaborate</a></li>
-                <li><a href="" class="text-[1.1rem] hover:font-semibold transition duration-800 hover:font-semibold" style="color: var(--secondary-color-light);">Donate</a></li>
-                <li><a href="" class="text-[1.1rem] hover:font-semibold transition duration-800 hover:font-semibold" style="color: var(--secondary-color-light);">About</a></li>
-                <li><a href="" class="text-[1.1rem] hover:font-semibold transition duration-800 hover:font-semibold" style="color: var(--secondary-color-light);">Connect</a></li>
-            </ul>
-            <a href="">
-                <div class="hidden md:flex space-x-4">
-                    <div class=" rounded-full cursor-pointer px-8 py-4" style="background-color: var(--secondary-color-light); color: var(--tertiary-color-dark);">
-                        <h1>
-                            New Here?
-                        </h1>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <div class="flex-shrink-0 w-10"></div>
     </nav>
 
-    <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-12 py-4 absolute w-full top-20 hidden" style="z-index: 1; background-color: {{ navbar_scroll_color|default:'var(--primary-color)' }};">
-        <li class="p-2"><a href="{% url 'home' %}" class="text-[0.9rem] hover:text-black transition duration-500" style="color: var(--secondary-color-light);">Home</a></li>
-        <li class="flex flex-col">
-            <button id="areas-toggle" class="text-[0.9rem] hover:font-semibold text-center" style="color: var(--secondary-color-light);">
-                Engage ▾
-            </button>
-            <ul id="areas-submenu" class="hidden flex flex-col items-center w-full py-8 gap-6 space-y-2 mt-2" style="background-color: var(--primary-color);">
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Church Planter Pathway</a></li>
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Existing Church Pathway</a></li>
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Marketplace Leader Pathway</a></li>
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Coaching</a></li>
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Consulting</a></li>
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Conferences</a></li>
-                <li><a href="" class="block py-4 w-full text-[0.9rem] text-white">Care</a></li>
-            </ul>
-        </li>
-        <li class="p-2"><a href="" class="text-[0.9rem] hover:text-black transition duration-500" style="color: var(--secondary-color-light);">Collaborate</a></li>
-        <li class="p-2"><a href="" class="text-[0.9rem] hover:text-black transition duration-500" style="color: var(--secondary-color-light);">Donate</a></li>
-        <li class="p-2"><a href="" class="text-[0.9rem] hover:text-black transition duration-500" style="color: var(--secondary-color-light);">About</a></li>
-        <li class="p-2"><a href="" class="text-[0.9rem] hover:text-black transition duration-500" style="color: var(--secondary-color-light);">Connect</a></li>
+    <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-20 py-6 absolute w-full top-20 bg-primary-color hidden z-40">
+        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">Home</a></li>
+        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">About Us</a></li>
+        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">The School</a></li>
+        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">Programs</a></li>
+        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">Contact Us</a></li>
     </ul>
 </header>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    let navbarScrollColor = "{{ navbar_scroll_color|default:'var(--primary-color)' }}";
-    let navbarStartColor = "{{ navbar_start_color|default:'transparent' }}";
+    const navbarStartColor = 'transparent';
+    const navbarScrollColor = 'var(--primary-color)';
 
     function updateNavbarColor() {
         if (!$('#mobile-menu').hasClass('hidden') || $(window).scrollTop() > 50) {
@@ -98,14 +54,6 @@
         }
     });
 
-    $("#areas-toggle").on("click", function() {
-        $("#areas-submenu").toggleClass("hidden");
-    });
-
-    $("#areas-toggle-desktop").on("click", function() {
-        $("#areas-submenu-desktop").toggleClass("hidden");
-    });
-
     $(window).on('scroll', function() {
         updateNavbarColor();
     });
@@ -113,5 +61,4 @@
     $(document).ready(function() {
         updateNavbarColor();
     });
-
 </script>

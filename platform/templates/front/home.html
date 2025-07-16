@@ -33,57 +33,48 @@
 {% block content %}
 <div class="relative min-h-screen text-white flex flex-col items-center overflow-hidden bg-cover bg-center" 
      style="background-image: url('{% static 'assets/FUNDO_SITE.png' %}'); background-color: var(--school-primary-blue);"> {# Fallback color if image fails #}
+    <div class="relative w-full min-h-[100vh] md:min-h-[90vh] overflow-hidden">
 
-    <header class="relative flex items-center justify-between w-full max-w-7xl h-20 p-6 mx-auto z-10">
-        <div class="flex-shrink-0">
-            <img src="{% static 'assets/logo.png' %}" alt="School Logo" class="h-10">
-        </div>
+        <img src="{% static 'assets/fundo_site.png' %}" alt="Fundo do site"
+            class="absolute top-0 left-0 w-full h-full object-cover z-0" />
 
-        <nav class="space-x-8 font-semibold uppercase text-sm flex-grow flex justify-center">
-            <a href="#" class="border-b-2 border-white pb-1">Home</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">About Us</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">The School</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">Programs</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">Contact Us</a>
-        </nav>
-        <div class="flex-shrink-0 w-10"></div> 
-    </header>
 
-    <section class="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl p-10 font-[Space Grotesk] flex-grow relative z-10">
-        
-        <div class="max-w-md mb-10 md:mb-0 text-center md:text-left flex-shrink-0 md:mr-10">
-            <h1 class="text-4xl lg:text-5xl font-bold mb-4" style="font-family: 'Piepie W01 Regular', sans-serif;">BRIGHT BEGINNINGS!</h1>
-            <p class="text-base lg:text-lg" style="color: var(--school-text-color-light);">
-                Every great journey starts with a bright beginning. <br class="hidden md:block" />
-                Join a place where curiosity shines and every child is celebrated. 
-            </p>
-        </div>
+        <section
+            class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl p-10 font-[Space Grotesk] flex-grow mx-auto">
 
-        <div class="relative my-10 md:my-0 flex-shrink-0">
-            <img src="{% static 'assets/imagem_fundo.png' %}" alt="Duas crianças sorrindo" 
-                 class="w-full h-auto md:w-[800px] md:h-[800px] lg:w-[600px] lg:h-[500px] 
-                        mx-auto object-contain">
-        </div>
+            <div class="max-w-md mb-10 md:mb-0 text-center md:text-left flex-shrink-0 md:mr-10">
+                <h1 class="text-4xl lg:text-5xl font-bold mb-4" style="font-family: 'Piepie W01 Regular', sans-serif;">
+                    BRIGHT BEGINNINGS!
+                </h1>
+                <p class="text-base lg:text-lg" style="color: var(--school-text-color-light);">
+                    Every great journey starts with a bright beginning. <br class="hidden md:block" />
+                    Join a place where curiosity shines and every child is celebrated.
+                </p>
+            </div>
 
-        <div class="max-w-sm text-center md:text-right mt-10 md:mt-0 flex-shrink-0 md:ml-10">
-            <h2 class="text-2xl lg:text-3xl font-bold">JOIN US!</h2>
-            <p class="text-base lg:text-lg mb-6" style="color: var(--school-text-color-light);">
-                Discover a bilingual world full of play, <br />
-                learning, love, and meaningful.
-            </p>
-            <a href="#" 
-               class="border-2 border-white px-6 py-3 font-bold rounded-lg transition-all duration-300" 
-               style="color: var(--school-text-color-light); border-color: var(--school-text-color-light); 
-                      background-color: transparent; /* Inicialmente transparente */
-                      --tw-bg-opacity: 1; /* Garante que a opacidade seja 1 */
-                      --tw-text-opacity: 1; /* Garante que a opacidade seja 1 */
-                      transition: background-color 0.3s ease, color 0.3s ease;"
-               onmouseover="this.style.backgroundColor = 'var(--school-button-hover-bg)'; this.style.color = 'var(--school-button-hover-text)';"
-               onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color-light)';">
-               LEARN MORE
-            </a>
-        </div>
-    </section>
+            <div class="relative my-10 md:my-0 flex-shrink-0">
+                <img src="{% static 'assets/imagem_fundo.png' %}" alt="Duas crianças sorrindo"
+                    class="w-full h-auto md:w-[800px] md:h-[800px] lg:w-[600px] lg:h-[500px] mx-auto object-contain" />
+            </div>
+
+            <div class="max-w-sm text-center md:text-right mt-10 md:mt-0 flex-shrink-0 md:ml-10">
+                <h2 class="text-2xl lg:text-3xl font-bold">JOIN US!</h2>
+                <p class="text-base lg:text-lg mb-6" style="color: var(--school-text-color-light);">
+                    Discover a bilingual world full of play, <br />
+                    learning, love, and meaningful.
+                </p>
+                <a href="#"
+                class="border-2 border-white px-6 py-3 font-bold rounded-lg transition-all duration-300"
+                style="color: var(--school-text-color-light); border-color: var(--school-text-color-light);
+                        background-color: transparent; --tw-bg-opacity: 1; --tw-text-opacity: 1;"
+                onmouseover="this.style.backgroundColor = 'var(--school-button-hover-bg)'; this.style.color = 'var(--school-button-hover-text)';"
+                onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color-light)';">
+                    LEARN MORE
+                </a>
+            </div>
+        </section>
+    </div>
+
 
     <section class="w-full text-gray-800 py-16 px-4 md:px-10 relative z-10 flex items-center justify-center" style="background-color: var(--school-section-bg-color-light);">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
