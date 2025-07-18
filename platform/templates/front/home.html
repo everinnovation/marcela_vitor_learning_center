@@ -2,23 +2,7 @@
 {% load static %}
 
 {% block title %}
-    School Name - Bright Beginnings
-{% endblock %}
-
-{% block head %}
-    <style>
-        :root {
-            --school-primary-blue: #0A0A9C; /* Um azul mais escuro, próximo ao do protótipo */
-            --school-text-color-light: #FFFFFF; /* Texto branco para fundos escuros */
-            --school-text-color-dark: #333333; /* Texto escuro para fundos claros */
-            --school-section-bg-color-light: #F8F8F8; /* Um cinza claro para o fundo das seções claras (quase branco) */
-            --school-button-hover-bg: #FFFFFF; /* Fundo do botão no hover */
-            --school-button-hover-text: #0A0A9C; /* Cor do texto do botão no hover, similar ao azul do protótipo */
-            --school-heading-color-dark: #0A0A9C; /* Cor para títulos em seções de fundo claro */
-            --school-program-bg-yellow: #fadb2d; /* Novo: Cor amarela para o fundo da seção OUR PROGRAMS */
-            --secondary-color-dark: #0A0A9C; /* Cor para o botão 'Leia mais' nos cards, ajustado para um azul escuro */
-        }
-    </style>
+    Marcela Vitor Learning Center
 {% endblock %}
 
 {% block content %}
@@ -26,97 +10,93 @@
     <div class="relative w-full min-h-[100vh] md:min-h-[90vh] overflow-hidden">
         <img src="{% static 'assets/home_background.png' %}"
             class="absolute top-0 left-0 w-full h-full object-cover z-0" />
-        <section class="relative h-[90vh] z-20 w-full font-[Space Grotesk] flex-grow mx-auto flex items-center justify-center">
+        <section class="relative h-[90vh] z-20 w-full flex-grow mx-auto flex items-center justify-center">
             <div class="ml-[25vw] mb-[2rem] inset-0 flex items-center justify-center h-[90vh] w-[60vw]">
                 <img src="{% static 'assets/imagem_fundo.png' %}" alt="Duas crianças sorrindo"
                     class="h-full w-auto max-w-full object-cover z-10" style="max-width: none;" />
             </div>
 
-            <div class="absolute left-10 top-1/4 w-[30vw] text-center md:text-left flex-shrink-0 flex flex-col justify-center z-20">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-4" style="font-family: 'Piepie W01 Regular', sans-serif;">
+            <div class="absolute left-20 top-1/4 w-[30vw] text-center md:text-left flex-shrink-0 flex flex-col justify-center z-20">
+                <h1 class="text-5xl space-grotesk-regular" style="letter-spacing: 0.08em;">
                     BRIGHT BEGINNINGS!
                 </h1>
-                <p class="text-base lg:text-lg" style="color: var(--school-text-color-light);">
-                    Every great journey starts with a bright beginning. <br class="hidden md:block" />
-                    Join a place where curiosity shines and every child is celebrated.
+                <p class="text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-light); max-width: 100%;">
+                    Every great journey starts with a bright beginning. Join a place where curiosity shines and every child is celebrated.
                 </p>
             </div>
 
-            <div class="absolute right-10 bottom-10 max-w-sm text-center md:text-right flex-shrink-0 flex flex-col justify-end items-end z-20">
-                <h2 class="text-2xl lg:text-3xl font-bold">JOIN US!</h2>
-                <p class="text-base lg:text-lg mb-6" style="color: var(--school-text-color-light);">
-                    Discover a bilingual world full of play, <br />
+            <div class="absolute right-24 bottom-20 max-w-sm text-center md:text-right flex-shrink-0 flex flex-col justify-end items-end z-20">
+                <h1 class="text-5xl space-grotesk-regular mb-2" style="letter-spacing: 0.07em;">
+                 JOIN US!
+                </h1>
+                <p class="text-base lg:text-lg space-grotesk-light mb-4" style="color: var(--school-text-color-light); max-width: 100%;">
+                    Discover a bilingual world full of play,
                     learning, love, and meaningful.
                 </p>
-                <a href="#"
-                    class="border-2 border-white px-6 py-3 font-bold rounded-lg transition-all duration-300"
-                    style="color: var(--school-text-color-light); border-color: var(--school-text-color-light);
-                            background-color: transparent; --tw-bg-opacity: 1; --tw-text-opacity: 1;"
-                    onmouseover="this.style.backgroundColor = 'var(--school-button-hover-bg)'; this.style.color = 'var(--school-button-hover-text)';"
-                    onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color-light)';">
+                <button class="px-6 py-2 text-white text-xl w-[80%] tracking-widest bg-[#1053f3] border-2 border-[#f5c542] rounded hover:bg-[#0e49d1] transition-colors duration-200">
                     LEARN MORE
-                </a>
+                </button>
             </div>
         </section>
     </div>
 
-
-    <section class="w-full text-gray-800 py-16 px-4 md:px-10 relative z-10 flex items-center justify-center" style="background-color: var(--school-section-bg-color-light);">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
-            
-            <div class="flex-shrink-0">
-                <img src="{% static 'assets/criancas.png' %}" alt="Duas crianças se abraçando" 
-                     class="w-[400px] h-[400px] md:w-[800px] md:h-[500px] object-contain">
-            </div>
-
-            <div class="max-w-xl text-center md:text-left">
-                <h2 class="text-4xl font-bold mb-6" style="color: var(--school-heading-color-dark);">OUR PHILOSOPHY</h2>
-                <p class="text-lg mb-4" style="color: var(--school-text-color-dark);">
+    <div class="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:pt-[2rem]">
+        <div class="flex-shrink-0 flex justify-center md:w-1/2 items-end">
+            <img src="{% static 'assets/criancas.png' %}" alt="Duas crianças se abraçando"
+                class="object-cover object-center select-none"
+                style="height: 600px; width: auto; margin-bottom:-80px;" />
+        </div>
+        <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4">
+            <h2 class="text-6xl space-grotesk-regular" style="color: var(--school-heading-color-dark); letter-spacing: 0.08em;">
+                OUR <b>PHILOSOPHY</b>
+            </h2>
+            <div class="w-full">
+                <p class="text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
                     We value individual development, respecting each child's pace and interests.
                 </p>
-                <p class="text-lg mb-6" style="color: var(--school-text-color-dark);">
+                <p class="text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
                     Our bilingual approach (Portuguese-English) follows Montessori principles, promoting learning through play, cultural awareness, and meaningful interactions.
                 </p>
-                <a href="#" 
-                   class="border-2 border-blue-600 px-6 py-3 font-bold rounded-lg transition-all duration-300" 
-                   style="color: var(--school-heading-color-dark); border-color: var(--school-heading-color-dark); 
-                          background-color: transparent;
-                          transition: background-color 0.3s ease, color 0.3s ease;"
-                   onmouseover="this.style.backgroundColor = 'var(--school-heading-color-dark)'; this.style.color = 'var(--school-text-color-light)';"
-                   onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-heading-color-dark)';">
-                   LEARN MORE
-                </a>
             </div>
+            <a href="#"
+                class="px-6 py-2 text-white flex items-center justify-center text-xl w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
+                style="max-width: 320px;">
+                LEARN MORE
+            </a>
         </div>
-    </section>
+    </div>
 
-    <section class="w-full text-white py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-primary-blue);">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
-            
-            <div class="flex-shrink-0">
-                <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor, Diretora" 
+    <div class="w-full text-white py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-primary-blue);">
+        <div class="max-w-7xl mx-auto flex flex-row items-center justify-center gap-0">
+            <div class="flex-shrink-0 flex justify-center items-center w-full md:w-1/2">
+                <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor, Diretora"
                      class="w-[280px] h-[280px] md:w-[350px] md:h-[350px] object-cover rounded-xl shadow-lg border-4 border-white">
             </div>
-
-            <div class="max-w-xl text-center md:text-left">
-                <h2 class="text-4xl font-bold mb-6" style="color: var(--school-text-color-light);">OUR TEACHERS</h2>
-                <p class="text-lg mb-4" style="color: var(--school-text-color-light);">
-                    Our team is made up of educators with over 5 years of experience and academic training in Massachusetts.
-                </p>
-                <p class="text-lg mb-4" style="color: var(--school-text-color-light);">
-                    The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools.
-                </p>
-                <p class="text-lg" style="color: var(--school-text-color-light);">
-                    Today, she leads her own center and is personally committed to children's education.
-                </p>
+            <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4">
+                <h2 class="text-6xl space-grotesk-regular" style="color: #fff; letter-spacing: 0.08em;">
+                    OUR <b>TEACHERS</b>
+                </h2>
+                <div class="w-full">
+                    <p class="text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
+                        Our team is made up of educators with over 5 years of experience and academic training in Massachusetts.
+                    </p>
+                    <p class="text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
+                        The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools.
+                    </p>
+                    <p class="text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
+                        Today, she leads her own center and is personally committed to children's education.
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="w-full text-gray-800 py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-program-bg-yellow);">
         <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-4xl font-bold" style="color: var(--school-heading-color-dark);">OUR PROGRAMS</h2>
-            <p class="text-base mb-6" style="color: var(--school-text-color-dark);">
+            <h2 class="text-4xl font-bold space-grotesk-regular text-[color:var(--school-heading-color-dark)]">
+                OUR PROGRAMS
+            </h2>
+            <p class="text-base mb-6 space-grotesk-light text-[color:var(--school-text-color-dark)]">
                 We cater for babies from 12 months to preschool. We combine quality education and language development.
             </p>
         </div>

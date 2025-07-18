@@ -1,5 +1,5 @@
 {% load static %}
-<header class="bg-transparent w-full fixed top-0 left-0 z-50 transition duration-800 ease-in-out h-[7rem]" id="navbar" style="top: -2px;">
+<header class="bg-transparent w-full fixed top-0 left-0 z-50 transition duration-800 ease-in-out h-[7rem] space-grotesk" id="navbar" style="top: -2px;">
     <nav class="container mx-auto flex justify-between items-center px-6 md:px-4 py-5 h-full max-w-7xl">
         <button id="menu-toggle" class="flex items-center md:hidden focus:outline-none">
             <span class="material-symbols-outlined text-white text-4xl">menu</span>
@@ -9,27 +9,26 @@
             <img src="{% static 'assets/logo.png' %}" alt="School Logo" class="h-14 md:h-16" />
         </a>
 
-        <nav class="hidden md:flex flex-grow justify-center space-x-8 font-semibold uppercase text-sm text-white">
-            <a href="#" class="border-b-2 border-white pb-1">Home</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">About Us</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">The School</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">Programs</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors">Contact Us</a>
+        <nav class="hidden md:flex flex-grow justify-center space-x-12 font-semibold uppercase text-base text-white space-grotesk-light">
+            <a href="#" class="border-b-2 border-white pb-1 space-grotesk-light">Home</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">About Us</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Programs</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Contact Us</a>
         </nav>
 
         <div class="flex-shrink-0 w-10"></div>
     </nav>
 
-    <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-20 py-6 absolute w-full top-20 bg-primary-color hidden z-40">
-        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">Home</a></li>
-        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">About Us</a></li>
-        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">The School</a></li>
-        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">Programs</a></li>
-        <li><a href="#" class="text-white text-sm uppercase font-semibold hover:text-gray-300 transition duration-500">Contact Us</a></li>
+    <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-20 py-6 absolute w-full top-20 bg-primary-color hidden z-40 font-semibold uppercase text-base text-white space-grotesk-light">
+        <li><a href="#" class="border-b-2 border-white pb-1 space-grotesk-light">Home</a></li>
+        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">About Us</a></li>
+        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a></li>
+        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Programs</a></li>
+        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Contact Us</a></li>
     </ul>
 </header>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const navbarStartColor = 'transparent';
     const navbarScrollColor = '#FFC900';
@@ -38,37 +37,40 @@
 
     function updateNavbarColor() {
         const scrolled = $(window).scrollTop() > 50;
-        // Navbar background with smooth transition
         $('#navbar').css({
             'background': scrolled ? navbarScrollColor : navbarStartColor,
             'box-shadow': scrolled ? '0 2px 16px rgba(0,0,0,0.08)' : 'none',
             'transition': 'background 0.4s, box-shadow 0.4s'
         });
 
-        // Desktop menu items color and hover effect
         $('.md\\:flex a').css({
             'color': scrolled ? menuItemScrollColor : menuItemStartColor,
-            'transition': 'color 0.4s'
+            'transition': 'color 0.4s',
+            'font-weight': 'normal'
         });
 
-        // Change border color on scroll for active/hovered items
+        $('.md\\:flex a.border-b-2').css({
+            'border-bottom-color': scrolled ? menuItemScrollColor : menuItemStartColor,
+            'font-weight': 'bold'
+        });
+
         $('.md\\:flex a').hover(
             function() {
-            $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
+                $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
             },
             function() {
-            $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
+                $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
             }
         );
-        $('.md\\:flex a.border-b-2').css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
 
-        // Mobile menu items (keep white always)
-                $('#mobile-menu a').css({
-                    'color': menuItemStartColor,
-                    'transition': 'color 0.4s'
-                });
-            }
-        
-            $(window).on('scroll', updateNavbarColor);
-            $(document).ready(updateNavbarColor);
-        </script>
+        $('#mobile-menu a').css({
+            'color': menuItemStartColor,
+            'transition': 'color 0.4s',
+            'font-weight': 'normal'
+        });
+        $('#mobile-menu a.border-b-2').css('font-weight', 'bold');
+    }
+
+    $(window).on('scroll', updateNavbarColor);
+    $(document).ready(updateNavbarColor);
+</script>
