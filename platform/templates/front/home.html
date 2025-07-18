@@ -7,7 +7,6 @@
 
 {% block head %}
     <style>
-        /* Variáveis CSS para cores do protótipo - podem ser ajustadas se houver elementos que não estejam na imagem de fundo */
         :root {
             --school-primary-blue: #0A0A9C; /* Um azul mais escuro, próximo ao do protótipo */
             --school-text-color-light: #FFFFFF; /* Texto branco para fundos escuros */
@@ -19,30 +18,21 @@
             --school-program-bg-yellow: #fadb2d; /* Novo: Cor amarela para o fundo da seção OUR PROGRAMS */
             --secondary-color-dark: #0A0A9C; /* Cor para o botão 'Leia mais' nos cards, ajustado para um azul escuro */
         }
-        /* Ajuste de fonte, se você estiver usando "Piepie W01 Regular" */
-        /* @font-face {
-            font-family: 'Piepie W01 Regular';
-            src: url('{% static 'fonts/PiepieW01Regular.woff2' %}') format('woff2'),
-                 url('{% static 'fonts/PiepieW01Regular.woff' %}') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        } */
     </style>
 {% endblock %}
 
 {% block content %}
-<div class="relative min-h-screen text-white flex flex-col items-center overflow-hidden bg-cover bg-center" 
-     style="background-image: url('{% static 'assets/FUNDO_SITE.png' %}'); background-color: var(--school-primary-blue);"> {# Fallback color if image fails #}
+<div class="relative min-h-screen text-white flex flex-col items-center overflow-hidden bg-cover bg-center">
     <div class="relative w-full min-h-[100vh] md:min-h-[90vh] overflow-hidden">
-
-        <img src="{% static 'assets/fundo_site.png' %}" alt="Fundo do site"
+        <img src="{% static 'assets/home_background.png' %}"
             class="absolute top-0 left-0 w-full h-full object-cover z-0" />
+        <section class="relative h-[90vh] z-20 w-full font-[Space Grotesk] flex-grow mx-auto flex items-center justify-center">
+            <div class="ml-[25vw] mb-[2rem] inset-0 flex items-center justify-center h-[90vh] w-[60vw]">
+                <img src="{% static 'assets/imagem_fundo.png' %}" alt="Duas crianças sorrindo"
+                    class="h-full w-auto max-w-full object-cover z-10" style="max-width: none;" />
+            </div>
 
-
-        <section
-            class="relative z-20 flex flex-col md:flex-row items-center justify-between w-full max-w-7xl p-10 font-[Space Grotesk] flex-grow mx-auto">
-
-            <div class="max-w-md mb-10 md:mb-0 text-center md:text-left flex-shrink-0 md:mr-10">
+            <div class="absolute left-10 top-1/4 w-[30vw] text-center md:text-left flex-shrink-0 flex flex-col justify-center z-20">
                 <h1 class="text-4xl lg:text-5xl font-bold mb-4" style="font-family: 'Piepie W01 Regular', sans-serif;">
                     BRIGHT BEGINNINGS!
                 </h1>
@@ -52,23 +42,18 @@
                 </p>
             </div>
 
-            <div class="relative my-10 md:my-0 flex-shrink-0">
-                <img src="{% static 'assets/imagem_fundo.png' %}" alt="Duas crianças sorrindo"
-                    class="w-full h-auto md:w-[800px] md:h-[800px] lg:w-[600px] lg:h-[500px] mx-auto object-contain" />
-            </div>
-
-            <div class="max-w-sm text-center md:text-right mt-10 md:mt-0 flex-shrink-0 md:ml-10">
+            <div class="absolute right-10 bottom-10 max-w-sm text-center md:text-right flex-shrink-0 flex flex-col justify-end items-end z-20">
                 <h2 class="text-2xl lg:text-3xl font-bold">JOIN US!</h2>
                 <p class="text-base lg:text-lg mb-6" style="color: var(--school-text-color-light);">
                     Discover a bilingual world full of play, <br />
                     learning, love, and meaningful.
                 </p>
                 <a href="#"
-                class="border-2 border-white px-6 py-3 font-bold rounded-lg transition-all duration-300"
-                style="color: var(--school-text-color-light); border-color: var(--school-text-color-light);
-                        background-color: transparent; --tw-bg-opacity: 1; --tw-text-opacity: 1;"
-                onmouseover="this.style.backgroundColor = 'var(--school-button-hover-bg)'; this.style.color = 'var(--school-button-hover-text)';"
-                onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color-light)';">
+                    class="border-2 border-white px-6 py-3 font-bold rounded-lg transition-all duration-300"
+                    style="color: var(--school-text-color-light); border-color: var(--school-text-color-light);
+                            background-color: transparent; --tw-bg-opacity: 1; --tw-text-opacity: 1;"
+                    onmouseover="this.style.backgroundColor = 'var(--school-button-hover-bg)'; this.style.color = 'var(--school-button-hover-text)';"
+                    onmouseout="this.style.backgroundColor = 'transparent'; this.style.color = 'var(--school-text-color-light)';">
                     LEARN MORE
                 </a>
             </div>

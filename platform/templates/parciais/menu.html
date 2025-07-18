@@ -1,12 +1,12 @@
 {% load static %}
-<header class="bg-transparent w-full fixed top-0 left-0 z-50 transition duration-800 ease-in-out" id="navbar" style="top: -2px;">
-    <nav class="container mx-auto flex justify-between items-center px-6 md:px-4 py-5 h-20 max-w-7xl">
+<header class="bg-transparent w-full fixed top-0 left-0 z-50 transition duration-800 ease-in-out h-[7rem]" id="navbar" style="top: -2px;">
+    <nav class="container mx-auto flex justify-between items-center px-6 md:px-4 py-5 h-full max-w-7xl">
         <button id="menu-toggle" class="flex items-center md:hidden focus:outline-none">
             <span class="material-symbols-outlined text-white text-4xl">menu</span>
         </button>
 
-        <a href="#" class="md:flex-grow-0 mx-auto md:mx-0 md:ml-4 flex justify-center items-center min-w-[150px]">
-            <img src="{% static 'assets/logo.png' %}" alt="School Logo" class="h-10 md:h-12" />
+        <a href="#" class="md:flex-grow-0 mx-auto md:mx-0 md:ml-4 flex justify-center items-center w-2xl">
+            <img src="{% static 'assets/logo.png' %}" alt="School Logo" class="h-14 md:h-16" />
         </a>
 
         <nav class="hidden md:flex flex-grow justify-center space-x-8 font-semibold uppercase text-sm text-white">
@@ -32,33 +32,43 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     const navbarStartColor = 'transparent';
-    const navbarScrollColor = 'var(--primary-color)';
+    const navbarScrollColor = '#FFC900';
+    const menuItemStartColor = 'white';
+    const menuItemScrollColor = '#222';
 
     function updateNavbarColor() {
-        if (!$('#mobile-menu').hasClass('hidden') || $(window).scrollTop() > 50) {
-            $('#navbar').css('background', navbarScrollColor);
-        } else {
-            $('#navbar').css('background', navbarStartColor);
-        }
-    }
+        const scrolled = $(window).scrollTop() > 50;
+        // Navbar background with smooth transition
+        $('#navbar').css({
+            'background': scrolled ? navbarScrollColor : navbarStartColor,
+            'box-shadow': scrolled ? '0 2px 16px rgba(0,0,0,0.08)' : 'none',
+            'transition': 'background 0.4s, box-shadow 0.4s'
+        });
 
-    $('#menu-toggle').on('click', function() {
-        $('#mobile-menu').toggleClass('hidden');
-        updateNavbarColor();
-    });
+        // Desktop menu items color and hover effect
+        $('.md\\:flex a').css({
+            'color': scrolled ? menuItemScrollColor : menuItemStartColor,
+            'transition': 'color 0.4s'
+        });
 
-    $(document).on('click', function(event) {
-        if (!$(event.target).closest('#mobile-menu, #menu-toggle').length) {
-            $('#mobile-menu').addClass('hidden');
-            updateNavbarColor();
-        }
-    });
+        // Change border color on scroll for active/hovered items
+        $('.md\\:flex a').hover(
+            function() {
+            $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
+            },
+            function() {
+            $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
+            }
+        );
+        $('.md\\:flex a.border-b-2').css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
 
-    $(window).on('scroll', function() {
-        updateNavbarColor();
-    });
-
-    $(document).ready(function() {
-        updateNavbarColor();
-    });
-</script>
+        // Mobile menu items (keep white always)
+                $('#mobile-menu a').css({
+                    'color': menuItemStartColor,
+                    'transition': 'color 0.4s'
+                });
+            }
+        
+            $(window).on('scroll', updateNavbarColor);
+            $(document).ready(updateNavbarColor);
+        </script>
