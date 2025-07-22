@@ -5,11 +5,104 @@
     About
 {% endblock %}
 
-{% block head %}
-{% endblock %}
-
 {% block content %}
-<div class="flex flex-col items-center">
+<!-- Hero Section -->
+<section class="w-full bg-gradient-to-br from-[var(--school-primary-blue)] to-blue-400 py-24 px-4 md:px-10 flex flex-col items-center justify-center relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-40 h-40 bg-yellow-300 opacity-20 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-0 right-0 w-32 h-32 bg-pink-300 opacity-20 rounded-full blur-2xl"></div>
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+        <h1 class="text-6xl md:text-7xl space-grotesk-bold text-white mb-6 tracking-wide drop-shadow-lg">
+            Who We Are
+        </h1>
+        <p class="text-xl md:text-2xl space-grotesk-light text-white mb-8 max-w-2xl mx-auto">
+            Marcela Vitor Learning Center is a vibrant, bilingual space where children grow, explore, and thrive. Our approach blends Montessori principles with a warm, multicultural environment.
+        </p>
+        <div class="flex justify-center">
+            <img src="{% static 'assets/about_hero.jpg' %}" alt="Children learning together"
+                class="mx-auto rounded-3xl shadow-2xl border-8 border-yellow-300 w-full max-w-xl object-cover transition-transform hover:scale-105 duration-300">
+        </div>
+    </div>
+</section>
 
-</div>
+<!-- Mission & Vision Section -->
+<section class="w-full py-20 px-4 md:px-10 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-10">
+            <div>
+                <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-3 flex items-center gap-2">
+                    <span class="inline-block w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-700 text-2xl">🎯</span>
+                    Our Mission
+                </h2>
+                <p class="text-lg space-grotesk-light text-gray-700">
+                    We nurture each child's curiosity and individuality, fostering growth through play, exploration, and meaningful relationships. Our bilingual curriculum (Portuguese-English) encourages cultural awareness and a lifelong love of learning.
+                </p>
+            </div>
+            <div>
+                <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-3 flex items-center gap-2">
+                    <span class="inline-block w-8 h-8 bg-yellow-200 rounded-full flex items-center justify-center text-yellow-700 text-2xl">🌟</span>
+                    Our Vision
+                </h2>
+                <p class="text-lg space-grotesk-light text-gray-700">
+                    To inspire confident, compassionate learners who celebrate diversity and contribute positively to their communities.
+                </p>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <img src="{% static 'assets/mission_vision.jpg' %}" alt="Children playing"
+                class="rounded-3xl shadow-2xl border-4 border-blue-100 w-full max-w-md object-cover transition-transform hover:scale-105 duration-300">
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="w-full py-20 px-4 md:px-10 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-shrink-0 w-full md:w-1/3 flex justify-center">
+            <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor, Diretora"
+                class="rounded-3xl shadow-2xl border-8 border-white h-[350px] w-full md:h-[400px] object-cover transition-transform hover:scale-105 duration-300">
+        </div>
+        <div class="w-full md:w-2/3 text-center md:text-left space-y-4">
+            <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-2 flex items-center gap-2">
+                <span class="inline-block w-8 h-8 bg-pink-200 rounded-full flex items-center justify-center text-pink-700 text-2xl">👩‍🏫</span>
+                Meet Our Director
+            </h2>
+            <p class="text-lg space-grotesk-light text-gray-800">
+                Marcela Vitor is a speech-language pathologist with 9 years of experience in Massachusetts schools. Her passion for education and child development shapes our center's caring, inclusive philosophy.
+            </p>
+            <p class="text-lg space-grotesk-light text-gray-800">
+                Our team of educators brings expertise, warmth, and dedication to every child’s journey.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="w-full py-20 px-4 md:px-10 bg-gray-50">
+    <div class="max-w-6xl mx-auto text-center mb-14">
+        <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-4 flex items-center justify-center gap-2">
+            <span class="inline-block w-8 h-8 bg-green-200 rounded-full flex items-center justify-center text-green-700 text-2xl">💡</span>
+            Our Core Values
+        </h2>
+        <p class="text-lg space-grotesk-light text-gray-700 mx-auto max-w-2xl">
+            We believe in respect, empathy, diversity, and the joy of learning. Our programs blend quality education and language development for children from 12 months to preschool.
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+            <img src="{% static 'assets/musica.jpg' %}" alt="Creativity icon" class="w-32 h-32 object-cover rounded-xl mb-4 border-4 border-blue-100">
+            <h3 class="text-2xl space-grotesk-bold text-blue-700 mb-2 flex items-center gap-2">🎨 Creativity</h3>
+            <p class="text-gray-600 text-center">We encourage creative expression through music, art, and imaginative play.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+            <img src="{% static 'assets/futebol.jpg' %}" alt="Teamwork icon" class="w-32 h-32 object-cover rounded-xl mb-4 border-4 border-yellow-100">
+            <h3 class="text-2xl space-grotesk-bold text-yellow-700 mb-2 flex items-center gap-2">🤝 Teamwork</h3>
+            <p class="text-gray-600 text-center">Children learn to collaborate, share, and build friendships through group activities and sports.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+            <img src="{% static 'assets/eventos.jpg' %}" alt="Diversity icon" class="w-32 h-32 object-cover rounded-xl mb-4 border-4 border-pink-100">
+            <h3 class="text-2xl space-grotesk-bold text-pink-700 mb-2 flex items-center gap-2">🌍 Diversity</h3>
+            <p class="text-gray-600 text-center">We celebrate cultural traditions and embrace diversity in joyful and meaningful ways.</p>
+        </div>
+    </div>
+</section>
 {% endblock %}

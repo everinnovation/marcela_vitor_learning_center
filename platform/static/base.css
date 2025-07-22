@@ -12,15 +12,15 @@ h1, li {
 }
 
 :root {
-    --school-primary-blue: #0A0A9C;
+    --school-primary-blue: #1253EF;
     --school-text-color-light: #FFFFFF;
-    --school-text-color-dark: #333333;
+    --school-text-color-dark: #353535;
     --school-section-bg-color-light: #F8F8F8;
     --school-button-hover-bg: #FFFFFF;
-    --school-button-hover-text: #0A0A9C;
-    --school-heading-color-dark: #0A0A9C;
-    --school-program-bg-yellow: #fadb2d;
-    --secondary-color-dark: #0A0A9C;
+    --school-button-hover-text: #1253EF;
+    --school-heading-color-dark: #1253EF;
+    --school-program-bg-yellow: #FCC802;
+    --secondary-color-dark: #1253EF;
 }
 
 .space-grotesk {
