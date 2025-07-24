@@ -10,22 +10,22 @@
         </a>
 
         <nav class="hidden md:flex flex-grow justify-center space-x-12 font-semibold uppercase text-base text-white space-grotesk-light">
-            <a href="{% url 'home' %}" class="border-b-2 border-white pb-1 space-grotesk-light">Home</a>
-            <a href="{% url 'about' %}" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">About Us</a>
+            <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">Home</a>
+            <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">About Us</a>
             <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a>
             <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Programs</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Contact Us</a>
+            <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">Contact Us</a>
         </nav>
 
         <div class="flex-shrink-0 w-10"></div>
     </nav>
 
     <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-20 py-6 absolute w-full top-20 bg-primary-color hidden z-40 font-semibold uppercase text-base text-white space-grotesk-light">
-        <li><a href="{% url 'home' %}" class="border-b-2 border-white pb-1 space-grotesk-light">Home</a></li>
-        <li><a href="{% url 'about' %}" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">About Us</a></li>
+        <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">Home</a></li>
+        <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">About Us</a></li>
         <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a></li>
         <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Programs</a></li>
-        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Contact Us</a></li>
+        <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">Contact Us</a></li>
     </ul>
 </header>
 
