@@ -24,16 +24,16 @@
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
         <div class="space-y-10">
             <div>
-                <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-3 flex items-center gap-3">
-                    Our Mission
+                <h2 class="text-6xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-3 flex items-center gap-3">
+                    Our <b>Mission</b>
                 </h2>
                 <p class="text-lg space-grotesk-light text-gray-700 leading-relaxed">
                     To nurture the potential of each child through exploration, play, and loving guidance. Our bilingual (Portuguese-English) environment fosters independence, empathy, and joy in learning.
                 </p>
             </div>
             <div>
-                <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-3 flex items-center gap-3">
-                    Our Vision
+                <h2 class="text-6xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-3 flex items-center gap-3">
+                    Our <b>Vision</b>
                 </h2>
                 <p class="text-lg space-grotesk-light text-gray-700 leading-relaxed">
                     We envision a community of confident, creative learners who honor diversity and lead with kindness and curiosity.
@@ -41,21 +41,21 @@
             </div>
         </div>
         <div class="flex justify-center">
-            <img src="{% static 'assets/mission_vision.jpg' %}" alt="Children playing"
-                class="rounded-3xl shadow-xl border-4 border-blue-100 w-full max-w-md object-cover">
+            <img src="{% static 'assets/joy.jpg' %}" alt="Children playing"
+          class="rounded-3xl shadow-xl border-4 border-blue-100 w-full max-w-2xl object-cover">
         </div>
     </div>
 </section>
 
-<section class="w-full py-24 px-4 md:px-10 bg-gradient-to-r from-yellow-100 via-yellow-200 to-yellow-300">
+<section class="w-full py-24 px-4 md:px-10 bg-[var(--school-program-bg-yellow)]">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div class="w-full md:w-1/2 flex justify-center">
             <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor"
                 class="rounded-3xl shadow-2xl border-8 border-white h-[400px] w-full object-cover">
         </div>
         <div class="w-full md:w-1/2 text-center md:text-left space-y-4">
-            <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] flex items-center gap-3">
-                Meet Marcela Vitor
+            <h2 class="text-6xl space-grotesk-regular text-[var(--school-text-color-dark)] flex items-center gap-3">
+                Meet <b>Marcela Vitor</b>
             </h2>
             <p class="text-lg space-grotesk-light text-gray-800 leading-relaxed">
                 Marcela is a bilingual speech-language pathologist with nearly a decade of experience in Massachusetts public schools. Her mission? To create a safe, inclusive environment where children grow with love and confidence.
@@ -67,53 +67,57 @@
     </div>
 </section>
 
-<section class="w-full py-24 px-4 md:px-10 bg-[#f7f7f7]">
-  <div class="max-w-7xl mx-auto text-center mb-16">
-    <h2 class="text-4xl space-grotesk-bold text-[var(--school-heading-color-dark)] mb-4 flex items-center justify-center gap-3">
-      Our Core Values
+<section class="w-full py-12 px-4 md:px-10 bg-[#f7f7f7]">
+  <div class="max-w-7xl mx-auto text-center mb-4 mt-4">
+    <h2 class="text-6xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-4 flex items-center justify-center gap-3">
+      Our <b>Core Values</b>
     </h2>
     <p class="text-lg space-grotesk-light text-gray-700 max-w-2xl mx-auto leading-relaxed">
       Every day, we live our values: kindness, creativity, inclusion, and discovery. They guide our teaching—and shape our community.
     </p>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-    <div class="bg-white rounded-3xl shadow-lg p-10 flex flex-col items-center hover:shadow-xl transition">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto bg-[#f9fafb] p-4 rounded-[2rem] shadow-inner">
+    <!-- Creativity -->
+    <div class="bg-white rounded-3xl shadow-md p-10 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300">
       <div class="w-20 h-20 mb-6 rounded-full bg-blue-100 flex items-center justify-center">
         <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M15.232 5.232a3 3 0 114.243 4.243l-10 10a3 3 0 01-1.414.793l-4 1a1 1 0 01-1.213-1.213l1-4a3 3 0 01.793-1.414l10-10z"/>
         </svg>
       </div>
-      <h3 class="text-2xl space-grotesk-bold text-blue-700 mb-2">Creativity</h3>
-      <p class="text-lg space-grotesk-light text-gray-700 text-center leading-relaxed">
-        We embrace art, music, and imagination—letting each child express themselves freely.
+      <h3 class="text-2xl space-grotesk-bold text-blue-700 mb-3">Creativity</h3>
+      <p class="text-lg space-grotesk-light text-gray-700 leading-relaxed">
+        We spark imagination through play, storytelling, and hands-on projects that let children create without limits.
       </p>
     </div>
 
-    <div class="bg-white rounded-3xl shadow-lg p-10 flex flex-col items-center hover:shadow-xl transition">
+    <!-- Teamwork -->
+    <div class="bg-white rounded-3xl shadow-md p-10 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300">
       <div class="w-20 h-20 mb-6 rounded-full bg-yellow-100 flex items-center justify-center">
         <svg class="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M3 20h5v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 010 7.75"/>
         </svg>
       </div>
-      <h3 class="text-2xl space-grotesk-bold text-yellow-700 mb-2">Teamwork</h3>
-      <p class="text-lg space-grotesk-light text-gray-700 text-center leading-relaxed">
-        From the playground to the classroom, we grow together through collaboration and empathy.
+      <h3 class="text-2xl space-grotesk-bold text-yellow-700 mb-3">Teamwork</h3>
+      <p class="text-lg space-grotesk-light text-gray-700 leading-relaxed">
+        We encourage collaboration, empathy, and shared success—learning how to support and grow with others.
       </p>
     </div>
 
-    <div class="bg-white rounded-3xl shadow-lg p-10 flex flex-col items-center hover:shadow-xl transition">
-      <div class="w-20 h-20 mb-6 rounded-full bg-pink-100 flex items-center justify-center">
-        <svg class="w-10 h-10 text-pink-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 4v16m8-8H4"/>
+    <!-- Curiosity -->
+    <div class="bg-white rounded-3xl shadow-md p-10 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300">
+      <div class="w-20 h-20 mb-6 rounded-full bg-green-100 flex items-center justify-center">
+        <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 8c-2.21 0-4 1.79-4 4h1.5a2.5 2.5 0 115 0c0 1.5-1.5 2.25-2.25 3M12 17h.01"/>
         </svg>
       </div>
-      <h3 class="text-2xl space-grotesk-bold text-pink-700 mb-2">Diversity</h3>
-      <p class="text-lg space-grotesk-light text-gray-700 text-center leading-relaxed">
-        We celebrate culture, language, and identity—because every child deserves to feel seen.
+      <h3 class="text-2xl space-grotesk-bold text-green-700 mb-3">Curiosity</h3>
+      <p class="text-lg space-grotesk-light text-gray-700 leading-relaxed">
+        We nurture a love for questions, discoveries, and exploration—turning wonder into lifelong learning.
       </p>
     </div>
   </div>
+
 </section>
 
 {% endblock %}
