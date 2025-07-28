@@ -10,116 +10,116 @@
     <div class="relative w-full min-h-[100vh] md:min-h-[90vh] overflow-hidden">
         <img src="{% static 'assets/home_background.png' %}"
             class="absolute top-0 left-0 w-full h-full object-cover z-0" />
-        <section class="relative h-[90vh] z-20 w-full flex-grow mx-auto flex items-center justify-center">
-            <div class="flex items-center justify-center h-[80vh] w-full">
+        <section class="relative h-[100vh] md:h-[90vh] z-20 w-full flex-grow mx-auto flex items-center justify-center">
+            <div class="flex items-start pt-2 md:items-center mb-32 md:mb-0 md:pt-0 justify-center h-[65vh] md:h-[80vh] w-full">
                 <img src="{% static 'assets/main_image_background.png' %}"
                     class="h-full w-auto max-w-full object-cover z-10" style="max-width: none;" />
             </div>
 
-            <div class="absolute left-20 top-1/4 w-[30vw] text-center md:text-left flex-shrink-0 flex flex-col justify-center z-20">
-                <h1 class="text-5xl space-grotesk-regular" style="letter-spacing: 0.08em;">
+            <div class="absolute left-4 sm:left-8 md:left-20 bottom-20 md:top-1/4 w-[90vw] sm:w-[70vw] md:w-[30vw] text-center md:text-left flex-shrink-0 flex flex-col justify-start z-20 px-2 md:mb-0 mb-4 md:px-0">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular" style="letter-spacing: 0.08em;">
                     BRIGHT BEGINNINGS!
                 </h1>
-                <p class="text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-light); max-width: 100%;">
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light mt-2" style="color: var(--school-text-color-light); max-width: 100%;">
                     Every great journey starts with a bright beginning. Join a place where curiosity shines and every child is celebrated.
                 </p>
             </div>
 
-            <div class="absolute right-24 bottom-20 max-w-sm text-center md:text-right flex-shrink-0 flex flex-col justify-end items-end z-20">
-                <h1 class="text-5xl space-grotesk-regular mb-2" style="letter-spacing: 0.07em;">
+            <div class="absolute left-1/2 transform -translate-x-1/2 md:left-auto md:transform-none md:right-24 bottom-8 sm:bottom-12 md:bottom-32 w-full md:max-w-sm text-center md:text-right flex-shrink-0 flex flex-col justify-end items-center md:items-end z-20 px-2 md:px-0">
+                <h1 class="hidden md:block text-5xl space-grotesk-regular mb-2" style="letter-spacing: 0.07em;">
                  JOIN US!
                 </h1>
-                <p class="text-base lg:text-lg space-grotesk-light mb-4" style="color: var(--school-text-color-light); max-width: 100%;">
+                <p class="hidden md:block text-base lg:text-lg space-grotesk-light mb-4" style="color: var(--school-text-color-light); max-width: 100%;">
                     Discover a bilingual world full of play,
                     learning, love, and meaningful.
                 </p>
-                <button class="px-6 py-2 text-white text-xl w-[80%] tracking-widest bg-[#1053f3] border-2 border-[#f5c542] rounded hover:bg-[#0e49d1] transition-colors duration-200">
+                <button class="px-4 sm:px-6 py-2 text-white text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] border-2 border-[#f5c542] rounded hover:bg-[#0e49d1] transition-colors duration-200">
                     LEARN MORE
                 </button>
             </div>
 
             <img src="{% static 'assets/lateral_banner.png' %}" alt="Lateral Banner"
-                class="absolute right-0 top-8 h-[50vh] object-cover z-30" style="max-width: none;" />
+                class="absolute right-0 top-8 h-[30vh] sm:h-[40vh] md:h-[50vh] object-cover z-30 hidden sm:block" style="max-width: none;" />
         </section>
     </div>
 
-    <div class="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:pt-[2rem]">
-        <div class="flex-shrink-0 flex justify-center md:w-1/2 items-end">
+    <div class="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:pt-[2rem] px-4 md:px-0">
+        <div class="flex-shrink-0 flex justify-center md:w-1/2 items-end order-2 md:order-1">
             <img src="{% static 'assets/children.png' %}"
-                class="object-cover object-center select-none"
-                style="height: 600px; width: auto; margin-bottom:-80px;" />
+                class="object-cover object-center select-none h-[400px] sm:h-[500px] md:h-[600px]"
+                style="width: auto; margin-bottom:-80px;" />
         </div>
-        <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4">
-            <h2 class="text-6xl space-grotesk-regular" style="color: var(--school-heading-color-dark); letter-spacing: 0.08em;">
+        <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4 order-1 md:order-2 px-4 md:px-0 mt-12 md:mt-0">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular" style="color: var(--school-heading-color-dark); letter-spacing: 0.08em;">
                 OUR <b>PHILOSOPHY</b>
             </h2>
             <div class="w-full">
-                <p class="text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
                     We value individual development, respecting each child's pace and interests.
                 </p>
-                <p class="text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
                     Our bilingual approach (Portuguese-English) follows Montessori principles, promoting learning through play, cultural awareness, and meaningful interactions.
                 </p>
             </div>
             <a href="#"
-                class="px-6 py-2 text-white flex items-center justify-center text-xl w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
+                class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                 style="max-width: 320px;">
                 LEARN MORE
             </a>
         </div>
     </div>
 
-    <div class="w-full text-white py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-primary-blue);">
-        <div class="max-w-7xl mx-auto flex flex-row items-center justify-center gap-12">
-            <div class="flex-shrink-0 flex justify-center items-center w-full md:w-1/2 rounded-3xl" style="min-height: 400px;">
+    <div class="w-full text-white py-8 sm:py-12 md:py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-primary-blue);">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-8 md:mt-0">
+            <div class="flex-shrink-0 flex justify-center items-center w-full md:w-1/2 rounded-3xl order-2 md:order-1" style="min-height: 300px;">
                 <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor, Diretora"
-                 class="h-[350px] w-full md:h-[450px] object-cover rounded-3xl shadow-lg border-8 border-[var(--school-program-bg-yellow)]">
+                 class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px] w-full object-cover rounded-3xl shadow-lg border-4 sm:border-6 md:border-8 border-[var(--school-program-bg-yellow)]">
             </div>
-            <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4">
-            <h2 class="text-6xl space-grotesk-regular" style="color: #fff; letter-spacing: 0.08em;">
+            <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4 order-1 md:order-2">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular" style="color: #fff; letter-spacing: 0.08em;">
                 OUR <b>TEACHERS</b>
             </h2>
             <div class="w-full">
-                <p class="text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
-                Our team is made up of educators with over 5 years of experience and academic training in Massachusetts.
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
+                    Our team is made up of educators with over 5 years of experience and academic training in Massachusetts.
                 </p>
-                <p class="text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
-                The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools.
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
+                    The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools.
                 </p>
-                <p class="text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
-                Today, she leads her own center and is personally committed to children's education.
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
+                    Today, she leads her own center and is personally committed to children's education.
                 </p>
             </div>
             </div>
         </div>
     </div>
 
-    <section class="w-full text-gray-800 py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-program-bg-yellow);">
-        <div class="max-w-7xl mx-auto text-center mb-12">
-            <h2 class="text-6xl space-grotesk-regular text-[color:var(--school-text-color-dark)]">
+    <section class="w-full text-gray-800 py-8 sm:py-12 md:py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-program-bg-yellow);">
+        <div class="max-w-7xl mx-auto text-center mb-8 md:mb-12 mt-8 md:mt-0">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular text-[color:var(--school-text-color-dark)]">
                 OUR <b>PROGRAMS</b>
             </h2>
-            <p class="text-base space-grotesk-light text-[color:var(--school-text-color-dark)] mx-auto w-full max-w-xs break-words"></p>
-                We cater for babies from 12 months to preschool. We<br>
+            <p class="text-sm sm:text-base space-grotesk-light text-[color:var(--school-text-color-dark)] mx-auto w-full max-w-md break-words mt-4">
+                We cater for babies from 12 months to preschool. We<br class="hidden sm:block">
                 combine quality education and language development.
             </p>
         </div>
 
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[520px] cursor-pointer">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[520px] cursor-pointer">
                 <a href="#" class="block">
-                    <div class="h-72 w-full">
+                    <div class="h-48 sm:h-60 md:h-72 w-full">
                         <img src="{% static 'assets/musica.jpg' %}" alt="Ícone de música" class="w-full h-full object-cover rounded-t-xl">
                     </div>
                 </a>
-                <div class="p-6 flex flex-col text-center flex-grow">
-                    <a href="#" class="block space-y-4">
-                        <h3 class="text-2xl font-normal text-gray-900">Weekly music classes</h3>
-                        <p class="text-gray-600">At our daycare, tiny toes tap and little voices shine in our weekly music lessons!</p>
+                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
+                    <a href="#" class="block space-y-3 sm:space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">Weekly music classes</h3>
+                        <p class="text-sm sm:text-base text-gray-600">At our daycare, tiny toes tap and little voices shine in our weekly music lessons!</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full">
                         <a href="#"
-                            class="px-6 py-2 text-white flex items-center justify-center text-xl w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
+                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                             style="max-width: 320px;">
                             LEARN MORE
                         </a>
@@ -127,20 +127,20 @@
                 </div>
             </div>
 
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[520px] cursor-pointer">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[520px] cursor-pointer">
                 <a href="#" class="block">
-                    <div class="h-72 w-full">
+                    <div class="h-48 sm:h-60 md:h-72 w-full">
                         <img src="{% static 'assets/futebol.jpg' %}" alt="Football icon" class="w-full h-full object-cover rounded-t-xl">
                     </div>
                 </a>
-                <div class="p-6 flex flex-col text-center flex-grow">
-                    <a href="#" class="block space-y-4">
-                        <h3 class="text-2xl font-normal text-gray-900">Seasonal Football</h3>
-                        <p class="text-gray-600">A playful sport that builds teamwork and motor skills with lots of joy, movement, and healthy fun!</p>
+                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
+                    <a href="#" class="block space-y-3 sm:space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">Seasonal Football</h3>
+                        <p class="text-sm sm:text-base text-gray-600">A playful sport that builds teamwork and motor skills with lots of joy, movement, and healthy fun!</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full">
                         <a href="#"
-                            class="px-6 py-2 text-white flex items-center justify-center text-xl w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
+                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                             style="max-width: 320px;">
                             LEARN MORE
                         </a>
@@ -148,20 +148,20 @@
                 </div>
             </div>
 
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[520px] cursor-pointer">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[520px] cursor-pointer">
                 <a href="#" class="block">
-                    <div class="h-72 w-full">
+                    <div class="h-48 sm:h-60 md:h-72 w-full">
                         <img src="{% static 'assets/eventos.jpg' %}" alt="Cultural Celebrations icon" class="w-full h-full object-cover rounded-t-xl">
                     </div>
                 </a>
-                <div class="p-6 flex flex-col text-center flex-grow">
-                    <a href="#" class="block space-y-4">
-                        <h3 class="text-2xl font-normal text-gray-900">Cultural Celebrations</h3>
-                        <p class="text-gray-600">Through cultural celebrations, children explore traditions, build empathy, and embrace diversity in joyful and meaningful ways.</p>
+                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
+                    <a href="#" class="block space-y-3 sm:space-y-4">
+                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">Cultural Celebrations</h3>
+                        <p class="text-sm sm:text-base text-gray-600">Through cultural celebrations, children explore traditions, build empathy, and embrace diversity in joyful and meaningful ways.</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full">
                         <a href="#"
-                            class="px-6 py-2 text-white flex items-center justify-center text-xl w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
+                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                             style="max-width: 320px;">
                             LEARN MORE
                         </a>

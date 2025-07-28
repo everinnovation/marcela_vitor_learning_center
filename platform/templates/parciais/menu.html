@@ -9,6 +9,12 @@
             <img src="{% static 'assets/logo.png' %}" alt="School Logo" class="h-14 md:h-16" />
         </a>
 
+        <a href="https://www.instagram.com/marcela_vitor_learning_center?igsh=c3FqOGNyYnc5Z2Rn" target="_blank" class="md:hidden text-3xl text-white mr-2 flex justify-center">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+
         <nav class="hidden md:flex flex-grow justify-center space-x-12 font-semibold uppercase text-base text-white space-grotesk-light">
             <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">Home</a>
             <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">About Us</a>
@@ -17,10 +23,10 @@
             <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">Contact Us</a>
         </nav>
 
-        <div class="flex-shrink-0 w-10"></div>
+        <div class="hidden md:flex flex-shrink-0 w-10"></div>
     </nav>
 
-    <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-20 py-6 absolute w-full top-20 bg-primary-color hidden z-40 font-semibold uppercase text-base text-white space-grotesk-light">
+    <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-4 py-6 absolute w-full top-20 hidden z-40 font-semibold uppercase text-base space-grotesk-light">
         <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">Home</a></li>
         <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">About Us</a></li>
         <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a></li>
@@ -29,7 +35,64 @@
     </ul>
 </header>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    // Toggle do menu mobile - lógica simplificada
+    $('#menu-toggle').on('click', function() {
+        $('#mobile-menu').toggleClass('hidden');
+        
+        // Quando o menu mobile abre, aplica a cor de scroll
+        if (!$('#mobile-menu').hasClass('hidden')) {
+            $('#navbar').css({
+                'background': navbarScrollColor,
+                'box-shadow': '0 2px 16px rgba(0,0,0,0.08)',
+                'transition': 'background 0.4s, box-shadow 0.4s'
+            });
+            
+            // Aplica a mesma cor de fundo no menu mobile
+            $('#mobile-menu').css({
+                'background': navbarScrollColor,
+                'transition': 'background 0.4s'
+            });
+            
+            // Muda a cor do ícone hambúrguer para escuro
+            $('#menu-toggle span').css({
+                'color': 'var(--school-text-color-dark)',
+                'transition': 'color 0.4s'
+            });
+            
+            // Muda a cor do ícone Instagram no header mobile para escuro
+            $('.md\\:hidden svg').css({
+                'color': 'var(--school-text-color-dark)',
+                'transition': 'color 0.4s'
+            });
+            
+            $('.md\\:flex a').css({
+                'color': menuItemScrollColor,
+                'transition': 'color 0.4s',
+                'font-weight': 'normal'
+            });
+            
+            $('.md\\:flex a.border-b-2').css({
+                'border-bottom-color': menuItemScrollColor,
+                'font-weight': 'bold'
+            });
+        } else {
+            // Quando fecha, volta à cor normal baseada no scroll
+            updateNavbarColor();
+        }
+    });
+
+    // Fechar menu quando clicar fora dele
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('#mobile-menu').length && !$(event.target).closest('#menu-toggle').length) {
+            $('#mobile-menu').addClass('hidden');
+            // Volta à cor normal baseada no scroll quando fecha
+            updateNavbarColor();
+        }
+    });
+
+    // Efeito de scroll do navbar - mantido do design original
     const navbarStartColor = 'transparent';
     const navbarScrollColor = 'var(--school-program-bg-yellow)';
     const menuItemStartColor = 'white';
@@ -37,38 +100,65 @@
 
     function updateNavbarColor() {
         const scrolled = $(window).scrollTop() > 50;
+        const mobileMenuOpen = !$('#mobile-menu').hasClass('hidden');
+        
+        // Se o menu mobile está aberto ou se scrollou, usa a cor de scroll
+        const shouldUseScrollColor = scrolled || mobileMenuOpen;
+        
         $('#navbar').css({
-            'background': scrolled ? navbarScrollColor : navbarStartColor,
-            'box-shadow': scrolled ? '0 2px 16px rgba(0,0,0,0.08)' : 'none',
+            'background': shouldUseScrollColor ? navbarScrollColor : navbarStartColor,
+            'box-shadow': shouldUseScrollColor ? '0 2px 16px rgba(0,0,0,0.08)' : 'none',
             'transition': 'background 0.4s, box-shadow 0.4s'
         });
 
+        // Aplica a cor de fundo no menu mobile quando necessário
+        if (mobileMenuOpen) {
+            $('#mobile-menu').css({
+                'background': navbarScrollColor,
+                'transition': 'background 0.4s'
+            });
+        }
+
+        // Controla a cor do ícone hambúrguer e Instagram no header mobile
+        $('#menu-toggle span').css({
+            'color': shouldUseScrollColor ? 'var(--school-text-color-dark)' : 'white',
+            'transition': 'color 0.4s'
+        });
+        
+        $('.md\\:hidden svg').css({
+            'color': shouldUseScrollColor ? 'var(--school-text-color-dark)' : 'white',
+            'transition': 'color 0.4s'
+        });
+
         $('.md\\:flex a').css({
-            'color': scrolled ? menuItemScrollColor : menuItemStartColor,
+            'color': shouldUseScrollColor ? menuItemScrollColor : menuItemStartColor,
             'transition': 'color 0.4s',
             'font-weight': 'normal'
         });
 
         $('.md\\:flex a.border-b-2').css({
-            'border-bottom-color': scrolled ? menuItemScrollColor : menuItemStartColor,
+            'border-bottom-color': shouldUseScrollColor ? menuItemScrollColor : menuItemStartColor,
             'font-weight': 'bold'
         });
 
         $('.md\\:flex a').hover(
             function() {
-                $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
+                $(this).css('border-bottom-color', shouldUseScrollColor ? menuItemScrollColor : menuItemStartColor);
             },
             function() {
-                $(this).css('border-bottom-color', scrolled ? menuItemScrollColor : menuItemStartColor);
+                $(this).css('border-bottom-color', shouldUseScrollColor ? menuItemScrollColor : menuItemStartColor);
             }
         );
 
         $('#mobile-menu a').css({
-            'color': menuItemStartColor,
+            'color': 'var(--school-text-color-dark)',
             'transition': 'color 0.4s',
             'font-weight': 'normal'
         });
-        $('#mobile-menu a.border-b-2').css('font-weight', 'bold');
+        $('#mobile-menu a.border-b-2').css({
+            'font-weight': 'bold',
+            'border-bottom-color': 'var(--school-text-color-dark)'
+        });
     }
 
     $(window).on('scroll', updateNavbarColor);

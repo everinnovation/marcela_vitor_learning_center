@@ -22,28 +22,31 @@ class ContactView(TemplateView):
         if form.is_valid():
             contact_message = form.save()
 
-            subject = f"Nova mensagem de {contact_message.name} - {contact_message.subject}"
-            context = {
-                'name': contact_message.name,
-                'email': contact_message.email,
-                'number': contact_message.phone,
-                'subject': contact_message.subject,
-                'message': contact_message.message
-            }
+            # subject = f"Nova mensagem de {contact_message.name} - {contact_message.subject}"
+            # context = {
+            #     'name': contact_message.name,
+            #     'email': contact_message.email,
+            #     'number': contact_message.phone,
+            #     'subject': contact_message.subject,
+            #     'message': contact_message.message
+            # }
 
-            template_name = 'email/contact_email.html'
-            to_emails = ['contatoondecomeremmarica@gmail.com', 'ondecomeremmarica@gmail.com']
-            email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
+            # template_name = 'email/contact_email.html'
+            # to_emails = ['contatoondecomeremmarica@gmail.com', 'ondecomeremmarica@gmail.com']
+            # email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
 
-            if email_sent:
-                messages.success(request, 'Mensagem enviada com sucesso!')
-                return redirect('contact')
+            # if email_sent:
+            messages.success(request, 'Thank you for your message! We will get back to you soon.')
+            return redirect('contact')
 
-            else:
-                messages.error(request, 'Falha ao enviar o e-mail.')
-                return redirect('contact')
-
-        return JsonResponse({'status': 'error', 'message': 'Dados inválidos.'}, status=400)
+            # else:
+            #     messages.error(request, 'Failed to send email. Please try again.')
+            #     return redirect('contact')
+        else:
+            messages.error(request, 'Please correct the errors below and try again.')
+            context = self.get_context_data(**kwargs)
+            context['form'] = form
+            return self.render_to_response(context)
     
 
 class AdminContactMessageListView(ListView):
