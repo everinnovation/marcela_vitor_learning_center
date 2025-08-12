@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  learning_center-database : 
+  learning-center-database: 
     image: postgres:latest 
-    container_name: learning_center-database  
+    container_name: learning-center-database 
     ports:
       - "5432:${DB_PORT}"
     environment:
@@ -12,7 +12,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     restart: always
     networks:
-      - learning_center-network
+      - learning-center-network
 
   web-project:
     hostname: "${HOSTNAME}"
@@ -20,13 +20,10 @@ services:
       context: .
       dockerfile: Dockerfile
     working_dir: /usr/src/platform
-    command: [
-        "sh",
-        "-c", 
-        "pip install debugpy -t /tmp && 
-        python /tmp/debugpy --wait-for-client --listen 0.0.0.0:3000
-        ./manage.py runserver ${HOSTNAME}:${PORT}"
-    ]
+    command: >
+      sh -c "pip install debugpy -t /tmp &&
+      python /tmp/debugpy --wait-for-client --listen 0.0.0.0:3000
+      manage.py runserver ${HOSTNAME}:${PORT}"
     volumes:
       - ./platform/:/usr/src/platform
     ports:
@@ -38,10 +35,10 @@ services:
     env_file:
       .env
     depends_on:
-      - learning_center-database 
+      - learning-center-database
     networks:
-      - learning_center-network
+      - learning-center-network
 
 networks:
-    learning_center-network:
-        external: true
+  learning-center-network:
+    external: true

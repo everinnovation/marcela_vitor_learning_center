@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models.contact import ContactMessage
+from .models.resume import Resume
 
-# Register your models here.
+admin.site.register(ContactMessage)
+admin.site.register(Resume)

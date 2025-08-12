@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}
-    About Us
+    {% trans "About Us" %}
 {% endblock %}
 
 {% block content %}
@@ -12,10 +13,10 @@
 
     <div class="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center">
         <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl space-grotesk-bold mb-4 sm:mb-6" style="letter-spacing: 0.08em;">
-            ABOUT US
+            {% trans "ABOUT US" %}
         </h1>
         <p class="text-sm sm:text-base lg:text-lg space-grotesk-light px-4 sm:px-6 md:px-0" style="color: var(--school-text-color-light); max-width: 100%;">
-            We are a bilingual learning center dedicated to valuing every child. Here, we believe curiosity is the starting point for great achievements. Our team welcomes, encourages, and celebrates diversity, fostering a safe, inclusive, and joyful environment. Join us as we build a bright future together!
+            {% trans "We are a bilingual learning center dedicated to valuing every child. Here, we believe curiosity is the starting point for great achievements. Our team welcomes, encourages, and celebrates diversity, fostering a safe, inclusive, and joyful environment. Join us as we build a bright future together!" %}
         </p>
     </div>
 </section>
@@ -25,18 +26,18 @@
         <div class="space-y-6 sm:space-y-8 md:space-y-10 order-2 md:order-1">
             <div>
                 <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-2 sm:mb-3 flex flex-row items-center md:items-start justify-center md:justify-start gap-1 sm:gap-3">
-                    Our <b>Mission</b>
+                    {% blocktrans %}Our <b>Mission</b>{% endblocktrans %}
                 </h2>
                 <p class="text-base sm:text-lg space-grotesk-light text-gray-700 px-2 md:px-0 leading-relaxed">
-                    To nurture the potential of each child through exploration, play, and loving guidance. Our bilingual (Portuguese-English) environment fosters independence, empathy, and joy in learning.
+                    {% trans "To nurture the potential of each child through exploration, play, and loving guidance. Our bilingual (Portuguese-English) environment fosters independence, empathy, and joy in learning." %}
                 </p>
             </div>
             <div>
                 <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-2 sm:mb-3 flex flex-row items-center md:items-start justify-center md:justify-start gap-1 sm:gap-3">
-                    Our <b>Vision</b>
+                    {% blocktrans %}Our <b>Vision</b>{% endblocktrans %}
                 </h2>
                 <p class="text-base sm:text-lg space-grotesk-light text-gray-700 px-2 md:px-0 leading-relaxed">
-                    We envision a community of confident, creative learners who honor diversity and lead with kindness and curiosity.
+                    {% trans "We envision a community of confident, creative learners who honor diversity and lead with kindness and curiosity." %}
                 </p>
             </div>
         </div>
@@ -55,13 +56,13 @@
         </div>
         <div class="w-full md:w-1/2 text-center md:text-left space-y-3 sm:space-y-4 order-1 md:order-2">
             <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl space-grotesk-regular text-[var(--school-text-color-dark)] flex flex-col sm:flex-row items-center justify-center md:justify-start gap-1 sm:gap-3">
-                Meet <b>Marcela Vitor</b>
+                {% blocktrans %}Meet <b>Marcela Vitor</b>{% endblocktrans %}
             </h2>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-800 px-2 md:px-0 leading-relaxed">
-                Marcela is a bilingual speech-language pathologist with nearly a decade of experience in Massachusetts public schools. Her mission? To create a safe, inclusive environment where children grow with love and confidence.
+                {% trans "Marcela is a bilingual speech-language pathologist with nearly a decade of experience in Massachusetts public schools. Her mission? To create a safe, inclusive environment where children grow with love and confidence." %}
             </p>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-800 px-2 md:px-0 leading-relaxed">
-                Her team shares this passion—each educator brings expertise and warmth, creating meaningful learning every day.
+                {% trans "Her team shares this passion—each educator brings expertise and warmth, creating meaningful learning every day." %}
             </p>
         </div>
     </div>
@@ -70,10 +71,10 @@
 <section class="w-full py-8 sm:py-10 md:py-12 px-4 md:px-10 bg-[#f7f7f7]">
   <div class="max-w-7xl mx-auto text-center mb-6 sm:mb-8 md:mb-4 mt-2 sm:mt-3 md:mt-4">
       <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-3 sm:mb-4 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3">
-          Our <b>Core Values</b>
+          {% blocktrans %}Our <b>Core Values</b>{% endblocktrans %}
       </h2>
       <p class="text-base sm:text-lg space-grotesk-light text-gray-700 max-w-xl sm:max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">
-          Every day, we live our values: kindness, creativity, inclusion, and discovery. They guide our teaching—and shape our community.
+          {% trans "Every day, we live our values: kindness, creativity, inclusion, and discovery. They guide our teaching—and shape our community." %}
       </p>
   </div>
 
@@ -84,9 +85,9 @@
               <path d="M15.232 5.232a3 3 0 114.243 4.243l-10 10a3 3 0 01-1.414.793l-4 1a1 1 0 01-1.213-1.213l1-4a3 3 0 01.793-1.414l10-10z"/>
             </svg>
         </div>
-        <h3 class="text-xl sm:text-2xl space-grotesk-bold text-blue-700 mb-2 sm:mb-3">Creativity</h3>
+        <h3 class="text-xl sm:text-2xl space-grotesk-bold text-blue-700 mb-2 sm:mb-3">{% trans "Creativity" %}</h3>
         <p class="text-base sm:text-lg space-grotesk-light text-gray-700 leading-relaxed">
-            We spark imagination through play, storytelling, and hands-on projects that let children create without limits.
+            {% trans "We spark imagination through play, storytelling, and hands-on projects that let children create without limits." %}
         </p>
     </div>
 
@@ -96,9 +97,9 @@
               <path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20h6M3 20h5v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 010 7.75"/>
             </svg>
         </div>
-        <h3 class="text-xl sm:text-2xl space-grotesk-bold text-yellow-700 mb-2 sm:mb-3">Teamwork</h3>
+        <h3 class="text-xl sm:text-2xl space-grotesk-bold text-yellow-700 mb-2 sm:mb-3">{% trans "Teamwork" %}</h3>
         <p class="text-base sm:text-lg space-grotesk-light text-gray-700 leading-relaxed">
-            We encourage collaboration, empathy, and shared success—learning how to support and grow with others.
+            {% trans "We encourage collaboration, empathy, and shared success—learning how to support and grow with others." %}
         </p>
     </div>
 
@@ -108,9 +109,9 @@
               <path d="M12 8c-2.21 0-4 1.79-4 4h1.5a2.5 2.5 0 115 0c0 1.5-1.5 2.25-2.25 3M12 17h.01"/>
             </svg>
         </div>
-        <h3 class="text-xl sm:text-2xl space-grotesk-bold text-green-700 mb-2 sm:mb-3">Curiosity</h3>
+        <h3 class="text-xl sm:text-2xl space-grotesk-bold text-green-700 mb-2 sm:mb-3">{% trans "Curiosity" %}</h3>
         <p class="text-base sm:text-lg space-grotesk-light text-gray-700 leading-relaxed">
-            We nurture a love for questions, discoveries, and exploration—turning wonder into lifelong learning.
+            {% trans "We nurture a love for questions, discoveries, and exploration—turning wonder into lifelong learning." %}
         </p>
     </div>
   </div>

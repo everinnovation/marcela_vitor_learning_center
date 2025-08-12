@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 742">
+  <rect width="1060" height="742" fill="#009b3a"/>
+  <path d="M530,50 l450,321 -450,321 -450,-321z" fill="#fedf00"/>
+  <circle cx="530" cy="371" r="170" fill="#002776"/>
+  <clipPath id="band">
+    <circle cx="530" cy="371" r="170"/>
+  </clipPath>
+  <path clip-path="url(#band)" d="M200,371 h660" stroke="white" stroke-width="40"/>
+  <text x="530" y="398" text-anchor="middle" font-family="Arial" font-size="60" fill="white">ORDEM E PROGRESSO</text>
+  <circle cx="735" cy="227" r="13" fill="white"/>
+  <circle cx="692" cy="233" r="13" fill="white"/>
+  <circle cx="673" cy="261" r="13" fill="white"/>
+  <circle cx="666" cy="292" r="13" fill="white"/>
+  <circle cx="678" cy="330" r="13" fill="white"/>
+  <circle cx="692" cy="368" r="13" fill="white"/>
+  <circle cx="706" cy="405" r="13" fill="white"/>
+  <circle cx="723" cy="437" r="13" fill="white"/>
+  <circle cx="750" cy="464" r="13" fill="white"/>
+  <circle cx="782" cy="480" r="13" fill="white"/>
+  <circle cx="816" cy="483" r="13" fill="white"/>
+  <circle cx="850" cy="475" r="13" fill="white"/>
+  <circle cx="882" cy="456" r="13" fill="white"/>
+  <circle cx="908" cy="428" r="13" fill="white"/>
+  <circle cx="928" cy="396" r="13" fill="white"/>
+  <circle cx="940" cy="360" r="13" fill="white"/>
+  <circle cx="945" cy="322" r="13" fill="white"/>
+  <circle cx="935" cy="285" r="13" fill="white"/>
+  <circle cx="915" cy="253" r="13" fill="white"/>
+  <circle cx="887" cy="230" r="13" fill="white"/>
+  <circle cx="854" cy="215" r="13" fill="white"/>
+  <circle cx="820" cy="215" r="13" fill="white"/>
+  <circle cx="786" cy="225" r="13" fill="white"/>
+  <circle cx="330" cy="260" r="13" fill="white"/>
+  <circle cx="292" cy="273" r="13" fill="white"/>
+  <circle cx="260" cy="295" r="13" fill="white"/>
+  <circle cx="235" cy="325" r="13" fill="white"/>
+  <circle cx="228" cy="361" r="13" fill="white"/>
+  <circle cx="233" cy="398" r="13" fill="white"/>
+  <circle cx="252" cy="433" r="13" fill="white"/>
+  <circle cx="285" cy="458" r="13" fill="white"/>
+  <circle cx="325" cy="472" r="13" fill="white"/>
+  <circle cx="368" cy="470" r="13" fill="white"/>
+  <circle cx="407" cy="450" r="13" fill="white"/>
+  <circle cx="436" cy="420" r="13" fill="white"/>
+  <circle cx="450" cy="381" r="13" fill="white"/>
+  <circle cx="452" cy="341" r="13" fill="white"/>
+  <circle cx="440" cy="302" r="13" fill="white"/>
+  <circle cx="415" cy="270" r="13" fill="white"/>
+  <circle cx="377" cy="251" r="13" fill="white"/>
+</svg>

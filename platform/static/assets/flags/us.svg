@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650">
+<rect width="1235" height="650" fill="#bf0a30"/>
+<rect y="50" width="1235" height="550" fill="white"/>
+<rect y="100" width="1235" height="450" fill="#bf0a30"/>
+<rect y="150" width="1235" height="350" fill="white"/>
+<rect y="200" width="1235" height="250" fill="#bf0a30"/>
+<rect y="250" width="1235" height="150" fill="white"/>
+<rect y="300" width="1235" height="50" fill="#bf0a30"/>
+<rect width="494" height="350" fill="#002868"/>
+<g fill="white">
+<g id="s">
+<g id="h">
+<path id="f" d="M47,329l12,36 39-26-15,45 39-27-5,17"/>
+<use xlink:href="#f" transform="scale(-1,1) translate(-494,0)"/>
+</g>
+<use xlink:href="#h" transform="rotate(72,247,175)"/>
+<use xlink:href="#h" transform="rotate(144,247,175)"/>
+<use xlink:href="#h" transform="rotate(216,247,175)"/>
+<use xlink:href="#h" transform="rotate(288,247,175)"/>
+</g>
+<g id="s6">
+<use xlink:href="#s" x="41"/>
+<use xlink:href="#s" x="82"/>
+<use xlink:href="#s" x="123"/>
+<use xlink:href="#s" x="164"/>
+<use xlink:href="#s" x="205"/>
+<use xlink:href="#s" x="246"/>
+</g>
+<g>
+<use xlink:href="#s" y="44"/>
+<use xlink:href="#s6" y="88"/>
+<use xlink:href="#s" y="132"/>
+<use xlink:href="#s6" y="176"/>
+<use xlink:href="#s" y="220"/>
+<use xlink:href="#s6" y="264"/>
+<use xlink:href="#s" y="308"/>
+</g>
+</g>
+</svg>

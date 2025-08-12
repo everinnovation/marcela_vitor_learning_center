@@ -1,0 +1,21 @@
+# Footer
+msgid "Every child shines here. Bilingual learning, play, and care in a loving community."
+msgstr "Cada criança brilha aqui. Aprendizado bilíngue, brincadeira e cuidado em uma comunidade amorosa."
+
+msgid "Quick Links"
+msgstr "Links Rápidos"
+
+msgid "Philosophy"
+msgstr "Filosofia"
+
+msgid "Teachers"
+msgstr "Professores"
+
+msgid "Contact"
+msgstr "Contato"
+
+msgid "Boston, MA"
+msgstr "Boston, MA"
+
+msgid "Schedule a Visit"
+msgstr "Agende uma Visita"

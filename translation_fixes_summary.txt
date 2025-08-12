@@ -1,0 +1,10 @@
+Summary of changes to fix HTML translation issues:
+1. Home.html: Fixed headings with <b> tags using {% blocktrans %}
+2. Home.html: Fixed paragraph with <br> tags using {% blocktrans %}
+3. About.html: Added {% load i18n %} at the top
+4. About.html: Fixed headings with <b> tags using {% blocktrans %}
+5. Resume.html: Added {% load i18n %} at the top
+6. Resume.html: Fixed headings with <b> tags using {% blocktrans %}
+7. Resume.html: Added translation tags for form fields
+8. django.po: Added new translation entries for strings with HTML tags
+9. additional_translations.txt: Added additional translations for the About and Resume pages

@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <header class="bg-transparent w-full fixed top-0 left-0 z-50 transition duration-800 ease-in-out h-[7rem] space-grotesk" id="navbar" style="top: -2px;">
     <nav class="container mx-auto flex justify-between items-center px-6 md:px-4 py-5 h-full max-w-7xl">
         <button id="menu-toggle" class="flex items-center md:hidden focus:outline-none">
@@ -16,22 +17,39 @@
         </a>
 
         <nav class="hidden md:flex flex-grow justify-center space-x-12 font-semibold uppercase text-base text-white space-grotesk-light">
-            <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">Home</a>
-            <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">About Us</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Programs</a>
-            <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">Contact Us</a>
+            <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">{% trans "Home" %}</a>
+            <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "About Us" %}</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "The School" %}</a>
+            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a>
+            <a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Contact Us" %}</a>
         </nav>
 
-        <div class="hidden md:flex flex-shrink-0 w-10"></div>
+        <div class="hidden md:flex items-center flex-shrink-0">
+            <div class="language-selector flex space-x-2 ml-4">
+                <button id="en-flag" class="flag-btn w-8 h-6 rounded-sm overflow-hidden border-2 border-white/30 hover:border-white transition-all duration-200 {% if LANGUAGE_CODE == 'en' %}ring-2 ring-white{% endif %}">
+                    <img src="{% static 'assets/flags/usa.png' %}" alt="English" class="w-full h-full object-cover">
+                </button>
+                <button id="pt-flag" class="flag-btn w-8 h-6 rounded-sm overflow-hidden border-2 border-white/30 hover:border-white transition-all duration-200 {% if LANGUAGE_CODE == 'pt-br' %}ring-2 ring-white{% endif %}">
+                    <img src="{% static 'assets/flags/brasil.jpg' %}" alt="Português" class="w-full h-full object-cover">
+                </button>
+            </div>
+        </div>
     </nav>
 
     <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-4 py-6 absolute w-full top-20 hidden z-40 font-semibold uppercase text-base space-grotesk-light">
-        <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">Home</a></li>
-        <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">About Us</a></li>
-        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">The School</a></li>
-        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">Programs</a></li>
-        <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">Contact Us</a></li>
+        <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">{% trans "Home" %}</a></li>
+        <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "About Us" %}</a></li>
+        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "The School" %}</a></li>
+        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a></li>
+        <li><a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Contact Us" %}</a></li>
+        <li class="flex space-x-4 mt-4">
+            <button id="en-flag-mobile" class="flag-btn w-10 h-7 rounded-sm overflow-hidden border-2 border-white/30 hover:border-white transition-all duration-200 {% if LANGUAGE_CODE == 'en' %}ring-2 ring-white{% endif %}">
+                <img src="{% static 'assets/flags/usa.png' %}" alt="English" class="w-full h-full object-cover">
+            </button>
+            <button id="pt-flag-mobile" class="flag-btn w-10 h-7 rounded-sm overflow-hidden border-2 border-white/30 hover:border-white transition-all duration-200 {% if LANGUAGE_CODE == 'pt-br' %}ring-2 ring-white{% endif %}">
+                <img src="{% static 'assets/flags/brasil.jpg' %}" alt="Português" class="w-full h-full object-cover">
+            </button>
+        </li>
     </ul>
 </header>
 
@@ -163,4 +181,86 @@
 
     $(window).on('scroll', updateNavbarColor);
     $(document).ready(updateNavbarColor);
+    
+    // Language selector functionality
+    function changeLanguage(lang) {
+        console.log("Changing language to:", lang);
+        
+        // Create form for POST submission
+        const form = document.createElement('form');
+        form.method = 'post';
+        form.action = '/i18n/setlang/';
+        form.style.display = 'none';
+        
+        // Add CSRF token
+        const csrfInput = document.createElement('input');
+        csrfInput.type = 'hidden';
+        csrfInput.name = 'csrfmiddlewaretoken';
+        csrfInput.value = '{{ csrf_token }}';
+        
+        // Add language selection
+        const langInput = document.createElement('input');
+        langInput.type = 'hidden';
+        langInput.name = 'language';
+        langInput.value = lang;
+        
+        // Add next parameter to return to the same page
+        // For English, remove the pt-br prefix if it exists
+        let nextPath = window.location.pathname;
+        if (lang === 'en' && nextPath.startsWith('/pt-br/')) {
+            nextPath = nextPath.replace('/pt-br/', '/');
+        }
+        
+        const nextInput = document.createElement('input');
+        nextInput.type = 'hidden';
+        nextInput.name = 'next';
+        nextInput.value = nextPath;
+        
+        console.log("Form action:", form.action);
+        console.log("Language value:", lang);
+        console.log("Next URL:", nextPath);
+        
+        // Append all inputs to form
+        form.appendChild(csrfInput);
+        form.appendChild(langInput);
+        form.appendChild(nextInput);
+        
+        // Append to body and submit
+        document.body.appendChild(form);
+        form.submit();
+    }
+    
+    // Event listeners for desktop flags
+    $('#en-flag').on('click', function() {
+        changeLanguage('en');
+    });
+    
+    $('#pt-flag').on('click', function() {
+        changeLanguage('pt-br');
+    });
+    
+    // Event listeners for mobile flags
+    $('#en-flag-mobile').on('click', function() {
+        changeLanguage('en');
+    });
+    
+    $('#pt-flag-mobile').on('click', function() {
+        changeLanguage('pt-br');
+    });
+    
+    // Update flag styles based on scroll
+    function updateFlagStyles() {
+        const scrolled = $(window).scrollTop() > 50;
+        
+        if (scrolled) {
+            $('.flag-btn').addClass('border-gray-800/30').removeClass('border-white/30');
+            $('.flag-btn.ring-2').addClass('ring-gray-800').removeClass('ring-white');
+        } else {
+            $('.flag-btn').addClass('border-white/30').removeClass('border-gray-800/30');
+            $('.flag-btn.ring-2').addClass('ring-white').removeClass('ring-gray-800');
+        }
+    }
+    
+    $(window).on('scroll', updateFlagStyles);
+    $(document).ready(updateFlagStyles);
 </script>
