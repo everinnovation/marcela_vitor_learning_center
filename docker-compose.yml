@@ -26,6 +26,7 @@ services:
       "
     volumes:
       - ./platform/:/usr/src/platform
+      - ./platform/media/:/usr/src/platform/media
     ports:
       - "${PORT}:${PORT}"
     environment:

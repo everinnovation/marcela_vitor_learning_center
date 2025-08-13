@@ -2,6 +2,7 @@ from django.views.generic import TemplateView, ListView
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.contrib import messages
+from django.utils.translation import gettext as _
 from ..forms.resume import ResumeForm
 from ..models.contact import ContactMessage
 from ..views.email_management import EmailManagementView
@@ -17,33 +18,73 @@ class ResumeView(TemplateView):
         return context
     
     def post(self, request, *args, **kwargs):
+        print("Resume form submitted")
+        print(f"POST data: {request.POST}")
+        print(f"FILES data: {request.FILES}")
+        
         form = ResumeForm(request.POST, request.FILES)
 
         if form.is_valid():
-            resume = form.save()
+            print("Form is valid")
+            try:
+                resume = form.save()
+                print(f"Resume saved successfully with ID: {resume.id}")
+            except Exception as e:
+                print(f"Error saving resume: {e}")
+                messages.error(request, _('There was an error saving your resume. Please try again.'))
+                context = self.get_context_data(**kwargs)
+                context['form'] = form
+                return self.render_to_response(context)
 
-            # subject = f"Nova mensagem de {contact_message.name} - {contact_message.subject}"
-            # context = {
-            #     'name': contact_message.name,
-            #     'email': contact_message.email,
-            #     'number': contact_message.phone,
-            #     'subject': contact_message.subject,
-            #     'message': contact_message.message
-            # }
+            subject = _('New resume submitted by {}').format(resume.full_name)
+            context = {
+                'name': resume.full_name,
+                'email': resume.email,
+                'phone': resume.phone,
+                'city': resume.city,
+                'state': resume.state,
+                'zip_code': resume.zip_code,
+                'native_language': resume.get_native_language_display(),
+                'portuguese_level': resume.get_portuguese_level_display(),
+                'english_level': resume.get_english_level_display(),
+                'field_of_expertise': resume.field_of_expertise,
+                'years_of_experience': resume.years_of_experience,
+                'additional_info': resume.additional_info,
+                'resume_file_url': request.build_absolute_uri(resume.resume_file.url) if resume.resume_file else 'No file submitted'
+            }
 
-            # template_name = 'email/contact_email.html'
-            # to_emails = ['contatoondecomeremmarica@gmail.com', 'ondecomeremmarica@gmail.com']
-            # email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
+            template_name = 'email/resume_email.html'
+            to_emails = ['rafaelpinheirodesigner@gmail.com']  # Substitua pelo email correto
+            
+            # Tenta enviar o email com o arquivo anexado se disponível
+            try:
+                if resume.resume_file:
+                    try:
+                        file_path = resume.resume_file.path
+                        # Limpa o nome para evitar caracteres especiais que podem causar problemas
+                        safe_name = ''.join(c for c in resume.full_name if c.isalnum() or c.isspace()).strip().replace(' ', '_')
+                        file_name = f"Resume_{safe_name}"
+                        email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails, file_path, file_name)
+                    except Exception as e:
+                        print(f"Error accessing resume file: {e}")
+                        # Se ocorrer um erro ao acessar o arquivo, ainda tenta enviar o email sem o anexo
+                        email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
+                else:
+                    email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
+            except Exception as e:
+                print(f"Error sending email: {e}")
+                email_sent = False
 
-            # if email_sent:
-            messages.success(request, 'Thank you for submitting your resume! We will review it and get in touch if there is a match.')
-            return redirect('resume')
-
-            # else:
-            #     messages.error(request, 'Failed to send email. Please try again.')
-            #     return redirect('resume')
+            if email_sent:
+                messages.success(request, _('Thank you for submitting your resume! We will review it and get in touch if there is a match.'))
+                return redirect('resume')
+            else:
+                messages.error(request, _('Your resume was saved, but we couldn\'t send the notification email. We\'ll still review your application.'))
+                return redirect('resume')
         else:
-            messages.error(request, 'Please correct the errors below and try again.')
+            print("Form is not valid")
+            print(f"Form errors: {form.errors}")
+            messages.error(request, _('Please correct the errors below and try again.'))
             context = self.get_context_data(**kwargs)
             context['form'] = form
             return self.render_to_response(context)

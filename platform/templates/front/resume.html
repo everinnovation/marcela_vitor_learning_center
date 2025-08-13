@@ -8,6 +8,14 @@
 
 {% block content %}
 <div class="relative min-h-screen bg-white text-gray-800">
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-70 z-50 flex justify-center items-center hidden">
+        <div class="bg-white p-5 rounded-xl flex flex-col items-center">
+            <div class="w-16 h-16 border-4 border-t-[var(--school-primary-blue)] border-b-[var(--school-primary-blue)] border-l-transparent border-r-transparent rounded-full animate-spin mb-4"></div>
+            <p class="text-[var(--school-heading-color-dark)] font-medium text-lg">{% trans "Submitting your resume..." %}</p>
+        </div>
+    </div>
+    
     <div class="flex items-end md:items-center justify-center w-full py-16 sm:py-20 md:py-24 px-4 min-h-[30vh] md:h-[45vh] md:px-10 text-center bg-[var(--school-primary-blue)] text-white">
         <div>
             <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl space-grotesk-regular mb-2 sm:mb-3 md:mb-4">{% blocktrans %}SUBMIT YOUR <b>RESUME</b>{% endblocktrans %}</h1>
@@ -109,9 +117,36 @@
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.getElementById('resume-form');
         const button = document.getElementById('submit-button');
+        const loadingOverlay = document.getElementById('loading-overlay');
         
         if (form && button) {
-            form.addEventListener('submit', function () {
+            form.addEventListener('submit', function (e) {
+                // Validação básica para campos obrigatórios
+                const fullName = form.querySelector('[name="full_name"]').value.trim();
+                const email = form.querySelector('[name="email"]').value.trim();
+                const phone = form.querySelector('[name="phone"]').value.trim();
+                
+                if (!fullName || !email || !phone) {
+                    e.preventDefault();
+                    alert('{% trans "Please fill in all required fields (Name, Email, Phone)" %}');
+                    return false;
+                }
+                
+                // Validação de email
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    e.preventDefault();
+                    alert('{% trans "Please enter a valid email address" %}');
+                    return false;
+                }
+                
+                console.log('Form validated and submitted');
+                console.log('Files:', document.querySelector('input[type="file"]').files);
+                
+                // Show loading overlay
+                loadingOverlay.classList.remove('hidden');
+                
+                // Disable button
                 button.disabled = true;
                 button.innerHTML = '{% trans "SUBMITTING..." %}';
                 button.classList.add('opacity-75');
@@ -130,4 +165,38 @@
         });
     });
 </script>
+
+<style>
+    /* Custom styling for file input */
+    input[type="file"] {
+        color: var(--school-text-color-dark);
+    }
+    
+    input[type="file"]::file-selector-button {
+        background-color: var(--school-primary-blue);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-right: 16px;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+    }
+    
+    input[type="file"]::file-selector-button:hover {
+        background-color: #0e49d1;
+    }
+    
+    /* Loading overlay animation */
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    #loading-overlay {
+        backdrop-filter: blur(3px);
+    }
+</style>
 {% endblock %}
