@@ -1,0 +1,305 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Schedule a Visit" %} – Marcela Vitor Learning Center
+{% endblock %}
+
+{% block content %}
+<div class="relative min-h-screen bg-white text-gray-800">
+    <!-- Loading overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-70 z-50 flex justify-center items-center hidden backdrop-blur-[3px]">
+        <div class="bg-white p-5 rounded-xl flex flex-col items-center">
+            <div class="w-16 h-16 border-4 border-t-[var(--school-primary-blue)] border-b-[var(--school-primary-blue)] border-l-transparent border-r-transparent rounded-full animate-spin mb-4"></div>
+            <p class="text-[var(--school-heading-color-dark)] font-medium text-lg">{% trans "Scheduling your visit..." %}</p>
+        </div>
+    </div>
+    
+    <div class="flex items-end md:items-center justify-center w-full py-16 sm:py-20 md:py-24 px-4 min-h-[30vh] md:h-[45vh] md:px-10 text-center bg-[var(--school-primary-blue)] text-white">
+        <div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl space-grotesk-regular mb-2 sm:mb-3 md:mb-4">
+                {% blocktrans %}SCHEDULE A <b>VISIT</b>{% endblocktrans %}
+            </h1>
+            <p class="text-sm sm:text-base md:text-lg space-grotesk-light max-w-xs sm:max-w-md md:max-w-2xl mx-auto px-2 sm:px-4 md:px-0">
+                {% trans "Plan your visit to our daycare and see what makes us special!" %}
+            </p>
+        </div>
+    </div>
+
+    {% if messages %}
+    <div class="w-full mt-4 sm:mt-6 px-4 sm:px-6 max-w-4xl mx-auto">
+        <ul class="space-y-2">
+            {% for message in messages %}
+                <li class="p-3 sm:p-4 rounded-lg text-center text-sm sm:text-base font-medium
+                    {% if message.tags == 'success' %} bg-green-100 text-green-700 border border-green-200 {% endif %} 
+                    {% if message.tags == 'error' %} bg-red-100 text-red-700 border border-red-200 {% endif %}
+                    {% if message.tags == 'warning' %} bg-yellow-100 text-yellow-700 border border-yellow-200 {% endif %}">
+                    {{ message }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>    
+    {% endif %}
+
+    <section class="py-6 sm:py-8 md:py-12 px-4 md:px-10 flex flex-col items-center">
+        <div class="max-w-4xl w-full bg-white shadow-lg sm:shadow-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 space-y-4 sm:space-y-5 md:space-y-6 border border-gray-200">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl text-center space-grotesk-regular text-[var(--school-heading-color-dark)]">
+                {% blocktrans %}Plan Your <b>Visit</b>{% endblocktrans %}
+            </h2>
+            
+            <p class="text-center text-gray-600 max-w-3xl mx-auto">
+                {% trans "We'd love to show you our facilities and answer all your questions. Select your preferred date and time for a visit." %}
+            </p>
+
+            <form action="" method="POST" id="schedule-form" class="space-y-4 sm:space-y-5 md:space-y-6">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Full Name" %} <span class="text-red-500">*</span></label>
+                        {{ form.full_name }}
+                    </div>
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Email" %} <span class="text-red-500">*</span></label>
+                        {{ form.email }}
+                    </div>
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Phone" %} <span class="text-red-500">*</span></label>
+                        {{ form.phone }}
+                    </div>
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Number of Children" %} <span class="text-red-500">*</span></label>
+                        {{ form.number_of_children }}
+                    </div>
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Children's Ages" %} <span class="text-red-500">*</span></label>
+                        {{ form.children_ages }}
+                    </div>
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Preferred Visit Date" %} <span class="text-red-500">*</span></label>
+                        {{ form.visit_date }}
+                    </div>
+                    <div>
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Preferred Time Slot" %} <span class="text-red-500">*</span></label>
+                        {{ form.time_slot }}
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-xs sm:text-sm text-[var(--school-text-color-dark)] mb-1">{% trans "Special Requests or Questions" %}</label>
+                        {{ form.special_requests }}
+                    </div>
+                </div>
+
+                <div class="pt-2 sm:pt-3 md:pt-4">
+                    <button type="submit" id="submit-button"
+                        class="w-full px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 text-white text-base sm:text-lg md:text-xl tracking-widest bg-[var(--school-primary-blue)] rounded-lg sm:rounded-xl hover:bg-[#0e49d1] transition duration-200">
+                        {% trans "SCHEDULE VISIT" %}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Additional Info Section -->
+    <section class="py-6 sm:py-8 md:py-12 px-4 md:px-10 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <div class="text-[var(--school-primary-blue)] text-3xl mb-3">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-[var(--school-heading-color-dark)]">{% trans "Visit Duration" %}</h3>
+                <p class="text-gray-600">
+                    {% trans "Visits typically last about 45-60 minutes, giving you plenty of time to tour our facilities and ask questions." %}
+                </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <div class="text-[var(--school-primary-blue)] text-3xl mb-3">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-[var(--school-heading-color-dark)]">{% trans "Bring Your Children" %}</h3>
+                <p class="text-gray-600">
+                    {% trans "We encourage you to bring your children along so they can experience our environment and activities firsthand." %}
+                </p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                <div class="text-[var(--school-primary-blue)] text-3xl mb-3">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-[var(--school-heading-color-dark)]">{% trans "What to Expect" %}</h3>
+                <p class="text-gray-600">
+                    {% trans "During your visit, you'll tour our classrooms, play areas, and meet some of our dedicated teachers and staff." %}
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('schedule-form');
+        const button = document.getElementById('submit-button');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const dateSelect = document.querySelector('select[name="visit_date"]');
+        const timeSlotSelect = document.querySelector('select[name="time_slot"]');
+        
+        // Function to update available time slots based on selected date
+        async function updateAvailableTimeSlots() {
+            const selectedDate = dateSelect.value;
+            if (!selectedDate) return;
+            
+            // Disable the time slot select while loading
+            timeSlotSelect.disabled = true;
+            
+            try {
+                const response = await fetch('/check-availability/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ date: selectedDate }),
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch available time slots');
+                }
+                
+                const data = await response.json();
+                
+                // Clear current options
+                timeSlotSelect.innerHTML = '';
+                
+                // Add a default option
+                const defaultOption = document.createElement('option');
+                defaultOption.value = '';
+                defaultOption.textContent = '{% trans "Select a time slot" %}';
+                timeSlotSelect.appendChild(defaultOption);
+                
+                // Add available time slots
+                if (data.available_slots && data.available_slots.length > 0) {
+                    data.available_slots.forEach(slot => {
+                        const option = document.createElement('option');
+                        option.value = slot;
+                        
+                        // Format the time for display (09:00 -> 9:00 AM)
+                        const hour = parseInt(slot.split(':')[0]);
+                        const minute = slot.split(':')[1];
+                        const ampm = hour >= 12 ? 'PM' : 'AM';
+                        const formattedHour = hour % 12 || 12;
+                        
+                        option.textContent = `${formattedHour}:${minute} ${ampm}`;
+                        timeSlotSelect.appendChild(option);
+                    });
+                } else {
+                    // No available slots
+                    const option = document.createElement('option');
+                    option.value = '';
+                    option.textContent = '{% trans "No available slots" %}';
+                    option.disabled = true;
+                    timeSlotSelect.appendChild(option);
+                }
+            } catch (error) {
+                console.error('Error fetching time slots:', error);
+                
+                // Add all possible time slots if we can't check availability
+                const allTimeSlots = [
+                    { value: '09:00', label: '9:00 AM' },
+                    { value: '10:00', label: '10:00 AM' },
+                    { value: '11:00', label: '11:00 AM' },
+                    { value: '14:00', label: '2:00 PM' },
+                    { value: '15:00', label: '3:00 PM' },
+                    { value: '16:00', label: '4:00 PM' }
+                ];
+                
+                allTimeSlots.forEach(slot => {
+                    const option = document.createElement('option');
+                    option.value = slot.value;
+                    option.textContent = slot.label;
+                    timeSlotSelect.appendChild(option);
+                });
+            } finally {
+                // Re-enable the time slot select
+                timeSlotSelect.disabled = false;
+            }
+        }
+        
+        // Update time slots when date changes
+        if (dateSelect) {
+            dateSelect.addEventListener('change', updateAvailableTimeSlots);
+            
+            // Initialize time slots for the default selected date
+            if (dateSelect.value) {
+                updateAvailableTimeSlots();
+            }
+        }
+        
+        if (form && button) {
+            form.addEventListener('submit', function (e) {
+                // Basic required field validation
+                const fullName = form.querySelector('[name="full_name"]').value.trim();
+                const email = form.querySelector('[name="email"]').value.trim();
+                const phone = form.querySelector('[name="phone"]').value.trim();
+                const visitDate = form.querySelector('[name="visit_date"]').value;
+                const timeSlot = form.querySelector('[name="time_slot"]').value;
+                const numberOfChildren = form.querySelector('[name="number_of_children"]').value;
+                const childrenAges = form.querySelector('[name="children_ages"]').value.trim();
+                
+                if (!fullName || !email || !phone || !visitDate || !timeSlot || !numberOfChildren || !childrenAges) {
+                    e.preventDefault();
+                    alert('{% trans "Please fill in all required fields" %}');
+                    return false;
+                }
+                
+                // Email validation
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    e.preventDefault();
+                    alert('{% trans "Please enter a valid email address" %}');
+                    return false;
+                }
+                
+                // Phone validation (basic)
+                const phonePattern = /^[\d\s\-\(\)\+]+$/;
+                if (!phonePattern.test(phone)) {
+                    e.preventDefault();
+                    alert('{% trans "Please enter a valid phone number" %}');
+                    return false;
+                }
+                
+                console.log('Form validated and submitted');
+                
+                // Show loading overlay
+                loadingOverlay.classList.remove('hidden');
+                
+                // Disable button
+                button.disabled = true;
+                button.innerHTML = '{% trans "SCHEDULING..." %}';
+                button.classList.add('opacity-75');
+            });
+        }
+
+        // Auto-hide success messages after 5 seconds
+        const successMessages = document.querySelectorAll('.bg-green-100');
+        successMessages.forEach(function(message) {
+            setTimeout(function() {
+                message.style.transition = 'opacity 0.5s ease-out';
+                message.style.opacity = '0';
+                setTimeout(function() {
+                    message.style.display = 'none';
+                }, 500);
+            }, 5000);
+        });
+    });
+</script>
+
+<style>
+    /* Loading overlay animation */
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+{% endblock %}

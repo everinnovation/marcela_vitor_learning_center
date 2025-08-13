@@ -1,0 +1,226 @@
+import os
+import datetime
+import logging
+import sys
+
+# Set up logging
+logger = logging.getLogger(__name__)
+
+# Get the path to the credentials file directly
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+GOOGLE_CALENDAR_CREDENTIALS = os.path.join(BASE_DIR, 'credentials', 'google_calendar_credentials.json')
+
+# Check if Google API libraries are available
+try:
+    from google.oauth2 import service_account
+    from googleapiclient.discovery import build
+    from googleapiclient.errors import HttpError
+    GOOGLE_API_AVAILABLE = True
+except ImportError:
+    GOOGLE_API_AVAILABLE = False
+    logger.error("Google API libraries not available. Please install with 'pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib'")
+
+class GoogleCalendarService:
+    """Service class for interacting with Google Calendar API."""
+    
+    def __init__(self):
+        if not GOOGLE_API_AVAILABLE:
+            logger.error("Google API libraries not available. Calendar integration disabled.")
+            self.service = None
+            return
+            
+        # Path to the service account credentials file
+        credentials_path = GOOGLE_CALENDAR_CREDENTIALS
+        
+        # Calendar ID where appointments will be created (usually your email address)
+        self.calendar_id = 'primary'  # Change this to your calendar ID if needed
+        
+        # Scopes required for calendar access
+        scopes = ['https://www.googleapis.com/auth/calendar']
+        
+        try:
+            # Check if credentials file exists
+            if not os.path.exists(credentials_path):
+                logger.error(f"Google Calendar credentials file not found at {credentials_path}")
+                self.service = None
+                return
+                
+            # Load credentials
+            credentials = service_account.Credentials.from_service_account_file(
+                credentials_path, scopes=scopes
+            )
+            
+            # Build calendar service
+            self.service = build('calendar', 'v3', credentials=credentials)
+            logger.info("Google Calendar service initialized successfully")
+        except Exception as e:
+            logger.error(f"Error initializing Google Calendar service: {str(e)}")
+            self.service = None
+    
+    def create_event(self, visit_schedule):
+        """Create a calendar event for a visit schedule."""
+        if not self.service:
+            logger.error("Google Calendar service not initialized. Cannot create event.")
+            return None
+        
+        try:
+            # Format the visit time
+            start_time = f"{visit_schedule.visit_date.isoformat()}T{visit_schedule.time_slot}:00"
+            # Visits last 1 hour
+            end_time = f"{visit_schedule.visit_date.isoformat()}T{int(visit_schedule.time_slot.split(':')[0])+1}:00:00"
+            
+            # Create event details
+            event = {
+                'summary': f'Daycare Visit - {visit_schedule.full_name}',
+                'location': 'Marcela Vitor Learning Center',
+                'description': (
+                    f"Visit scheduled for {visit_schedule.full_name}\n"
+                    f"Phone: {visit_schedule.phone}\n"
+                    f"Email: {visit_schedule.email}\n"
+                    f"Number of children: {visit_schedule.number_of_children}\n"
+                    f"Children ages: {visit_schedule.children_ages}\n"
+                    f"Special requests: {visit_schedule.special_requests or 'None'}"
+                ),
+                'start': {
+                    'dateTime': start_time,
+                    'timeZone': 'America/Sao_Paulo',  # Update with your timezone
+                },
+                'end': {
+                    'dateTime': end_time,
+                    'timeZone': 'America/Sao_Paulo',  # Update with your timezone
+                },
+                'reminders': {
+                    'useDefault': False,
+                    'overrides': [
+                        {'method': 'email', 'minutes': 24 * 60},  # 1 day before
+                        {'method': 'popup', 'minutes': 60},  # 1 hour before
+                    ],
+                },
+            }
+            
+            # Create the event
+            event = self.service.events().insert(calendarId=self.calendar_id, body=event).execute()
+            logger.info(f"Event created: {event.get('htmlLink')}")
+            
+            return event.get('id')
+        
+        except HttpError as error:
+            logger.error(f"Error creating Google Calendar event: {error}")
+            return None
+        except Exception as e:
+            logger.error(f"Unexpected error creating Google Calendar event: {str(e)}")
+            return None
+    
+    def update_event(self, event_id, visit_schedule):
+        """Update an existing calendar event."""
+        if not self.service:
+            logger.error("Google Calendar service not initialized. Cannot update event.")
+            return False
+        
+        try:
+            # Get the existing event
+            event = self.service.events().get(calendarId=self.calendar_id, eventId=event_id).execute()
+            
+            # Format the visit time
+            start_time = f"{visit_schedule.visit_date.isoformat()}T{visit_schedule.time_slot}:00"
+            # Visits last 1 hour
+            end_time = f"{visit_schedule.visit_date.isoformat()}T{int(visit_schedule.time_slot.split(':')[0])+1}:00:00"
+            
+            # Update event details
+            event['summary'] = f'Daycare Visit - {visit_schedule.full_name}'
+            event['description'] = (
+                f"Visit scheduled for {visit_schedule.full_name}\n"
+                f"Phone: {visit_schedule.phone}\n"
+                f"Email: {visit_schedule.email}\n"
+                f"Number of children: {visit_schedule.number_of_children}\n"
+                f"Children ages: {visit_schedule.children_ages}\n"
+                f"Special requests: {visit_schedule.special_requests or 'None'}"
+            )
+            event['start'] = {
+                'dateTime': start_time,
+                'timeZone': 'America/Sao_Paulo',  # Update with your timezone
+            }
+            event['end'] = {
+                'dateTime': end_time,
+                'timeZone': 'America/Sao_Paulo',  # Update with your timezone
+            }
+            
+            # Update the event
+            updated_event = self.service.events().update(
+                calendarId=self.calendar_id, eventId=event_id, body=event
+            ).execute()
+            
+            logger.info(f"Event updated: {updated_event.get('htmlLink')}")
+            return True
+        
+        except HttpError as error:
+            logger.error(f"Error updating Google Calendar event: {error}")
+            return False
+        except Exception as e:
+            logger.error(f"Unexpected error updating Google Calendar event: {str(e)}")
+            return False
+    
+    def delete_event(self, event_id):
+        """Delete a calendar event."""
+        if not self.service:
+            logger.error("Google Calendar service not initialized. Cannot delete event.")
+            return False
+        
+        try:
+            self.service.events().delete(calendarId=self.calendar_id, eventId=event_id).execute()
+            logger.info(f"Event deleted: {event_id}")
+            return True
+        
+        except HttpError as error:
+            logger.error(f"Error deleting Google Calendar event: {error}")
+            return False
+        except Exception as e:
+            logger.error(f"Unexpected error deleting Google Calendar event: {str(e)}")
+            return False
+    
+    def get_available_slots(self, date_str):
+        """Get available time slots for a specific date."""
+        if not self.service:
+            logger.error("Google Calendar service not initialized. Cannot get available slots.")
+            # Return all slots if we can't check availability
+            return ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00']
+        
+        try:
+            # All possible time slots
+            all_slots = ['09:00', '10:00', '11:00', '14:00', '15:00', '16:00']
+            
+            # Get the beginning and end of the selected date
+            date_obj = datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
+            start_datetime = datetime.datetime.combine(date_obj, datetime.time.min).isoformat() + 'Z'
+            end_datetime = datetime.datetime.combine(date_obj, datetime.time.max).isoformat() + 'Z'
+            
+            # Get events for that day
+            events_result = self.service.events().list(
+                calendarId=self.calendar_id,
+                timeMin=start_datetime,
+                timeMax=end_datetime,
+                singleEvents=True,
+                orderBy='startTime'
+            ).execute()
+            
+            events = events_result.get('items', [])
+            
+            # Find booked slots
+            booked_slots = []
+            for event in events:
+                start = event['start'].get('dateTime')
+                if start:
+                    # Extract the hour:minute from the dateTime string
+                    time_part = start.split('T')[1][:5]  # Format HH:MM
+                    booked_slots.append(time_part)
+            
+            # Return available slots (all slots minus booked slots)
+            available_slots = [slot for slot in all_slots if slot not in booked_slots]
+            return available_slots
+        
+        except HttpError as error:
+            logger.error(f"Error getting available slots from Google Calendar: {error}")
+            return all_slots  # Return all slots if we can't check availability
+        except Exception as e:
+            logger.error(f"Unexpected error getting available slots from Google Calendar: {str(e)}")
+            return all_slots  # Return all slots if we can't check availability

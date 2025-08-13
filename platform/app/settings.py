@@ -27,6 +27,44 @@ SECRET_KEY = 'django-insecure-9f)9^dz(mzjv#gr#&ocp8fw0p$d$6h5@a@#4fn99*6!k8(u0_k
 DEBUG = True
 DOMAIN = os.getenv('DOMAIN')
 
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'website': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
 ALLOWED_HOSTS = ['0.0.0.0', '192.168.0.108', 'localhost', '127.0.0.1', DOMAIN, '*']
 
 
@@ -166,6 +204,8 @@ EMAIL_HOST_USER = 'contactmarcelavitor@gmail.com'
 EMAIL_HOST_PASSWORD = 'sorkfzlgvfcgsxoe'
 EMAIL_USE_TLS = True
 PASSWORD_RESET_TIMEOUT = 14400
+DEFAULT_FROM_EMAIL = 'contactmarcelavitor@gmail.com'
+ADMIN_EMAIL = 'contactmarcelavitor@gmail.com'
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 

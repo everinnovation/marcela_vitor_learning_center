@@ -21,6 +21,7 @@
             <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "About Us" %}</a>
             <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "The School" %}</a>
             <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a>
+            <a href="{% url 'schedule' %}" class="{% if request.resolver_match.url_name == 'schedule' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Schedule a Visit" %}</a>
             <a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Contact Us" %}</a>
         </nav>
 
@@ -41,6 +42,7 @@
         <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "About Us" %}</a></li>
         <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "The School" %}</a></li>
         <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a></li>
+        <li><a href="{% url 'schedule' %}" class="{% if request.resolver_match.url_name == 'schedule' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Schedule a Visit" %}</a></li>
         <li><a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Contact Us" %}</a></li>
         <li class="flex space-x-4 mt-4">
             <button id="en-flag-mobile" class="flag-btn w-10 h-7 rounded-sm overflow-hidden border-2 border-white/30 hover:border-white transition-all duration-200 {% if LANGUAGE_CODE == 'en' %}ring-2 ring-white{% endif %}">
