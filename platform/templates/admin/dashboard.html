@@ -1,0 +1,135 @@
+{% extends 'admin/base_admin.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    <!-- Visit Summary Cards -->
+    <div class="bg-blue-100 p-4 rounded-lg shadow">
+        <div class="flex items-center">
+            <div class="p-3 rounded-full bg-blue-600 text-white mr-4">
+                <i class="fas fa-calendar-check text-xl"></i>
+            </div>
+            <div>
+                <p class="text-sm text-blue-600">{% trans "Upcoming Visits" %}</p>
+                <p class="text-2xl font-bold">{{ upcoming_visits }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-green-100 p-4 rounded-lg shadow">
+        <div class="flex items-center">
+            <div class="p-3 rounded-full bg-green-600 text-white mr-4">
+                <i class="fas fa-check-circle text-xl"></i>
+            </div>
+            <div>
+                <p class="text-sm text-green-600">{% trans "Completed Visits" %}</p>
+                <p class="text-2xl font-bold">{{ completed_visits }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-red-100 p-4 rounded-lg shadow">
+        <div class="flex items-center">
+            <div class="p-3 rounded-full bg-red-600 text-white mr-4">
+                <i class="fas fa-times-circle text-xl"></i>
+            </div>
+            <div>
+                <p class="text-sm text-red-600">{% trans "Cancelled Visits" %}</p>
+                <p class="text-2xl font-bold">{{ cancelled_visits }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-purple-100 p-4 rounded-lg shadow">
+        <div class="flex items-center">
+            <div class="p-3 rounded-full bg-purple-600 text-white mr-4">
+                <i class="fas fa-file-alt text-xl"></i>
+            </div>
+            <div>
+                <p class="text-sm text-purple-600">{% trans "Resume Submissions" %}</p>
+                <p class="text-2xl font-bold">{{ total_resumes }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Upcoming Visits for the Next Week -->
+    <div class="bg-white p-4 rounded-lg shadow border">
+        <h2 class="text-lg font-bold mb-4 text-gray-700 border-b pb-2">
+            <i class="fas fa-calendar mr-2"></i> {% trans "Upcoming Visits (Next 7 Days)" %}
+        </h2>
+        
+        {% if upcoming_week_visits %}
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b text-left">{% trans "Date" %}</th>
+                        <th class="py-2 px-4 border-b text-left">{% trans "Time" %}</th>
+                        <th class="py-2 px-4 border-b text-left">{% trans "Name" %}</th>
+                        <th class="py-2 px-4 border-b text-left">{% trans "Actions" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for visit in upcoming_week_visits %}
+                    <tr class="hover:bg-gray-100">
+                        <td class="py-2 px-4 border-b">{{ visit.visit_date|date:"M d, Y" }}</td>
+                        <td class="py-2 px-4 border-b">{{ visit.get_time_slot_display }}</td>
+                        <td class="py-2 px-4 border-b">{{ visit.full_name }}</td>
+                        <td class="py-2 px-4 border-b">
+                            <a href="{% url 'admin_visit_detail' visit.id %}" class="text-blue-600 hover:underline">
+                                <i class="fas fa-eye"></i> {% trans "View" %}
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-gray-500 italic">{% trans "No upcoming visits for the next 7 days." %}</p>
+        {% endif %}
+        
+        <div class="mt-4 text-right">
+            <a href="{% url 'admin_visits' %}" class="text-blue-600 hover:underline">
+                {% trans "View all visits" %} <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Recent Resume Submissions -->
+    <div class="bg-white p-4 rounded-lg shadow border">
+        <h2 class="text-lg font-bold mb-4 text-gray-700 border-b pb-2">
+            <i class="fas fa-file-alt mr-2"></i> {% trans "Recent Resume Submissions" %}
+        </h2>
+        
+        {% if recent_resumes %}
+        <div class="space-y-3">
+            {% for resume in recent_resumes %}
+            <div class="p-3 border rounded hover:bg-gray-50">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="font-medium">{{ resume.full_name }}</h3>
+                        <p class="text-sm text-gray-600">{{ resume.email }}</p>
+                        <p class="text-xs text-gray-500">{% trans "Submitted" %}: {{ resume.created_at|date:"M d, Y" }}</p>
+                    </div>
+                    <a href="{% url 'admin_resume_detail' resume.id %}" class="text-blue-600 hover:underline">
+                        <i class="fas fa-eye"></i> {% trans "View" %}
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="text-gray-500 italic">{% trans "No resume submissions yet." %}</p>
+        {% endif %}
+        
+        <div class="mt-4 text-right">
+            <a href="{% url 'admin_resumes' %}" class="text-blue-600 hover:underline">
+                {% trans "View all resumes" %} <i class="fas fa-arrow-right ml-1"></i>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

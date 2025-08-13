@@ -1,0 +1,98 @@
+{% extends 'admin/base_admin.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <!-- Header with status badge -->
+    <div class="border-b px-6 py-4 flex justify-between items-center">
+        <div>
+            <h2 class="text-xl font-bold text-gray-800">
+                {% trans "Message from" %} {{ message.name }}
+            </h2>
+            <p class="text-gray-500">{{ message.created_at|date:"F d, Y" }} {% trans "at" %} {{ message.created_at|time:"H:i" }}</p>
+        </div>
+        <span class="px-3 py-1 rounded-full text-sm font-medium
+            {% if message.is_read %}bg-green-100 text-green-800{% else %}bg-blue-100 text-blue-800{% endif %}">
+            {% if message.is_read %}{% trans "Read" %}{% else %}{% trans "Unread" %}{% endif %}
+        </span>
+    </div>
+    
+    <!-- Main content -->
+    <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Sender Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                    {% trans "Sender Information" %}
+                </h3>
+                
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Full Name" %}</p>
+                        <p class="font-medium">{{ message.name }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Email" %}</p>
+                        <p class="font-medium">{{ message.email }}</p>
+                    </div>
+                    
+                    {% if message.phone %}
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Phone" %}</p>
+                        <p class="font-medium">{{ message.phone }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Message Details -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                    {% trans "Message Details" %}
+                </h3>
+                
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Subject" %}</p>
+                        <p class="font-medium">{{ message.subject|default:"(No subject)" }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Message" %}</p>
+                        <div class="bg-gray-50 p-3 rounded border mt-1 whitespace-pre-wrap">{{ message.message }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer with actions -->
+    <div class="px-6 py-4 bg-gray-50 border-t flex justify-between">
+        <a href="{% url 'admin_messages' %}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+            <i class="fas fa-arrow-left mr-1"></i> {% trans "Back to List" %}
+        </a>
+        
+        <div class="space-x-2">
+            {% if not message.is_read %}
+            <form method="post" action="{% url 'admin_message_mark_read' message.id %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                    <i class="fas fa-check mr-1"></i> {% trans "Mark as Read" %}
+                </button>
+            </form>
+            {% else %}
+            <form method="post" action="{% url 'admin_message_mark_unread' message.id %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" class="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700">
+                    <i class="fas fa-times mr-1"></i> {% trans "Mark as Unread" %}
+                </button>
+            </form>
+            {% endif %}
+            <a href="/admin/website/contactmessage/{{ message.id }}/change/" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+                <i class="fas fa-edit mr-1"></i> {% trans "Edit Message" %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

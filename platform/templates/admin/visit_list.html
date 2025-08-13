@@ -1,0 +1,115 @@
+{% extends 'admin/base_admin.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="mb-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+        <h2 class="text-xl font-bold text-gray-700 mb-4 md:mb-0">
+            {% trans "Visit Schedules" %} 
+            {% if status_filter %}
+            - {{ status_filter|title }}
+            {% endif %}
+        </h2>
+        
+        <div class="flex space-x-2">
+            <a href="{% url 'admin_visits' %}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 {% if not status_filter %}font-bold bg-gray-300{% endif %}">
+                {% trans "All" %}
+            </a>
+            <a href="{% url 'admin_visits' %}?status=scheduled" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 {% if status_filter == 'scheduled' %}font-bold bg-gray-300{% endif %}">
+                {% trans "Scheduled" %}
+            </a>
+            <a href="{% url 'admin_visits' %}?status=completed" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 {% if status_filter == 'completed' %}font-bold bg-gray-300{% endif %}">
+                {% trans "Completed" %}
+            </a>
+            <a href="{% url 'admin_visits' %}?status=cancelled" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 {% if status_filter == 'cancelled' %}font-bold bg-gray-300{% endif %}">
+                {% trans "Cancelled" %}
+            </a>
+        </div>
+    </div>
+</div>
+
+{% if visits %}
+<div class="overflow-x-auto bg-white shadow-md rounded-lg">
+    <table class="min-w-full">
+        <thead>
+            <tr class="bg-gray-200 text-gray-700">
+                <th class="py-3 px-4 text-left">{% trans "Date & Time" %}</th>
+                <th class="py-3 px-4 text-left">{% trans "Name" %}</th>
+                <th class="py-3 px-4 text-left">{% trans "Contact" %}</th>
+                <th class="py-3 px-4 text-left">{% trans "Children" %}</th>
+                <th class="py-3 px-4 text-left">{% trans "Status" %}</th>
+                <th class="py-3 px-4 text-left">{% trans "Actions" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for visit in visits %}
+            <tr class="border-b hover:bg-gray-50">
+                <td class="py-3 px-4">
+                    <div class="font-medium">{{ visit.visit_date|date:"M d, Y" }}</div>
+                    <div class="text-sm text-gray-500">{{ visit.get_time_slot_display }}</div>
+                </td>
+                <td class="py-3 px-4">{{ visit.full_name }}</td>
+                <td class="py-3 px-4">
+                    <div>{{ visit.email }}</div>
+                    <div class="text-sm text-gray-500">{{ visit.phone }}</div>
+                </td>
+                <td class="py-3 px-4">
+                    <div>{{ visit.number_of_children }} {% trans "children" %}</div>
+                    <div class="text-sm text-gray-500">{% trans "Ages" %}: {{ visit.children_ages }}</div>
+                </td>
+                <td class="py-3 px-4">
+                    <span class="px-2 py-1 rounded text-sm
+                        {% if visit.status == 'scheduled' %}bg-blue-100 text-blue-800
+                        {% elif visit.status == 'completed' %}bg-green-100 text-green-800
+                        {% elif visit.status == 'cancelled' %}bg-red-100 text-red-800
+                        {% endif %}">
+                        {{ visit.get_status_display }}
+                    </span>
+                </td>
+                <td class="py-3 px-4">
+                    <a href="{% url 'admin_visit_detail' visit.id %}" class="text-blue-600 hover:underline">
+                        <i class="fas fa-eye"></i> {% trans "View" %}
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Pagination -->
+{% if is_paginated %}
+<div class="flex justify-center mt-6">
+    <div class="flex space-x-1">
+        {% if page_obj.has_previous %}
+        <a href="?{% if status_filter %}status={{ status_filter }}&{% endif %}page={{ page_obj.previous_page_number }}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        {% endif %}
+        
+        {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+            <span class="px-4 py-2 bg-indigo-600 text-white rounded">{{ i }}</span>
+            {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+            <a href="?{% if status_filter %}status={{ status_filter }}&{% endif %}page={{ i }}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">{{ i }}</a>
+            {% endif %}
+        {% endfor %}
+        
+        {% if page_obj.has_next %}
+        <a href="?{% if status_filter %}status={{ status_filter }}&{% endif %}page={{ page_obj.next_page_number }}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
+{% else %}
+<div class="bg-gray-50 p-6 text-center rounded-lg border">
+    <p class="text-gray-600">{% trans "No visit schedules found." %}</p>
+    {% if status_filter %}
+    <p class="mt-2 text-sm text-gray-500">{% trans "Try removing the status filter to see all visits." %}</p>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}

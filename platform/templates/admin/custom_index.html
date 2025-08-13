@@ -1,0 +1,13 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block content %}
+<div style="margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-radius: 4px; border-left: 4px solid #1253EF;">
+    <h2 style="color: #1253EF; margin-top: 0;">{% trans "Admin Panel" %}</h2>
+    <p>{% trans "In addition to this Django admin interface, you can use our custom admin panel for a more user-friendly experience:" %}</p>
+    <a href="{% url 'admin_dashboard' %}" style="display: inline-block; background-color: #1253EF; color: white; padding: 10px 15px; border-radius: 4px; text-decoration: none; margin-top: 10px; font-weight: bold;">
+        {% trans "Go to Custom Admin Panel" %}
+    </a>
+</div>
+{{ block.super }}
+{% endblock %}

@@ -1,0 +1,100 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% if page_title %}{{ page_title }} - {% endif %}Marcela Vitor Admin{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .sidebar {
+            min-height: calc(100vh - 64px);
+        }
+        .content {
+            min-height: calc(100vh - 64px);
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-indigo-700 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="{% url 'admin_dashboard' %}" class="text-xl font-bold">Marcela Vitor Learning Center</a>
+            <div class="flex items-center space-x-4">
+                <span>{% trans "Welcome" %}, {{ request.user.username }}</span>
+                <a href="/admin/logout/" class="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm">{% trans "Logout" %}</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <aside class="sidebar bg-gray-800 text-white w-full md:w-64 p-4">
+            <nav>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="{% url 'admin_dashboard' %}" class="block py-2 px-4 rounded hover:bg-gray-700 {% if request.resolver_match.url_name == 'admin_dashboard' %}bg-gray-700{% endif %}">
+                            <i class="fas fa-tachometer-alt mr-2"></i> {% trans "Dashboard" %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'admin_visits' %}" class="block py-2 px-4 rounded hover:bg-gray-700 {% if request.resolver_match.url_name == 'admin_visits' %}bg-gray-700{% endif %}">
+                            <i class="fas fa-calendar-check mr-2"></i> {% trans "Visit Schedules" %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'admin_resumes' %}" class="block py-2 px-4 rounded hover:bg-gray-700 {% if request.resolver_match.url_name == 'admin_resumes' %}bg-gray-700{% endif %}">
+                            <i class="fas fa-file-alt mr-2"></i> {% trans "Resume Submissions" %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/admin/" class="block py-2 px-4 rounded hover:bg-gray-700">
+                            <i class="fas fa-cogs mr-2"></i> {% trans "Django Admin" %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="block py-2 px-4 rounded hover:bg-gray-700">
+                            <i class="fas fa-home mr-2"></i> {% trans "Back to Website" %}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content flex-grow p-6 bg-white shadow-lg m-4 rounded-lg">
+            <h1 class="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">{{ page_title }}</h1>
+            
+            {% if messages %}
+            <div class="mb-4">
+                {% for message in messages %}
+                <div class="p-4 rounded {% if message.tags == 'success' %}bg-green-100 text-green-700{% elif message.tags == 'error' %}bg-red-100 text-red-700{% elif message.tags == 'warning' %}bg-yellow-100 text-yellow-700{% else %}bg-blue-100 text-blue-700{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 text-center text-sm">
+        <p>© {% now "Y" %} Marcela Vitor Learning Center. {% trans "All rights reserved." %}</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // Toggle mobile menu
+        $(document).ready(function() {
+            // Add any JS functionality needed
+        });
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

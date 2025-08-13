@@ -31,5 +31,5 @@ class Resume(BaseModel):
     resume_file = models.FileField(upload_to='curriculos/', validators=[FileExtensionValidator(allowed_extensions=['pdf', 'doc', 'docx'])])
     additional_info = models.TextField(blank=True, null=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.full_name

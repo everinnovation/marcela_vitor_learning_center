@@ -1,0 +1,139 @@
+{% extends 'admin/base_admin.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <!-- Header -->
+    <div class="border-b px-6 py-4 bg-gray-50">
+        <h2 class="text-xl font-bold text-gray-800">
+            {% trans "Resume for" %} {{ resume.full_name }}
+        </h2>
+        <p class="text-gray-500">{% trans "Submitted on" %} {{ resume.created_at|date:"F d, Y" }}</p>
+    </div>
+    
+    <!-- Main content -->
+    <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Personal Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                    {% trans "Personal Information" %}
+                </h3>
+                
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Full Name" %}</p>
+                        <p class="font-medium">{{ resume.full_name }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Email" %}</p>
+                        <p class="font-medium">{{ resume.email }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Phone" %}</p>
+                        <p class="font-medium">{{ resume.phone }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Location" %}</p>
+                        <p class="font-medium">{{ resume.city }}, {{ resume.state }} {{ resume.zip_code }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                    {% trans "Professional Information" %}
+                </h3>
+                
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Field of Expertise" %}</p>
+                        <p class="font-medium">{{ resume.field_of_expertise }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Years of Experience" %}</p>
+                        <p class="font-medium">{{ resume.years_of_experience }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Language Skills -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                {% trans "Language Skills" %}
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-4 rounded">
+                    <p class="text-sm text-gray-500">{% trans "Native Language" %}</p>
+                    <p class="font-medium">{{ resume.get_native_language_display }}</p>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded">
+                    <p class="text-sm text-gray-500">{% trans "English Level" %}</p>
+                    <p class="font-medium">{{ resume.get_english_level_display }}</p>
+                </div>
+                
+                <div class="bg-gray-50 p-4 rounded">
+                    <p class="text-sm text-gray-500">{% trans "Portuguese Level" %}</p>
+                    <p class="font-medium">{{ resume.get_portuguese_level_display }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional Information -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                {% trans "Additional Information" %}
+            </h3>
+            
+            <div class="bg-gray-50 p-4 rounded">
+                {% if resume.additional_info %}
+                <p>{{ resume.additional_info|linebreaks }}</p>
+                {% else %}
+                <p class="text-gray-500 italic">{% trans "No additional information provided." %}</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Resume File -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                {% trans "Resume File" %}
+            </h3>
+            
+            <div class="bg-gray-50 p-4 rounded">
+                {% if resume.resume_file %}
+                <div class="flex justify-between items-center">
+                    <p class="font-medium">{{ resume.resume_file.name|cut:"curriculos/" }}</p>
+                    <a href="{{ resume.resume_file.url }}" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                        <i class="fas fa-download mr-1"></i> {% trans "Download" %}
+                    </a>
+                </div>
+                {% else %}
+                <p class="text-gray-500 italic">{% trans "No resume file uploaded." %}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer with actions -->
+    <div class="px-6 py-4 bg-gray-50 border-t flex justify-between">
+        <a href="{% url 'admin_resumes' %}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+            <i class="fas fa-arrow-left mr-1"></i> {% trans "Back to List" %}
+        </a>
+        
+        <div class="space-x-2">
+            <a href="/admin/website/resume/{{ resume.id }}/change/" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <i class="fas fa-edit mr-1"></i> {% trans "Edit Resume" %}
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

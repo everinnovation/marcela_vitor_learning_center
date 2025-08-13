@@ -1,0 +1,129 @@
+{% extends 'admin/base_admin.html' %}
+{% load i18n %}
+
+{% block content %}
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <!-- Header with status badge -->
+    <div class="border-b px-6 py-4 flex justify-between items-center">
+        <div>
+            <h2 class="text-xl font-bold text-gray-800">
+                {% trans "Visit by" %} {{ visit.full_name }}
+            </h2>
+            <p class="text-gray-500">{{ visit.visit_date|date:"F d, Y" }} {% trans "at" %} {{ visit.get_time_slot_display }}</p>
+        </div>
+        <span class="px-3 py-1 rounded-full text-sm font-medium
+            {% if visit.status == 'scheduled' %}bg-blue-100 text-blue-800
+            {% elif visit.status == 'completed' %}bg-green-100 text-green-800
+            {% elif visit.status == 'cancelled' %}bg-red-100 text-red-800
+            {% endif %}">
+            {{ visit.get_status_display }}
+        </span>
+    </div>
+    
+    <!-- Main content -->
+    <div class="p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Visitor Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                    {% trans "Visitor Information" %}
+                </h3>
+                
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Full Name" %}</p>
+                        <p class="font-medium">{{ visit.full_name }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Email" %}</p>
+                        <p class="font-medium">{{ visit.email }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Phone" %}</p>
+                        <p class="font-medium">{{ visit.phone }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Visit Details -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                    {% trans "Visit Details" %}
+                </h3>
+                
+                <div class="space-y-3">
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Visit Date" %}</p>
+                        <p class="font-medium">{{ visit.visit_date|date:"F d, Y" }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Time Slot" %}</p>
+                        <p class="font-medium">{{ visit.get_time_slot_display }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Number of Children" %}</p>
+                        <p class="font-medium">{{ visit.number_of_children }}</p>
+                    </div>
+                    
+                    <div>
+                        <p class="text-sm text-gray-500">{% trans "Children Ages" %}</p>
+                        <p class="font-medium">{{ visit.children_ages }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Special Requests -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                {% trans "Special Requests" %}
+            </h3>
+            
+            <div class="bg-gray-50 p-4 rounded">
+                {% if visit.special_requests %}
+                <p>{{ visit.special_requests|linebreaks }}</p>
+                {% else %}
+                <p class="text-gray-500 italic">{% trans "No special requests provided." %}</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- System Information -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold mb-4 text-gray-700 border-b pb-2">
+                {% trans "System Information" %}
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <p class="text-sm text-gray-500">{% trans "Created" %}</p>
+                    <p class="font-medium">{{ visit.created_at }}</p>
+                </div>
+                
+                <div>
+                    <p class="text-sm text-gray-500">{% trans "Last Updated" %}</p>
+                    <p class="font-medium">{{ visit.update_at }}</p>
+                </div>
+                
+                {% if visit.google_calendar_event_id %}
+                <div class="col-span-2">
+                    <p class="text-sm text-gray-500">{% trans "Google Calendar Event ID" %}</p>
+                    <p class="font-medium">{{ visit.google_calendar_event_id }}</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer with actions -->
+    <div class="px-6 py-4 bg-gray-50 border-t flex justify-between">
+        <a href="{% url 'admin_visits' %}" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+            <i class="fas fa-arrow-left mr-1"></i> {% trans "Back to List" %}
+        </a>
+    </div>
+</div>
+{% endblock %}

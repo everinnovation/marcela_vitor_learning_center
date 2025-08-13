@@ -207,6 +207,10 @@ PASSWORD_RESET_TIMEOUT = 14400
 DEFAULT_FROM_EMAIL = 'contactmarcelavitor@gmail.com'
 ADMIN_EMAIL = 'contactmarcelavitor@gmail.com'
 
+# Authentication settings
+LOGIN_URL = '/admin/login/'
+LOGIN_REDIRECT_URL = '/admin-panel/'
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 MEDIA_URL = '/media/'
