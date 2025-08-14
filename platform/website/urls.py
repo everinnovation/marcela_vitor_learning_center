@@ -4,6 +4,7 @@ from .views.about import AboutView
 from .views.contact import ContactView
 from .views.resume import ResumeView
 from .views.schedule import ScheduleView, ScheduleAvailabilityView
+from .views.programs import ProgramsView
 from .views.admin_panel import (
     AdminDashboardView, VisitListView, VisitDetailView,
     ResumeListView, ResumeDetailView
@@ -15,6 +16,7 @@ urlpatterns = [
     path('contact/', ContactView.as_view(), name='contact'),
     path('resume/', ResumeView.as_view(), name='resume'),
     path('schedule/', ScheduleView.as_view(), name='schedule'),
+    path('programs/', ProgramsView.as_view(), name='programs'),
     path('check-availability/', ScheduleAvailabilityView.as_view(), name='check_availability'),
     
     # Admin panel URLs

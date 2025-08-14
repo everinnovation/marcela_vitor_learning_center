@@ -19,8 +19,7 @@
         <nav class="hidden md:flex flex-grow justify-center space-x-12 font-semibold uppercase text-base text-white space-grotesk-light">
             <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">{% trans "Home" %}</a>
             <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "About Us" %}</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "The School" %}</a>
-            <a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a>
+            <a href="{% url 'programs' %}" class="{% if request.resolver_match.url_name == 'programs' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a>
             <a href="{% url 'schedule' %}" class="{% if request.resolver_match.url_name == 'schedule' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Schedule a Visit" %}</a>
             <a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Careers" %}</a>
         </nav>
@@ -40,8 +39,7 @@
     <ul id="mobile-menu" class="md:hidden flex flex-col items-center space-y-6 mt-4 py-6 absolute w-full top-20 hidden z-40 font-semibold uppercase text-base space-grotesk-light">
         <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 space-grotesk-light">{% trans "Home" %}</a></li>
         <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "About Us" %}</a></li>
-        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "The School" %}</a></li>
-        <li><a href="#" class="hover:border-b-2 hover:border-white pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a></li>
+        <li><a href="{% url 'programs' %}" class="{% if request.resolver_match.url_name == 'programs' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Programs" %}</a></li>
         <li><a href="{% url 'schedule' %}" class="{% if request.resolver_match.url_name == 'schedule' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Schedule a Visit" %}</a></li>
         <li><a href="{% url 'resume' %}" class="{% if request.resolver_match.url_name == 'resume' %}border-b-2 border-white{% else %}hover:border-b-2 hover:border-white{% endif %} pb-1 transition-colors space-grotesk-light">{% trans "Careers" %}</a></li>
         <li class="flex space-x-4 mt-4">
@@ -57,11 +55,9 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // Toggle do menu mobile - lógica simplificada
     $('#menu-toggle').on('click', function() {
         $('#mobile-menu').toggleClass('hidden');
         
-        // Quando o menu mobile abre, aplica a cor de scroll
         if (!$('#mobile-menu').hasClass('hidden')) {
             $('#navbar').css({
                 'background': navbarScrollColor,
@@ -69,19 +65,16 @@
                 'transition': 'background 0.4s, box-shadow 0.4s'
             });
             
-            // Aplica a mesma cor de fundo no menu mobile
             $('#mobile-menu').css({
                 'background': navbarScrollColor,
                 'transition': 'background 0.4s'
             });
             
-            // Muda a cor do ícone hambúrguer para escuro
             $('#menu-toggle span').css({
                 'color': 'var(--school-text-color-dark)',
                 'transition': 'color 0.4s'
             });
             
-            // Muda a cor do ícone Instagram no header mobile para escuro
             $('.md\\:hidden svg').css({
                 'color': 'var(--school-text-color-dark)',
                 'transition': 'color 0.4s'
@@ -98,21 +91,17 @@
                 'font-weight': 'bold'
             });
         } else {
-            // Quando fecha, volta à cor normal baseada no scroll
             updateNavbarColor();
         }
     });
 
-    // Fechar menu quando clicar fora dele
     $(document).on('click', function(event) {
         if (!$(event.target).closest('#mobile-menu').length && !$(event.target).closest('#menu-toggle').length) {
             $('#mobile-menu').addClass('hidden');
-            // Volta à cor normal baseada no scroll quando fecha
             updateNavbarColor();
         }
     });
 
-    // Efeito de scroll do navbar - mantido do design original
     const navbarStartColor = 'transparent';
     const navbarScrollColor = 'var(--school-program-bg-yellow)';
     const menuItemStartColor = 'white';
@@ -122,7 +111,6 @@
         const scrolled = $(window).scrollTop() > 50;
         const mobileMenuOpen = !$('#mobile-menu').hasClass('hidden');
         
-        // Se o menu mobile está aberto ou se scrollou, usa a cor de scroll
         const shouldUseScrollColor = scrolled || mobileMenuOpen;
         
         $('#navbar').css({
@@ -131,7 +119,6 @@
             'transition': 'background 0.4s, box-shadow 0.4s'
         });
 
-        // Aplica a cor de fundo no menu mobile quando necessário
         if (mobileMenuOpen) {
             $('#mobile-menu').css({
                 'background': navbarScrollColor,
@@ -139,7 +126,6 @@
             });
         }
 
-        // Controla a cor do ícone hambúrguer e Instagram no header mobile
         $('#menu-toggle span').css({
             'color': shouldUseScrollColor ? 'var(--school-text-color-dark)' : 'white',
             'transition': 'color 0.4s'
@@ -184,30 +170,24 @@
     $(window).on('scroll', updateNavbarColor);
     $(document).ready(updateNavbarColor);
     
-    // Language selector functionality
     function changeLanguage(lang) {
         console.log("Changing language to:", lang);
         
-        // Create form for POST submission
         const form = document.createElement('form');
         form.method = 'post';
         form.action = '/i18n/setlang/';
         form.style.display = 'none';
         
-        // Add CSRF token
         const csrfInput = document.createElement('input');
         csrfInput.type = 'hidden';
         csrfInput.name = 'csrfmiddlewaretoken';
         csrfInput.value = '{{ csrf_token }}';
         
-        // Add language selection
         const langInput = document.createElement('input');
         langInput.type = 'hidden';
         langInput.name = 'language';
         langInput.value = lang;
         
-        // Add next parameter to return to the same page
-        // For English, remove the pt-br prefix if it exists
         let nextPath = window.location.pathname;
         if (lang === 'en' && nextPath.startsWith('/pt-br/')) {
             nextPath = nextPath.replace('/pt-br/', '/');
@@ -222,17 +202,14 @@
         console.log("Language value:", lang);
         console.log("Next URL:", nextPath);
         
-        // Append all inputs to form
         form.appendChild(csrfInput);
         form.appendChild(langInput);
         form.appendChild(nextInput);
         
-        // Append to body and submit
         document.body.appendChild(form);
         form.submit();
     }
     
-    // Event listeners for desktop flags
     $('#en-flag').on('click', function() {
         changeLanguage('en');
     });
@@ -241,7 +218,6 @@
         changeLanguage('pt-br');
     });
     
-    // Event listeners for mobile flags
     $('#en-flag-mobile').on('click', function() {
         changeLanguage('en');
     });
@@ -250,7 +226,6 @@
         changeLanguage('pt-br');
     });
     
-    // Update flag styles based on scroll
     function updateFlagStyles() {
         const scrolled = $(window).scrollTop() > 50;
         

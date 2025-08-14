@@ -22,7 +22,7 @@
                     {% trans "BRIGHT BEGINNINGS!" %}
                 </h1>
                 <p class="text-sm sm:text-base lg:text-lg space-grotesk-light mt-2" style="color: var(--school-text-color-light); max-width: 100%;">
-                    {% trans "Every great journey starts with a bright beginning. Join a place where curiosity shines and every child is celebrated." %}
+                    {% trans "Where Child-Centered Learning Meets Multicultural Excellence" %}
                 </p>
             </div>
 
@@ -30,8 +30,8 @@
                 <h1 class="hidden md:block text-5xl space-grotesk-regular mb-2" style="letter-spacing: 0.07em;">
                  {% trans "JOIN US!" %}
                 </h1>
-                <p class="hidden md:block text-base lg:text-lg space-grotesk-light mb-4" style="color: var(--school-text-color-light); max-width: 100%;">
-                    {% trans "Discover a bilingual world full of play, learning, love, and meaningful." %}
+                <p class="hidden md:block text-base lg:text-lg space-grotesk-light mb-2" style="color: var(--school-text-color-light); max-width: 100%;">
+                    {% trans "Discover the transformative power of authentic bilingual education at Marcela Vitor Learning Center, the only Portuguese-English immersion program in Massachusetts." %}
                 </p>
                 <button class="px-4 sm:px-6 py-2 text-white text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] border-2 border-[#f5c542] rounded hover:bg-[#0e49d1] transition-colors duration-200">
                     {% trans "LEARN MORE" %}
@@ -43,25 +43,50 @@
         </section>
     </div>
 
-    <div class="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:pt-[2rem] px-4 md:px-0">
+    <div class="w-full bg-[var(--school-program-bg-yellow)] py-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 px-4">
+            <div class="text-center">
+                <p class="text-lg sm:text-xl font-bold text-gray-800">{% trans "Ages" %}</p>
+                <p class="text-2xl sm:text-3xl font-bold text-blue-700">3 {% trans "mo" %} - 8 {% trans "yrs" %}</p>
+            </div>
+            <div class="text-center">
+                <p class="text-lg sm:text-xl font-bold text-gray-800">{% trans "Immersion" %}</p>
+                <p class="text-2xl sm:text-3xl font-bold text-blue-700">100%</p>
+            </div>
+            <div class="text-center">
+                <p class="text-lg sm:text-xl font-bold text-gray-800">{% trans "In Massachusetts" %}</p>
+                <p class="text-2xl sm:text-3xl font-bold text-blue-700">{% trans "Only One" %}</p>
+            </div>
+            <div class="text-center">
+                <p class="text-lg sm:text-xl font-bold text-gray-800">{% trans "Methodology" %}</p>
+                <p class="text-2xl sm:text-3xl font-bold text-blue-700">{% trans "Child-Centered" %}</p>
+            </div>
+            <div class="text-center">
+                <p class="text-lg sm:text-xl font-bold text-gray-800">{% trans "Licensed by" %}</p>
+                <p class="text-2xl sm:text-3xl font-bold text-blue-700">{% trans "MA EEC" %}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative w-full flex flex-col md:flex-row items-center justify-center gap-4 md:pt-[2rem] px-4 md:px-0 py-16">
         <div class="flex-shrink-0 flex justify-center md:w-1/2 items-end order-2 md:order-1">
             <img src="{% static 'assets/children.png' %}"
                 class="object-cover object-center select-none h-[400px] sm:h-[500px] md:h-[600px]"
-                style="width: auto; margin-bottom:-80px;" />
+                style="width: auto; margin-bottom:-8rem;" />
         </div>
-        <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4 order-1 md:order-2 px-4 md:px-0 mt-12 md:mt-0">
+        <div class="max-w-xl pt-12 text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4 order-1 md:order-2 px-4 md:px-0 mt-12 md:mt-0">
             <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular" style="color: var(--school-heading-color-dark); letter-spacing: 0.08em;">
-                {% blocktrans %}OUR <b>PHILOSOPHY</b>{% endblocktrans %}
+                {% trans "A Bilingual Advantage for Your Child" %}
             </h2>
             <div class="w-full">
                 <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
-                    {% trans "We value individual development, respecting each child's pace and interests." %}
+                    {% trans "At Marcela Vitor Learning Center, we believe every child possesses unlimited potential. Our unique blend of educational philosophies—drawing inspiration from Montessori principles, Reggio Emilia approaches, and modern early childhood research—combined with bilingual immersion creates an environment where children don't just learn—they flourish." %}
                 </p>
-                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: var(--school-text-color-dark); max-width: 100%;">
-                    {% trans "Our bilingual approach (Portuguese-English) follows Montessori principles, promoting learning through play, cultural awareness, and meaningful interactions." %}
+                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light mt-4" style="color: var(--school-text-color-dark); max-width: 100%;">
+                    {% trans "As Massachusetts' exclusive Portuguese-English learning center, we offer something no other program can: authentic cultural bridge-building that prepares your child for an interconnected world." %}
                 </p>
             </div>
-            <a href="#"
+            <a href="{% url 'about' %}"
                 class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                 style="max-width: 320px;">
                 {% trans "LEARN MORE" %}
@@ -69,27 +94,49 @@
         </div>
     </div>
 
-    <div class="w-full text-white py-8 sm:py-12 md:py-16 px-4 md:px-10 relative z-10" style="background-color: var(--school-primary-blue);">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mt-8 md:mt-0">
-            <div class="flex-shrink-0 flex justify-center items-center w-full md:w-1/2 rounded-3xl order-2 md:order-1" style="min-height: 300px;">
-                <img src="{% static 'assets/professora.jpg' %}" alt="Marcela Vitor, Diretora"
-                 class="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px] w-full object-cover rounded-3xl shadow-lg border-4 sm:border-6 md:border-8 border-[var(--school-program-bg-yellow)]">
-            </div>
-            <div class="max-w-xl text-center md:text-left flex flex-col justify-center items-center md:items-start w-full md:w-1/2 gap-4 order-1 md:order-2">
-            <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular" style="color: #fff; letter-spacing: 0.08em;">
-                {% blocktrans %}OUR <b>TEACHERS</b>{% endblocktrans %}
+    <div class="w-full text-white py-8 sm:py-12 md:py-24 px-4 md:px-24 relative z-10" style="background-color: var(--school-primary-blue);">
+        <div class="max-w-7xl mx-auto mb-8 text-center">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular mb-6 ">
+                {% trans "Our Educational <b>Philosophy</b>" %}
             </h2>
-            <div class="w-full">
-                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
-                    {% trans "Our team is made up of educators with over 5 years of experience and academic training in Massachusetts." %}
-                </p>
-                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
-                    {% trans "The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools." %}
-                </p>
-                <p class="text-sm sm:text-base lg:text-lg space-grotesk-light" style="color: #fff; max-width: 100%;">
-                    {% trans "Today, she leads her own center and is personally committed to children's education." %}
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-medium mb-4">1. {% trans "Montessori-Inspired Learning" %}</h3>
+                <p class="text-base space-grotesk-light">
+                    {% trans "We emphasize child-led discovery, hands-on learning, and respect for each child's natural development." %}
                 </p>
             </div>
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-medium mb-4">2. {% trans "Reggio Emilia Project-Based Learning" %}</h3>
+                <p class="text-base space-grotesk-light">
+                    {% trans "We view children as capable researchers and our environment as the \"third teacher,\" encouraging exploration of real-world questions." %}
+                </p>
+            </div>
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-medium mb-4">3. {% trans "Authentic Bilingual Immersion" %}</h3>
+                <p class="text-base space-grotesk-light">
+                    {% trans "Our program is true cultural immersion, where children acquire both languages naturally through meaningful interactions." %}
+                </p>
+            </div>
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-medium mb-4">4. {% trans "Play-Based Learning Philosophy" %}</h3>
+                <p class="text-base space-grotesk-light">
+                    {% trans "We understand that play is a child's work. Our curriculum integrates purposeful play that develops social skills, emotional regulation, and creativity." %}
+                </p>
+            </div>
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-medium mb-4">5. {% trans "Social-Emotional Development Focus" %}</h3>
+                <p class="text-base space-grotesk-light">
+                    {% trans "We prioritize emotional intelligence alongside academic growth, helping children develop empathy and resilience." %}
+                </p>
+            </div>
+            <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-medium mb-4">6. {% trans "Family Partnership Approach" %}</h3>
+                <p class="text-base space-grotesk-light">
+                    {% trans "We believe education is most effective when families and schools work together, maintaining open and transparent communication." %}
+                </p>
             </div>
         </div>
     </div>
@@ -99,27 +146,31 @@
             <h2 class="text-4xl sm:text-5xl md:text-6xl space-grotesk-regular text-[color:var(--school-text-color-dark)]">
                 {% blocktrans %}OUR <b>PROGRAMS</b>{% endblocktrans %}
             </h2>
-            <p class="text-sm sm:text-base space-grotesk-light text-[color:var(--school-text-color-dark)] mx-auto w-full max-w-md break-words mt-4">
-                {% trans "We cater for babies from 12 months to preschool." %}
-                <br class="hidden sm:block">
-                {% trans "We combine quality education and language development." %}
+            <p class="text-sm sm:text-base space-grotesk-light text-[color:var(--school-text-color-dark)] mx-auto w-1/2 mt-4">
+                {% trans "From infants to school-age, our bilingual Portuguese-English programs are designed to nurture the whole child in a Montessori-inspired environment." %}
             </p>
+            <div class="mt-8">
+                <a href="{% url 'programs' %}"
+                    class="px-6 py-3 text-white inline-block text-lg tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200">
+                    {% trans "VIEW ALL PROGRAMS" %}
+                </a>
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
             <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[520px] cursor-pointer">
-                <a href="#" class="block">
+                <a href="{% url 'programs' %}" class="block">
                     <div class="h-48 sm:h-60 md:h-72 w-full">
-                        <img src="{% static 'assets/musica.jpg' %}" alt="Ícone de música" class="w-full h-full object-cover rounded-t-xl">
+                        <img src="{% static 'assets/musica.jpg' %}" alt="Baby Care Program" class="w-full h-full object-cover rounded-t-xl">
                     </div>
                 </a>
                 <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="#" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "Weekly music classes" %}</h3>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "At our daycare, tiny toes tap and little voices shine in our weekly music lessons!" %}</p>
+                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4">
+                        <h3 class="text-xl sm:text-xl font-normal text-gray-900">{% trans "BABY CARE & EARLY LEARNING" %}</h3>
+                        <p class="text-sm sm:text-base text-gray-600">{% trans "Where bilingual journey begins. Our specialized care for our youngest learners (3-12 months) establishes neural pathways for natural bilingual development." %}</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full">
-                        <a href="#"
+                        <a href="{% url 'programs' %}"
                             class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                             style="max-width: 320px;">
                             {% trans "LEARN MORE" %}
@@ -129,18 +180,18 @@
             </div>
 
             <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[520px] cursor-pointer">
-                <a href="#" class="block">
+                <a href="{% url 'programs' %}" class="block">
                     <div class="h-48 sm:h-60 md:h-72 w-full">
-                        <img src="{% static 'assets/futebol.jpg' %}" alt="Football icon" class="w-full h-full object-cover rounded-t-xl">
+                        <img src="{% static 'assets/futebol.jpg' %}" alt="Toddler/Preschool Program" class="w-full h-full object-cover rounded-t-xl">
                     </div>
                 </a>
                 <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="#" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "Seasonal Football" %}</h3>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "A playful sport that builds teamwork and motor skills with lots of joy, movement, and healthy fun!" %}</p>
+                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4 mb-4">
+                        <h3 class="text-xl sm:text-xl font-normal text-gray-900">{% trans "TODDLER & PRESCHOOL PROGRAMS" %}</h3>
+                        <p class="text-sm sm:text-base text-gray-600">{% trans "Discovery through movement and language for ages 14 months to 4 years. Our mixed-age environment allows natural peer learning while providing developmentally appropriate challenges." %}</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full">
-                        <a href="#"
+                        <a href="{% url 'programs' %}"
                             class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                             style="max-width: 320px;">
                             {% trans "LEARN MORE" %}
@@ -150,29 +201,42 @@
             </div>
 
             <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[520px] cursor-pointer">
-                <a href="#" class="block">
+                <a href="{% url 'programs' %}" class="block">
                     <div class="h-48 sm:h-60 md:h-72 w-full">
-                        <img src="{% static 'assets/eventos.jpg' %}" alt="Cultural Celebrations icon" class="w-full h-full object-cover rounded-t-xl">
+                        <img src="{% static 'assets/eventos.jpg' %}" alt="Pre-K & School-Age Program" class="w-full h-full object-cover rounded-t-xl">
                     </div>
                 </a>
                 <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="#" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "Cultural Celebrations" %}</h3>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "Through cultural celebrations, children explore traditions, build empathy, and embrace diversity in joyful and meaningful ways." %}</p>
+                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4">
+                        <h3 class="text-xl sm:text-xl font-normal text-gray-900">{% trans "PRE-K & SCHOOL-AGE PROGRAMS" %}</h3>
+                        <p class="text-sm sm:text-base text-gray-600">{% trans "Kindergarten ready, world ready. For ages 5-8, our program develops advanced bilingual skills while mastering academic and social competencies needed for school success." %}</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full">
-                        <a href="#"
+                        <a href="{% url 'programs' %}"
                             class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
                             style="max-width: 320px;">
                             {% trans "LEARN MORE" %}
                         </a>
                     </div>
                 </div>
-            </div>
-            </div>
             </div>
         </div>
     </section>
 
+    <section class="w-full py-12 sm:py-16 bg-white text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-6">
+                {% trans "Ready to <b>Begin?</b>" %}
+            </h2>
+            <p class="text-lg sm:text-xl space-grotesk-light text-gray-700 mb-8 max-w-3xl mx-auto">
+                {% trans "Contact us today to schedule your tour and discover why families throughout Massachusetts choose Marcela Vitor Learning Center for their children's most important years. Together, we'll build the foundation for your child's brilliant future." %}
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="{% url 'schedule' %}" class="px-12 py-4 bg-[#1053f3] text-white rounded-xl text-xl tracking-wide hover:bg-[#0e49d1] transition-colors duration-200 w-1/2">
+                    {% trans "Schedule a Tour" %}
+                </a>
+            </div>
+        </div>
+    </section>
 </div>
 {% endblock %}

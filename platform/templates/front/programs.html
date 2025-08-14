@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Programs" %} - Marcela Vitor Learning Center
+{% endblock %}
+
+{% block content %}
+<section class="w-full min-h-[50vh] bg-[var(--school-primary-blue)] py-12 sm:py-16 md:py-20 px-4 md:px-10 flex items-center justify-center text-white relative overflow-hidden" style="--school-primary-blue: #1253EF;">
+    <div class="absolute top-0 left-0 w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 bg-yellow-300 opacity-20 rounded-full blur-2xl"></div>
+    <div class="absolute bottom-0 right-0 w-16 h-16 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-pink-300 opacity-20 rounded-full blur-2xl"></div>
+
+    <div class="max-w-6xl mx-auto flex flex-col items-center justify-center relative z-10 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl space-grotesk-bold mb-4 sm:mb-6" style="letter-spacing: 0.08em;">
+            {% trans "OUR PROGRAMS" %}
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg space-grotesk-light px-4 sm:px-6 md:px-0" style="color: var(--school-text-color-light); max-width: 100%;">
+            {% trans "As Massachusetts' only Portuguese-English bilingual learning center with Montessori-inspired educational principles, we offer developmentally appropriate programs for children ages 3 months to 8 years." %}
+        </p>
+    </div>
+</section>
+
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)] mb-6 sm:mb-8">
+            {% blocktrans %}Our <b>Child-Centered Approach</b>{% endblocktrans %}
+        </h2>
+        <p class="text-base sm:text-lg space-grotesk-light text-gray-700 max-w-4xl mx-auto mb-8 sm:mb-12">
+            {% trans "Our bilingual immersion approach provides a seamless experience in both English and Portuguese, creating natural language acquisition. We follow Montessori-inspired principles that respect each child's development pace while encouraging independence, curiosity, and a love for learning in children from infancy through early elementary years." %}
+        </p>
+    </div>
+</section>
+
+<!-- Infant Program -->
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
+        <div class="md:w-1/2">
+            <img src="{% static 'assets/infant_program.jpg' %}" alt="Infant Program" class="rounded-3xl shadow-lg border-4 border-blue-100 w-full h-auto object-cover">
+        </div>
+        <div class="md:w-1/2 space-y-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
+                {% trans "Infant Program" %}
+            </h2>
+            <p class="text-xl font-medium text-blue-600 mb-4">{% trans "Ages 3-15 months" %}</p>
+            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
+                {% trans "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace. We focus on responsive caregiving that builds trust and security while promoting language, motor, and social development through gentle guidance and bilingual interaction." %}
+            </p>
+            <ul class="space-y-2 text-base sm:text-lg text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    {% trans "Low teacher-to-child ratios for individualized care" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    {% trans "Sensory-rich environments that stimulate development" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    {% trans "Daily communication with families about milestones and care" %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
+        <div class="md:w-1/2">
+            <img src="{% static 'assets/toddler_program.jpg' %}" alt="Toddler Program" class="rounded-3xl shadow-lg border-4 border-yellow-100 w-full h-auto object-cover">
+        </div>
+        <div class="md:w-1/2 space-y-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
+                {% trans "Toddler Program" %}
+            </h2>
+            <p class="text-xl font-medium text-yellow-600 mb-4">{% trans "Ages 15 months-3 years" %}</p>
+            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
+                {% trans "Our toddler program embraces this age of exploration and growing independence. Through carefully designed environments and activities, toddlers develop self-help skills, language abilities in both English and Portuguese, and positive social interactions." %}
+            </p>
+            <ul class="space-y-2 text-base sm:text-lg text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-yellow-500 mr-2">•</span>
+                    {% trans "Practical life activities that develop independence" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-yellow-500 mr-2">•</span>
+                    {% trans "Language-rich environment with songs, stories, and conversation in both languages" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-yellow-500 mr-2">•</span>
+                    {% trans "Supportive toilet learning when developmentally ready" %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
+        <div class="md:w-1/2">
+            <img src="{% static 'assets/preschool_program.jpg' %}" alt="Preschool Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-auto object-cover">
+        </div>
+        <div class="md:w-1/2 space-y-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
+                {% trans "Preschool Program" %}
+            </h2>
+            <p class="text-xl font-medium text-green-600 mb-4">{% trans "Ages 3-5 years" %}</p>
+            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
+                {% trans "Our preschool program fosters a love of learning through exploration and discovery. Children engage with Montessori-inspired materials across curriculum areas while developing strong bilingual skills and cultural appreciation." %}
+            </p>
+            <ul class="space-y-2 text-base sm:text-lg text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">•</span>
+                    {% trans "Hands-on learning experiences in mathematics, language, science, and culture" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">•</span>
+                    {% trans "Daily opportunities for creative expression through art, music, and movement" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">•</span>
+                    {% trans "Social-emotional development through collaborative projects and conflict resolution" %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
+        <div class="md:w-1/2">
+            <img src="{% static 'assets/school_age_program.jpg' %}" alt="School-Age Program" class="rounded-3xl shadow-lg border-4 border-purple-100 w-full h-auto object-cover">
+        </div>
+        <div class="md:w-1/2 space-y-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
+                {% trans "School-Age Program" %}
+            </h2>
+            <p class="text-xl font-medium text-purple-600 mb-4">{% trans "Ages 5-8 years" %}</p>
+            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
+                {% trans "Our school-age program builds on the strong foundation established in our early childhood programs, continuing the bilingual immersion experience while supporting academic growth aligned with Massachusetts curriculum standards." %}
+            </p>
+            <ul class="space-y-2 text-base sm:text-lg text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-purple-500 mr-2">•</span>
+                    {% trans "Advanced literacy and numeracy development in both Portuguese and English" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-purple-500 mr-2">•</span>
+                    {% trans "Project-based learning that integrates science, technology, engineering, arts, and mathematics" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-purple-500 mr-2">•</span>
+                    {% trans "Cultural studies that build global awareness and appreciation for diversity" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-purple-500 mr-2">•</span>
+                    {% trans "After-school and vacation programs that extend the bilingual learning experience" %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-[var(--school-primary-blue)] text-white">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular mb-6">{% trans "Ready to Give Your Child the Bilingual Advantage?" %}</h2>
+        <p class="text-base sm:text-lg space-grotesk-light mb-8 max-w-3xl mx-auto">
+            {% trans "Research shows that the critical period for language acquisition happens before age 8. Don't miss this window of opportunity. Schedule a visit to tour our center, meet our teachers, and learn more about how our unique bilingual Montessori-inspired approach can benefit your child's cognitive, social, and linguistic development." %}
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="{% url 'schedule' %}" class="px-6 py-3 bg-white text-[var(--school-primary-blue)] font-semibold rounded-xl hover:bg-gray-100 transition duration-200">
+                {% trans "Schedule a Visit" %}
+            </a>
+            <a href="{% url 'contact' %}" class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition duration-200">
+                {% trans "Contact Us" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
