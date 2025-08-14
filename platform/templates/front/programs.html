@@ -32,17 +32,16 @@
     </div>
 </section>
 
-<!-- Infant Program -->
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
-            <img src="{% static 'assets/infant_program.jpg' %}" alt="Infant Program" class="rounded-3xl shadow-lg border-4 border-blue-100 w-full h-auto object-cover">
+            <img src="{% static 'assets/baby.jpg' %}" alt="Infant Program" class="rounded-3xl shadow-lg border-4 border-blue-100 w-full h-auto object-cover">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
                 {% trans "Infant Program" %}
             </h2>
-            <p class="text-xl font-medium text-blue-600 mb-4">{% trans "Ages 3-15 months" %}</p>
+            <p class="text-xl font-medium text-blue-600 mb-4">{% trans "Ages 3 - 15 months" %}</p>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
                 {% trans "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace. We focus on responsive caregiving that builds trust and security while promoting language, motor, and social development through gentle guidance and bilingual interaction." %}
             </p>
@@ -67,13 +66,13 @@
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
-            <img src="{% static 'assets/toddler_program.jpg' %}" alt="Toddler Program" class="rounded-3xl shadow-lg border-4 border-yellow-100 w-full h-auto object-cover">
+            <img src="{% static 'assets/joy.jpg' %}" alt="Toddler Program" class="rounded-3xl shadow-lg border-4 border-yellow-100 w-full h-auto object-cover">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
                 {% trans "Toddler Program" %}
             </h2>
-            <p class="text-xl font-medium text-yellow-600 mb-4">{% trans "Ages 15 months-3 years" %}</p>
+            <p class="text-xl font-medium text-yellow-600 mb-4">{% trans "Ages 15 months - 3 years" %}</p>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
                 {% trans "Our toddler program embraces this age of exploration and growing independence. Through carefully designed environments and activities, toddlers develop self-help skills, language abilities in both English and Portuguese, and positive social interactions." %}
             </p>
@@ -98,7 +97,7 @@
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
-            <img src="{% static 'assets/preschool_program.jpg' %}" alt="Preschool Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-auto object-cover">
+            <img src="{% static 'assets/preschool.jpg' %}" alt="Preschool Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-[300px] md:h-[400px] object-cover object-center" style="aspect-ratio: 16/9;">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
@@ -129,7 +128,7 @@
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
-            <img src="{% static 'assets/school_age_program.jpg' %}" alt="School-Age Program" class="rounded-3xl shadow-lg border-4 border-purple-100 w-full h-auto object-cover">
+            <img src="{% static 'assets/school.jpg' %}" alt="Preschool Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-[300px] md:h-[400px] object-cover object-center" style="aspect-ratio: 16/9;">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
@@ -170,9 +169,6 @@
         <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="{% url 'schedule' %}" class="px-6 py-3 bg-white text-[var(--school-primary-blue)] font-semibold rounded-xl hover:bg-gray-100 transition duration-200">
                 {% trans "Schedule a Visit" %}
-            </a>
-            <a href="{% url 'contact' %}" class="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition duration-200">
-                {% trans "Contact Us" %}
             </a>
         </div>
     </div>
