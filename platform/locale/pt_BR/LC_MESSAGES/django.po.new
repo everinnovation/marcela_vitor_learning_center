@@ -1,0 +1,465 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Marcela Vitor Learning Center\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-15 00:37+0000\n"
+"PO-Revision-Date: 2025-08-14 12:00-0300\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese Brazilian\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Welcome"
+msgstr "Bem-vindo"
+
+msgid "Logout"
+msgstr "Sair"
+
+msgid "Dashboard"
+msgstr "Painel"
+
+msgid "Messages"
+msgstr "Mensagens"
+
+msgid "Visits"
+msgstr "Visitas"
+
+msgid "Resumes"
+msgstr "Currículos"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "Contact Messages"
+msgstr "Mensagens de Contato"
+
+msgid "New"
+msgstr "Novo"
+
+msgid "Scheduled Visits"
+msgstr "Visitas Agendadas"
+
+msgid "Upcoming"
+msgstr "Próximas"
+
+msgid "Job Applications"
+msgstr "Candidaturas"
+
+msgid "Recent"
+msgstr "Recentes"
+
+msgid "View All"
+msgstr "Ver Todos"
+
+msgid "Message from"
+msgstr "Mensagem de"
+
+msgid "at"
+msgstr "em"
+
+msgid "Read"
+msgstr "Lido"
+
+msgid "Unread"
+msgstr "Não lido"
+
+msgid "Additional Information"
+msgstr "Informações Adicionais"
+
+msgid "Full Name"
+msgstr "Nome Completo"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Phone"
+msgstr "Telefone"
+
+msgid "Message Details"
+msgstr "Detalhes da Mensagem"
+
+msgid "Subject"
+msgstr "Assunto"
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Back to List"
+msgstr "Voltar à Lista"
+
+msgid "Mark as Read"
+msgstr "Marcar como Lido"
+
+msgid "Mark as Unread"
+msgstr "Marcar como Não Lido"
+
+msgid "Edit Message"
+msgstr "Editar Mensagem"
+
+msgid "Contact Us"
+msgstr "Contato"
+
+msgid "All"
+msgstr "Todos"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "View"
+msgstr "Ver"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "Contact Message"
+msgstr "Mensagem de Contato"
+
+msgid "Are you sure you want to delete this message?"
+msgstr "Tem certeza que deseja excluir esta mensagem?"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Confirm"
+msgstr "Confirmar"
+
+msgid "No messages found"
+msgstr "Nenhuma mensagem encontrada"
+
+msgid "Visit Details"
+msgstr "Detalhes da Visita"
+
+msgid "Visitor Information"
+msgstr "Informações do Visitante"
+
+msgid "Parent Name"
+msgstr "Nome do Responsável"
+
+msgid "Child Name"
+msgstr "Nome da Criança"
+
+msgid "Child Age"
+msgstr "Idade da Criança"
+
+msgid "Visit Information"
+msgstr "Informações da Visita"
+
+msgid "Preferred Date"
+msgstr "Data Preferida"
+
+msgid "Preferred Time"
+msgstr "Horário Preferido"
+
+msgid "Notes"
+msgstr "Observações"
+
+msgid "Edit Visit"
+msgstr "Editar Visita"
+
+msgid "Are you sure you want to delete this visit?"
+msgstr "Tem certeza que deseja excluir esta visita?"
+
+msgid "Scheduled Visit"
+msgstr "Visita Agendada"
+
+msgid "No visits found"
+msgstr "Nenhuma visita encontrada"
+
+msgid "Resume Details"
+msgstr "Detalhes do Currículo"
+
+msgid "Applicant Information"
+msgstr "Informações do Candidato"
+
+msgid "Position"
+msgstr "Cargo"
+
+msgid "Resume"
+msgstr "Currículo"
+
+msgid "Download Resume"
+msgstr "Baixar Currículo"
+
+msgid "Edit Resume"
+msgstr "Editar Currículo"
+
+msgid "Job Application"
+msgstr "Candidatura"
+
+msgid "Are you sure you want to delete this resume?"
+msgstr "Tem certeza que deseja excluir este currículo?"
+
+msgid "No resumes found"
+msgstr "Nenhum currículo encontrado"
+
+msgid "Home"
+msgstr "Início"
+
+msgid "About Us"
+msgstr "Sobre Nós"
+
+msgid "ABOUT US"
+msgstr "SOBRE NÓS"
+
+msgid "<b>A Dream Born </b> from Love"
+msgstr "<b>Um Sonho Nascido</b> do Amor"
+
+msgid "Our <b>Unique Approach</b>"
+msgstr "Nossa <b>Abordagem Única</b>"
+
+msgid "Bilingual Immersion"
+msgstr "Imersão Bilíngue"
+
+msgid "Montessori-Inspired Learning"
+msgstr "Aprendizado Inspirado em Montessori"
+
+msgid "Meet <b>Our Founders</b>"
+msgstr "Conheça <b>Nossos Fundadores</b>"
+
+msgid "Marcela Vitor"
+msgstr "Marcela Vitor"
+
+msgid "Rodolfo Vitor"
+msgstr "Rodolfo Vitor"
+
+msgid "Massachusetts' Only"
+msgstr "Em Massachusetts"
+
+msgid "Child-Centered"
+msgstr "Centrada na Criança"
+
+msgid "BRIGHT BEGINNINGS!"
+msgstr "COMEÇOS BRILHANTES!"
+
+msgid "Where Child-Centered Learning Meets Multicultural Excellence"
+msgstr "Onde o Aprendizado Centrado na Criança Encontra a Excelência Multicultural"
+
+msgid "JOIN US!"
+msgstr "JUNTE-SE A NÓS!"
+
+msgid "LEARN MORE"
+msgstr "SAIBA MAIS"
+
+msgid "ENROLLMENT OPEN FOR 2025-2026!"
+msgstr "MATRÍCULAS ABERTAS PARA 2025-2026!"
+
+msgid "SCHEDULE A VISIT"
+msgstr "AGENDE UMA VISITA"
+
+msgid "mo"
+msgstr "meses"
+
+msgid "yrs"
+msgstr "anos"
+
+msgid "Immersion"
+msgstr "Imersão"
+
+msgid "In Massachusetts"
+msgstr "Em Massachusetts"
+
+msgid "Only One"
+msgstr "Único"
+
+msgid "Methodology"
+msgstr "Metodologia"
+
+msgid "Licensed by"
+msgstr "Licenciado por"
+
+msgid "Years Experience"
+msgstr "Anos de Experiência"
+
+msgid "Capacity"
+msgstr "Capacidade"
+
+msgid "Our Educational Philosophy"
+msgstr "Nossa Filosofia Educacional"
+
+msgid "At Marcela Vitor Learning Center, we believe in nurturing children through a thoughtfully designed bilingual environment that promotes cognitive, social, and emotional development. Our approach combines the best elements of different educational methodologies to create a rich, engaging learning experience."
+msgstr "No Marcela Vitor Learning Center, acreditamos em nutrir as crianças através de um ambiente bilíngue cuidadosamente projetado que promove o desenvolvimento cognitivo, social e emocional. Nossa abordagem combina os melhores elementos de diferentes metodologias educacionais para criar uma experiência de aprendizado rica e envolvente."
+
+msgid "Programs"
+msgstr "Programas"
+
+msgid "OUR PROGRAMS"
+msgstr "NOSSOS PROGRAMAS"
+
+msgid "A Comprehensive Approach to <b>Bilingual Education</b>"
+msgstr "Uma Abordagem Abrangente para <b>Educação Bilíngue</b>"
+
+msgid "Infants Program"
+msgstr "Programa para Bebês"
+
+msgid "Toddlers Program"
+msgstr "Programa para Crianças Pequenas"
+
+msgid "Preschool Program"
+msgstr "Programa Pré-escolar"
+
+msgid "School Age Program"
+msgstr "Programa para Idade Escolar"
+
+msgid "Offering a nurturing and stimulating bilingual environment for our youngest learners. Through sensory experiences, language exposure, and developmental activities, we help babies build a strong foundation for future learning while fostering their natural curiosity."
+msgstr "Oferecemos um ambiente bilíngue acolhedor e estimulante para nossos aprendizes mais jovens. Através de experiências sensoriais, exposição à linguagem e atividades de desenvolvimento, ajudamos os bebês a construir uma base sólida para o aprendizado futuro, enquanto estimulamos sua curiosidade natural."
+
+msgid "Our toddler program embraces this exciting stage of development with a carefully designed bilingual curriculum that encourages independence, language acquisition, and social skills. Through play-based learning, music, movement, and creative activities, toddlers develop confidence while being exposed to both Portuguese and English."
+msgstr "Nosso programa para crianças pequenas abraça esta empolgante fase de desenvolvimento com um currículo bilíngue cuidadosamente projetado que incentiva a independência, a aquisição de linguagem e as habilidades sociais. Através de aprendizado baseado em brincadeiras, música, movimento e atividades criativas, as crianças desenvolvem confiança enquanto são expostas tanto ao português quanto ao inglês."
+
+msgid "Our preschool program builds on children's natural curiosity with a comprehensive bilingual curriculum that prepares them for kindergarten and beyond. Through hands-on learning experiences, children develop pre-literacy and pre-math skills, cultural awareness, and social-emotional competence in both Portuguese and English."
+msgstr "Nosso programa pré-escolar se baseia na curiosidade natural das crianças com um currículo bilíngue abrangente que as prepara para o jardim de infância e além. Através de experiências práticas de aprendizado, as crianças desenvolvem habilidades de pré-alfabetização e pré-matemática, consciência cultural e competência socioemocional tanto em português quanto em inglês."
+
+msgid "Our after-school program offers a seamless extension of the bilingual learning experience for elementary school children. With homework support, enrichment activities, and continued language development in both Portuguese and English, we help school-age children build academic skills while exploring their interests in a supportive environment."
+msgstr "Nosso programa após a escola oferece uma extensão perfeita da experiência de aprendizado bilíngue para crianças do ensino fundamental. Com apoio para lição de casa, atividades de enriquecimento e desenvolvimento contínuo da linguagem tanto em português quanto em inglês, ajudamos crianças em idade escolar a desenvolver habilidades acadêmicas enquanto exploram seus interesses em um ambiente de apoio."
+
+msgid "Ready to Give Your Child the Bilingual Advantage?"
+msgstr "Pronto para Dar ao Seu Filho a Vantagem Bilíngue?"
+
+msgid "Schedule a Visit"
+msgstr "Agende uma Visita"
+
+msgid "SCHEDULE A VISIT TODAY"
+msgstr "AGENDE UMA VISITA HOJE"
+
+msgid "Experience <b>Our Unique Environment</b> Firsthand"
+msgstr "Experimente <b>Nosso Ambiente Único</b> Pessoalmente"
+
+msgid "At Marcela Vitor Learning Center, we believe that seeing is believing. We invite you to schedule a visit to our center to experience our unique bilingual environment firsthand, meet our dedicated staff, and learn more about how our approach can benefit your child."
+msgstr "No Marcela Vitor Learning Center, acreditamos que ver é acreditar. Convidamos você a agendar uma visita ao nosso centro para experimentar nosso ambiente bilíngue único pessoalmente, conhecer nossa equipe dedicada e saber mais sobre como nossa abordagem pode beneficiar seu filho."
+
+msgid "Schedule Your Visit"
+msgstr "Agende Sua Visita"
+
+msgid "Please fill out the form below to schedule a visit to our center. We look forward to meeting you and your child!"
+msgstr "Por favor, preencha o formulário abaixo para agendar uma visita ao nosso centro. Estamos ansiosos para conhecer você e seu filho!"
+
+msgid "Your Information"
+msgstr "Suas Informações"
+
+msgid "Parent's Name"
+msgstr "Nome do Responsável"
+
+msgid "Your Email"
+msgstr "Seu Email"
+
+msgid "Your Phone"
+msgstr "Seu Telefone"
+
+msgid "Child's Information"
+msgstr "Informações da Criança"
+
+msgid "Child's Name"
+msgstr "Nome da Criança"
+
+msgid "Child's Age"
+msgstr "Idade da Criança"
+
+msgid "Visit Preferences"
+msgstr "Preferências de Visita"
+
+msgid "Preferred Date"
+msgstr "Data Preferida"
+
+msgid "Preferred Time"
+msgstr "Horário Preferido"
+
+msgid "Morning"
+msgstr "Manhã"
+
+msgid "Afternoon"
+msgstr "Tarde"
+
+msgid "Additional Notes"
+msgstr "Observações Adicionais"
+
+msgid "Any questions or specific information you'd like to discuss during your visit?"
+msgstr "Alguma pergunta ou informação específica que você gostaria de discutir durante sua visita?"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Thank you for scheduling a visit!"
+msgstr "Obrigado por agendar uma visita!"
+
+msgid "We have received your request and will contact you shortly to confirm your visit details."
+msgstr "Recebemos sua solicitação e entraremos em contato em breve para confirmar os detalhes da sua visita."
+
+msgid "Return Home"
+msgstr "Voltar para a Página Inicial"
+
+msgid "Careers"
+msgstr "Carreiras"
+
+msgid "CAREERS"
+msgstr "CARREIRAS"
+
+msgid "Join <b>Our Team</b>"
+msgstr "Junte-se a <b>Nossa Equipe</b>"
+
+msgid "At Marcela Vitor Learning Center, we are always looking for passionate, dedicated individuals to join our team. If you are committed to providing quality bilingual education and care for children, we invite you to apply for a position with us."
+msgstr "No Marcela Vitor Learning Center, estamos sempre procurando indivíduos apaixonados e dedicados para se juntar à nossa equipe. Se você está comprometido em fornecer educação bilíngue de qualidade e cuidados para crianças, convidamos você a se candidatar a uma posição conosco."
+
+msgid "Current Openings"
+msgstr "Vagas Atuais"
+
+msgid "Apply Now"
+msgstr "Candidate-se Agora"
+
+msgid "Please fill out the form below to apply for a position at our center. We will review your application and contact you if your qualifications match our needs."
+msgstr "Por favor, preencha o formulário abaixo para se candidatar a uma posição em nosso centro. Analisaremos sua candidatura e entraremos em contato se suas qualificações corresponderem às nossas necessidades."
+
+msgid "Your Resume"
+msgstr "Seu Currículo"
+
+msgid "Upload your resume (PDF format)"
+msgstr "Envie seu currículo (formato PDF)"
+
+msgid "Thank you for your application!"
+msgstr "Obrigado pela sua candidatura!"
+
+msgid "We have received your application and will review it shortly. If your qualifications match our needs, we will contact you for an interview."
+msgstr "Recebemos sua candidatura e a analisaremos em breve. Se suas qualificações corresponderem às nossas necessidades, entraremos em contato para uma entrevista."
+
+msgid "Discover the transformative power of authentic bilingual education at Marcela Vitor Learning Center, the only Portuguese-English immersion program in Massachusetts."
+msgstr "Descubra o poder transformador da educação bilíngue autêntica no Marcela Vitor Learning Center, o único programa de imersão português-inglês em Massachusetts."
+
+msgid "Bilingual Immersion Program"
+msgstr "Programa de Imersão Bilíngue"
+
+msgid "Comprehensive Curriculum"
+msgstr "Currículo Abrangente"
+
+msgid "Experienced Educators"
+msgstr "Educadores Experientes"
+
+msgid "Licensed by EEC"
+msgstr "Licenciado pelo EEC"
+
+msgid "Secure Environment"
+msgstr "Ambiente Seguro"
+
+msgid "Welcome to Marcela Vitor Learning Center"
+msgstr "Bem-vindo ao Marcela Vitor Learning Center"
+
+msgid "Where Learning Meets Love"
+msgstr "Onde o Aprendizado Encontra o Amor"
+
+msgid "A Dream Born from Love"
+msgstr "Um Sonho Nascido do Amor"
+
+msgid "The Marcela Vitor Learning Center was born from a vision shared by educators Marcela and Rodolfo Vitor: to create a nurturing space where children could develop their full potential while embracing two cultures and languages. With over 20 years of combined experience in education, they recognized the tremendous benefits of early bilingual education and sought to create Massachusetts' first Portuguese-English immersion program."
+msgstr "O Marcela Vitor Learning Center nasceu de uma visão compartilhada pelos educadores Marcela e Rodolfo Vitor: criar um espaço acolhedor onde as crianças pudessem desenvolver todo o seu potencial enquanto abraçam duas culturas e línguas. Com mais de 20 anos de experiência combinada em educação, eles reconheceram os tremendos benefícios da educação bilíngue precoce e buscaram criar o primeiro programa de imersão português-inglês de Massachusetts."

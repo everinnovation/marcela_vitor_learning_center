@@ -29,7 +29,6 @@ class EmailManagementView(View):
                     print(f"File attached successfully: {file_name}.{file_extension}")
             except Exception as e:
                 print(f"Error attaching file: {e}")
-                # Continue without the attachment
 
         try:
             print("Attempting to send email...")
@@ -46,7 +45,6 @@ class EmailManager:
     def send_resume_email(resume_data, file_path=None):
         """Send email notification for new resume submission."""
         try:
-            # Render email template
             email_html = render_to_string('email/resume_email.html', {
                 'name': resume_data.full_name,
                 'email': resume_data.email,
@@ -62,7 +60,6 @@ class EmailManager:
                 'additional_info': resume_data.additional_info
             })
             
-            # Create email
             email = EmailMessage(
                 subject=f'New Resume Submission - {resume_data.full_name}',
                 body=email_html,
@@ -72,12 +69,10 @@ class EmailManager:
             )
             email.content_subtype = "html"
             
-            # Attach resume file if available
             if file_path and os.path.exists(file_path):
                 file_name = os.path.basename(file_path)
                 file_extension = file_name.split('.')[-1]
                 
-                # Set the appropriate content type for the attachment
                 content_type = 'application/pdf' if file_extension.lower() == 'pdf' else 'application/octet-stream'
                 
                 with open(file_path, 'rb') as pdf_file:
@@ -87,7 +82,6 @@ class EmailManager:
             else:
                 logger.warning(f"Resume file not found or not provided: {file_path}")
             
-            # Send email
             email.send()
             logger.info(f"Resume notification email sent for {resume_data.full_name}")
             return True
@@ -98,19 +92,15 @@ class EmailManager:
             
     @staticmethod
     def send_schedule_confirmation_email(schedule_data):
-        """Send email confirmation for visit scheduling."""
         try:
-            # Format time slot for display
             hour = int(schedule_data.time_slot.split(':')[0])
             minute = schedule_data.time_slot.split(':')[1]
             ampm = 'PM' if hour >= 12 else 'AM'
             formatted_hour = hour % 12 or 12
             formatted_time = f"{formatted_hour}:{minute} {ampm}"
             
-            # Format date for display
             formatted_date = schedule_data.visit_date.strftime('%A, %B %d, %Y')
             
-            # Render email template
             email_html = render_to_string('email/schedule_email.html', {
                 'name': schedule_data.full_name,
                 'email': schedule_data.email,
@@ -121,21 +111,19 @@ class EmailManager:
                 'special_requests': schedule_data.special_requests
             })
             
-            # Get admin email from settings, default to the FROM email if not defined
             admin_email = getattr(settings, 'ADMIN_EMAIL', settings.DEFAULT_FROM_EMAIL)
+            contact_email = "contactmarcelavitor@gmail.com"
             
-            # Create email for customer
             customer_email = EmailMessage(
                 subject=f'Visit Confirmation - Marcela Vitor Learning Center',
                 body=email_html,
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 to=[schedule_data.email],
-                reply_to=[admin_email]
+                reply_to=[contact_email]
             )
             customer_email.content_subtype = "html"
             customer_email.send()
             
-            # Create notification email for admin
             admin_email_msg = EmailMessage(
                 subject=f'New Visit Scheduled - {schedule_data.full_name}',
                 body=email_html,
@@ -146,7 +134,17 @@ class EmailManager:
             admin_email_msg.content_subtype = "html"
             admin_email_msg.send()
             
-            logger.info(f"Schedule confirmation emails sent for {schedule_data.full_name}")
+            contact_email_msg = EmailMessage(
+                subject=f'New Visit Scheduled - {schedule_data.full_name}',
+                body=email_html,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=[contact_email],
+                reply_to=[schedule_data.email]
+            )
+            contact_email_msg.content_subtype = "html"
+            contact_email_msg.send()
+            
+            logger.info(f"Schedule confirmation emails sent for {schedule_data.full_name} to customer, admin, and contact")
             return True
         
         except Exception as e:

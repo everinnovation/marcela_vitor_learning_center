@@ -54,20 +54,17 @@ class ResumeView(TemplateView):
             }
 
             template_name = 'email/resume_email.html'
-            to_emails = ['rafaelpinheirodesigner@gmail.com']  # Substitua pelo email correto
+            to_emails = ['contactmarcelavitor@gmail.com']
             
-            # Tenta enviar o email com o arquivo anexado se disponível
             try:
                 if resume.resume_file:
                     try:
                         file_path = resume.resume_file.path
-                        # Limpa o nome para evitar caracteres especiais que podem causar problemas
                         safe_name = ''.join(c for c in resume.full_name if c.isalnum() or c.isspace()).strip().replace(' ', '_')
                         file_name = f"Resume_{safe_name}"
                         email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails, file_path, file_name)
                     except Exception as e:
                         print(f"Error accessing resume file: {e}")
-                        # Se ocorrer um erro ao acessar o arquivo, ainda tenta enviar o email sem o anexo
                         email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
                 else:
                     email_sent = EmailManagementView.send_email(subject, template_name, context, to_emails)
