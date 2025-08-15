@@ -1,0 +1,143 @@
+# Core values
+msgid "Every day, we live our values: kindness, creativity, inclusion, and discovery. They guide our teaching—and shape our community."
+msgstr "Todos os dias, vivemos nossos valores: bondade, criatividade, inclusão e descoberta. Eles guiam nosso ensino—e moldam nossa comunidade."
+
+msgid "Creativity"
+msgstr "Criatividade"
+
+msgid "We spark imagination through play, storytelling, and hands-on projects that let children create without limits."
+msgstr "Despertamos a imaginação através de brincadeiras, contação de histórias e projetos práticos que permitem às crianças criar sem limites."
+
+msgid "Teamwork"
+msgstr "Trabalho em Equipe"
+
+msgid "We encourage collaboration, empathy, and shared success—learning how to support and grow with others."
+msgstr "Incentivamos a colaboração, empatia e sucesso compartilhado—aprendendo como apoiar e crescer com os outros."
+
+msgid "Curiosity"
+msgstr "Curiosidade"
+
+msgid "We nurture a love for questions, discoveries, and exploration—turning wonder into lifelong learning."
+msgstr "Cultivamos o amor por perguntas, descobertas e exploração—transformando a curiosidade em aprendizado para toda a vida."
+
+# Resume page
+msgid "Resume Upload"
+msgstr "Envio de Currículo"
+
+msgid "SUBMIT YOUR <b>RESUME</b>"
+msgstr "ENVIE SEU <b>CURRÍCULO</b>"
+
+msgid "Join our talent pool by submitting your resume today!"
+msgstr "Junte-se ao nosso banco de talentos enviando seu currículo hoje!"
+
+msgid "Submit Your <b>Application</b>"
+msgstr "Envie Sua <b>Candidatura</b>"
+
+msgid "Full Name"
+msgstr "Nome Completo"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Phone"
+msgstr "Telefone"
+
+msgid "City"
+msgstr "Cidade"
+
+msgid "State"
+msgstr "Estado"
+
+msgid "Zip Code"
+msgstr "CEP"
+
+msgid "Native Language"
+msgstr "Língua Materna"
+
+msgid "Portuguese Level"
+msgstr "Nível de Português"
+
+msgid "English Level"
+msgstr "Nível de Inglês"
+
+msgid "Field of Expertise"
+msgstr "Área de Especialização"
+
+msgid "Years of Experience"
+msgstr "Anos de Experiência"
+
+msgid "Resume File"
+msgstr "Arquivo do Currículo"
+
+msgid "Additional Information"
+msgstr "Informações Adicionais"
+
+msgid "SUBMIT RESUME"
+msgstr "ENVIAR CURRÍCULO"
+
+msgid "SUBMITTING..."
+msgstr "ENVIANDO..."
+
+# Footer
+msgid "Every child shines here. Bilingual learning, play, and care in a loving community."
+msgstr "Cada criança brilha aqui. Aprendizado bilíngue, brincadeira e cuidado em uma comunidade amorosa."
+
+msgid "Quick Links"
+msgstr "Links Rápidos"
+
+msgid "Philosophy"
+msgstr "Filosofia"
+
+msgid "Teachers"
+msgstr "Professores"
+
+msgid "Contact"
+msgstr "Contato"
+
+msgid "Boston, MA"
+msgstr "Boston, MA"
+
+msgid "Schedule a Visit"
+msgstr "Agende uma Visita"
+
+msgid "Where Child-Centered Learning Meets Multicultural Excellence"
+msgstr "Onde o Aprendizado Centrado na Criança Encontra a Excelência Multicultural"
+
+msgid "Discover the transformative power of authentic bilingual education at Marcela Vitor Learning Center, the only Portuguese-English immersion program in Massachusetts."
+msgstr "Descubra o poder transformador da educação bilíngue autêntica no Marcela Vitor Learning Center, o único programa de imersão Português-Inglês em Massachusetts."
+
+msgid "ENROLLMENT OPEN FOR 2025-2026!"
+msgstr "MATRÍCULAS ABERTAS PARA 2025-2026!"
+
+msgid "SCHEDULE A VISIT"
+msgstr "AGENDE UMA VISITA"
+
+msgid "Ages"
+msgstr "Idades"
+
+msgid "mo"
+msgstr "meses"
+
+msgid "yrs"
+msgstr "anos"
+
+msgid "Immersion"
+msgstr "Imersão"
+
+msgid "In Massachusetts"
+msgstr "Em Massachusetts"
+
+msgid "Only One"
+msgstr "Único"
+
+msgid "Methodology"
+msgstr "Metodologia"
+
+msgid "Child-Centered"
+msgstr "Centrada na Criança"
+
+msgid "Licensed by"
+msgstr "Licenciado por"
+
+msgid "MA EEC"
+msgstr "MA EEC"

@@ -1,0 +1,712 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Marcela Vitor Learning Center\n"
+--
+msgid "Welcome"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Visit Schedules"
+msgstr ""
+
+msgid "Resume Submissions"
+msgstr ""
+
+msgid "Django Admin"
+msgstr ""
+
+msgid "Back to Website"
+msgstr ""
+
+msgid "All rights reserved."
+msgstr ""
+
+msgid "Message from"
+msgstr ""
+
+msgid "at"
+msgstr ""
+
+msgid "Read"
+msgstr ""
+
+msgid "Unread"
+msgstr ""
+
+--
+msgid "Message Details"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Back to List"
+msgstr ""
+
+msgid "Mark as Read"
+msgstr ""
+
+msgid "Mark as Unread"
+msgstr ""
+
+msgid "Edit Message"
+msgstr ""
+
+--
+msgid "All"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+--
+msgid "Actions"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "No contact messages found."
+msgstr ""
+
+msgid "Try removing the filter to see all messages."
+msgstr ""
+
+msgid "Admin Panel"
+msgstr ""
+
+--
+"panel for a more user-friendly experience:"
+msgstr ""
+
+msgid "Go to Custom Admin Panel"
+msgstr ""
+
+msgid "Upcoming Visits"
+msgstr ""
+
+msgid "Completed Visits"
+msgstr ""
+
+--
+msgid "Upcoming Visits (Next 7 Days)"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "No upcoming visits for the next 7 days."
+msgstr ""
+
+msgid "View all visits"
+msgstr ""
+
+msgid "Recent Resume Submissions"
+msgstr ""
+
+msgid "Submitted"
+msgstr ""
+
+msgid "No resume submissions yet."
+msgstr ""
+
+msgid "View all resumes"
+msgstr ""
+
+--
+msgid "Submitted on"
+msgstr ""
+
+--
+msgid "Location"
+msgstr ""
+
+--
+msgid "Language Skills"
+msgstr ""
+
+--
+msgid "Download"
+msgstr ""
+
+msgid "No resume file uploaded."
+msgstr ""
+
+msgid "Edit Resume"
+msgstr ""
+
+--
+msgid "Native"
+msgstr ""
+
+--
+msgid "No resume submissions found."
+msgstr ""
+
+msgid "Visit by"
+msgstr ""
+
+--
+msgid "Visit Details"
+msgstr ""
+
+msgid "Visit Date"
+msgstr ""
+
+msgid "Time Slot"
+msgstr ""
+
+msgid "Number of Children"
+msgstr ""
+
+msgid "Children Ages"
+msgstr ""
+
+msgid "Special Requests"
+msgstr ""
+
+msgid "No special requests provided."
+msgstr ""
+
+--
+msgid "Created"
+msgstr ""
+
+msgid "Last Updated"
+msgstr ""
+
+msgid "Google Calendar Event ID"
+msgstr ""
+
+--
+msgid "Completed"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "Date & Time"
+msgstr ""
+
+--
+msgid "children"
+msgstr ""
+
+--
+msgid "No visit schedules found."
+msgstr ""
+
+msgid "Try removing the status filter to see all visits."
+msgstr ""
+
+--
+"creating an extraordinary foundation for your child's global future."
+msgstr ""
+
+msgid "<b>A Dream Born </b> from Love"
+msgstr ""
+
+--
+"create the school we wished existed."
+msgstr ""
+
+--
+"school - we created the community we wanted for our own daughters."
+msgstr ""
+
+--
+"experiences."
+msgstr ""
+
+--
+"absorbing vocabulary, pronunciation, and cultural nuances organically."
+msgstr ""
+
+--
+"intrinsic motivation."
+msgstr ""
+
+--
+"only Portuguese-English bilingual learning center."
+msgstr ""
+
+--
+"based approach to our curriculum."
+msgstr ""
+"Marcela é uma fonoaudióloga bilíngue com quase uma década de experiência em "
+--
+"cultures."
+msgstr ""
+
+msgid "Rodolfo Vitor"
+msgstr ""
+
+--
+"the highest standards of quality, safety, and innovation."
+msgstr ""
+
+--
+"building bridges between Brazilian and American cultures."
+msgstr ""
+
+msgid "Research-Based <b>Excellence in Bilingual Education</b>"
+msgstr ""
+
+--
+"experience."
+msgstr ""
+
+msgid "Cognitive Benefits"
+msgstr ""
+
+--
+"leverages these natural advantages."
+msgstr ""
+
+msgid "Critical Period"
+msgstr ""
+
+--
+"maximize this critical window of opportunity."
+msgstr ""
+
+msgid "Cultural Awareness"
+msgstr ""
+
+--
+"foundation for true global citizenship."
+msgstr ""
+
+msgid "Family <b>Testimonials</b>"
+msgstr ""
+
+--
+"Massachusetts' only Portuguese-English bilingual learning center."
+msgstr ""
+
+--
+"a community that celebrates our heritage."
+msgstr ""
+
+msgid "Ana & Mark Thompson"
+msgstr ""
+
+msgid "Parents of Sophia, age 4"
+msgstr ""
+
+--
+"He's learning so much more than just language."
+msgstr ""
+
+msgid "Jennifer & David Miller"
+msgstr ""
+
+msgid "Parents of Lucas, age 3"
+msgstr ""
+
+--
+"of our family."
+msgstr ""
+
+msgid "Carolina & James Wilson"
+msgstr ""
+
+msgid "Parents of Benjamin, 7 months"
+msgstr ""
+
+msgid "Calendar"
+msgstr ""
+
+msgid "School Calendar"
+msgstr ""
+
+--
+"availability."
+msgstr ""
+
+msgid "You can also subscribe to our calendar using the link below:"
+msgstr ""
+
+msgid "Subscribe to Calendar"
+msgstr ""
+
+--
+"like to schedule a visit, we're here to help!"
+msgstr ""
+
+--
+"we'll get back to you as soon as possible."
+msgstr ""
+
+msgid "The Bilingual Advantage at Marcela Vitor Learning Center"
+msgstr ""
+
+--
+"English bilingual environment for children from 3 months to 8 years old."
+msgstr ""
+
+--
+"journey while fostering independence, curiosity, and love for learning."
+msgstr ""
+
+msgid "Research-Based"
+msgstr ""
+
+--
+"development."
+msgstr ""
+
+--
+msgid "Where Child-Centered Learning Meets Multicultural Excellence"
+msgstr ""
+"Onde o Aprendizado Centrado na Criança Encontra a Excelência Multicultural"
+--
+"in Massachusetts."
+msgstr ""
+"Descubra o poder transformador da educação bilíngue autêntica no Marcela "
+--
+"where children don't just learn—they flourish."
+msgstr ""
+"No Marcela Vitor Learning Center, acreditamos que cada criança possui um "
+--
+"prepares your child for an interconnected world."
+msgstr ""
+"Como centro de aprendizagem exclusivo de Português-Inglês de Massachusetts, "
+--
+"child's natural development."
+msgstr ""
+"Enfatizamos a descoberta liderada pela criança, o aprendizado prático e o "
+--
+msgid "We view children as capable researchers and our environment as the \\"
+msgstr ""
+"Vemos as crianças como pesquisadores capazes e nosso ambiente como o "
+--
+"languages naturally through meaningful interactions."
+msgstr ""
+"Nosso programa é uma verdadeira imersão cultural, onde as crianças adquirem "
+--
+"creativity."
+msgstr ""
+"Entendemos que brincar é o trabalho da criança. Nosso currículo integra "
+--
+"children develop empathy and resilience."
+msgstr ""
+"Priorizamos a inteligência emocional junto com o crescimento acadêmico, "
+--
+"together, maintaining open and transparent communication."
+msgstr ""
+"Acreditamos que a educação é mais eficaz quando famílias e escolas trabalham "
+--
+"designed to nurture the whole child in a Montessori-inspired environment."
+msgstr ""
+"De bebês à idade escolar, nossos programas bilíngues Português-Inglês são "
+--
+"develop at their own pace with responsive bilingual caregiving."
+msgstr ""
+"Nosso programa para bebês oferece um ambiente acolhedor e seguro onde os "
+--
+"activities that develop self-help skills and bilingual language abilities."
+msgstr ""
+"Nosso programa para crianças pequenas abraça a exploração e a crescente "
+--
+"development."
+msgstr ""
+"Nosso programa pré-escolar promove o amor pelo aprendizado através da "
+--
+"supporting academic growth aligned with Massachusetts curriculum standards."
+msgstr ""
+"Nosso programa para idade escolar continua a experiência de imersão bilíngue "
+--
+"brilliant future."
+msgstr ""
+"Entre em contato conosco hoje para agendar sua visita e descobrir por que "
+--
+"appropriate programs for children ages 3 months to 8 years."
+msgstr ""
+
+msgid "Our <b>Child-Centered Approach</b>"
+msgstr ""
+
+--
+"children from infancy through early elementary years."
+msgstr ""
+
+--
+"through gentle guidance and bilingual interaction."
+msgstr ""
+"Nosso programa para bebês oferece um ambiente acolhedor e seguro onde os "
+--
+msgid "Low teacher-to-child ratios for individualized care"
+msgstr ""
+
+msgid "Sensory-rich environments that stimulate development"
+msgstr ""
+
+msgid "Daily communication with families about milestones and care"
+msgstr ""
+
+--
+"Portuguese, and positive social interactions."
+msgstr ""
+"Nosso programa para crianças pequenas abraça a exploração e a crescente "
+--
+msgid "Practical life activities that develop independence"
+msgstr ""
+
+--
+"languages"
+msgstr ""
+
+msgid "Supportive toilet learning when developmentally ready"
+msgstr ""
+
+msgid "Preschool Program"
+msgstr ""
+
+--
+"appreciation."
+msgstr ""
+"Nosso programa pré-escolar promove o amor pelo aprendizado através da "
+--
+"Hands-on learning experiences in mathematics, language, science, and culture"
+msgstr ""
+
+--
+"Daily opportunities for creative expression through art, music, and movement"
+msgstr ""
+
+--
+"resolution"
+msgstr ""
+
+msgid "School-Age Program"
+msgstr ""
+
+--
+"standards."
+msgstr ""
+"Nosso programa para idade escolar continua a experiência de imersão bilíngue "
+--
+"Advanced literacy and numeracy development in both Portuguese and English"
+msgstr ""
+
+--
+"arts, and mathematics"
+msgstr ""
+
+--
+"Cultural studies that build global awareness and appreciation for diversity"
+msgstr ""
+"Estudos culturais que desenvolvem consciência global e valorização da "
+--
+"experience"
+msgstr ""
+"Programas após a escola e de férias que ampliam a experiência de aprendizado "
+--
+msgid "Ready to Give Your Child the Bilingual Advantage?"
+msgstr ""
+
+--
+"social, and linguistic development."
+msgstr ""
+
+--
+msgid "Submitting your resume..."
+msgstr ""
+
+--
+msgid "Please fill in all required fields (Name, Email, Phone)"
+msgstr ""
+
+msgid "Please enter a valid email address"
+msgstr ""
+
+--
+msgid "Plan your visit to our daycare and see what makes us special!"
+msgstr ""
+
+--
+"your preferred date and time for a visit."
+msgstr ""
+
+msgid "Children's Ages"
+msgstr ""
+
+msgid "Preferred Visit Date"
+msgstr ""
+
+msgid "Preferred Time Slot"
+msgstr ""
+
+msgid "Special Requests or Questions"
+msgstr ""
+
+--
+msgid "Visit Duration"
+msgstr ""
+
+--
+"our facilities and ask questions."
+msgstr ""
+
+msgid "Bring Your Children"
+msgstr ""
+
+--
+"environment and activities firsthand."
+msgstr ""
+
+msgid "What to Expect"
+msgstr ""
+
+--
+"our dedicated teachers and staff."
+msgstr ""
+
+msgid "Select a time slot"
+msgstr ""
+
+msgid "No available slots"
+msgstr ""
+
+msgid "Please fill in all required fields"
+msgstr ""
+
+msgid "Please enter a valid phone number"
+msgstr ""
+
+--
+"community."
+msgstr ""
+"Cada criança brilha aqui. Aprendizado bilíngue, brincadeira e cuidado em uma "
+--
+msgid "Marcela Vitor Admin"
+msgstr ""
+
+msgid "Welcome to Marcela Vitor Learning Center Admin"
+msgstr ""
+
+msgid "Mark selected messages as read"
+msgstr ""
+
+msgid "Mark selected messages as unread"
+msgstr ""
+
+msgid "Example: 2, 4, 6"
+msgstr ""
+
+msgid "Admin Dashboard"
+msgstr ""
+
+--
+msgid "There was an error saving your resume. Please try again."
+msgstr ""
+
+msgid "New resume submitted by {}"
+msgstr ""
+
+--
+"there is a match."
+msgstr ""
+
+--
+"still review your application."
+msgstr ""
+
+msgid "Please correct the errors below and try again."
+msgstr ""
+
+--
+"with all the details. We'll see you soon."
+msgstr ""
+
+--
+"confirmation email, but we'll see you soon."
+msgstr ""
+
+--
+"contact you to confirm the appointment."
+msgstr ""
+
+--
+"confirm the appointment."
+msgstr ""
+
+--
+"directly."
+msgstr ""
+
+msgid "Please correct the errors in the form."
+msgstr ""
+
+--
+#~ "curiosity shines and every child is celebrated."
+#~ msgstr ""
+#~ "Toda grande jornada começa com um começo brilhante. Junte-se a um lugar "
+--
+#~ "Discover a bilingual world full of play, learning, love, and meaningful."
+#~ msgstr ""
+#~ "Descubra um mundo bilíngue cheio de brincadeiras, aprendizado, amor e "
+--
+#~ "interests."
+#~ msgstr ""
+#~ "Valorizamos o desenvolvimento individual, respeitando o ritmo e os "
+--
+#~ "meaningful interactions."
+#~ msgstr ""
+#~ "Nossa abordagem bilíngue (Português-Inglês) segue os princípios "
+--
+#~ "academic training in Massachusetts."
+#~ msgstr ""
+#~ "Nossa equipe é formada por educadores com mais de 5 anos de experiência e "
+--
+#~ "in both public and private schools."
+#~ msgstr ""
+#~ "A diretora, Marcela Vitor, é fonoaudióloga com 9 anos de experiência no "
+--
+#~ "education."
+#~ msgstr ""
+#~ "Hoje, ela lidera seu próprio centro e está pessoalmente comprometida com "
+--
+#~ "future together!"
+#~ msgstr ""
+#~ "Somos um centro de aprendizagem bilíngue dedicado a valorizar cada "
+--
+#~ "independence, empathy, and joy in learning."
+#~ msgstr ""
+#~ "Nutrir o potencial de cada criança por meio da exploração, brincadeira e "
+--
+#~ "diversity and lead with kindness and curiosity."
+#~ msgstr ""
+#~ "Imaginamos uma comunidade de aprendizes confiantes e criativos que honram "
+--
+#~ "creating meaningful learning every day."
+#~ msgstr ""
+#~ "Sua equipe compartilha essa paixão—cada educador traz expertise e "
+--
+#~ "discovery. They guide our teaching—and shape our community."
+#~ msgstr ""
+#~ "Todos os dias, vivemos nossos valores: bondade, criatividade, inclusão e "
+--
+#~ "that let children create without limits."
+#~ msgstr ""
+#~ "Despertamos a imaginação através de brincadeiras, contação de histórias e "
+--
+#~ "support and grow with others."
+#~ msgstr ""
+#~ "Incentivamos a colaboração, empatia e sucesso compartilhado—aprendendo "
+--
+#~ "wonder into lifelong learning."
+#~ msgstr ""
+#~ "Cultivamos o amor por perguntas, descobertas e exploração—transformando a "

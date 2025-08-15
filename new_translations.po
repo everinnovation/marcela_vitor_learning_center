@@ -1,0 +1,133 @@
+# Admin translations
+msgid "Welcome"
+msgstr "Bem-vindo"
+
+msgid "Logout"
+msgstr "Sair"
+
+msgid "Dashboard"
+msgstr "Painel"
+
+msgid "Visit Schedules"
+msgstr "Agendamentos de Visitas"
+
+msgid "Resume Submissions"
+msgstr "Envios de Currículos"
+
+msgid "Django Admin"
+msgstr "Administração Django"
+
+msgid "Back to Website"
+msgstr "Voltar ao Site"
+
+msgid "All rights reserved."
+msgstr "Todos os direitos reservados."
+
+msgid "Message from"
+msgstr "Mensagem de"
+
+msgid "at"
+msgstr "em"
+
+msgid "Read"
+msgstr "Lido"
+
+msgid "Unread"
+msgstr "Não lido"
+
+msgid "Message Details"
+msgstr "Detalhes da Mensagem"
+
+msgid "Subject"
+msgstr "Assunto"
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Back to List"
+msgstr "Voltar à Lista"
+
+msgid "Mark as Read"
+msgstr "Marcar como Lido"
+
+msgid "Mark as Unread"
+msgstr "Marcar como Não Lido"
+
+msgid "Edit Message"
+msgstr "Editar Mensagem"
+
+msgid "Contact Messages"
+msgstr "Mensagens de Contato"
+
+msgid "All"
+msgstr "Todos"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Name"
+msgstr "Nome"
+
+# Homepage new translations
+msgid "Where Child-Centered Learning Meets Multicultural Excellence"
+msgstr "Onde o Aprendizado Centrado na Criança Encontra a Excelência Multicultural"
+
+msgid "Discover the transformative power of authentic bilingual education at Marcela Vitor Learning Center, the only Portuguese-English immersion program in Massachusetts."
+msgstr "Descubra o poder transformador da educação bilíngue autêntica no Marcela Vitor Learning Center, o único programa de imersão Português-Inglês em Massachusetts."
+
+msgid "Our Child-Centered Approach"
+msgstr "Nossa Abordagem Centrada na Criança"
+
+msgid "As Massachusetts' only Portuguese-English bilingual learning center with Montessori-inspired educational principles, we offer developmentally appropriate programs for children ages 3 months to 8 years."
+msgstr "Como único centro de aprendizagem bilíngue Português-Inglês de Massachusetts com princípios educacionais inspirados em Montessori, oferecemos programas apropriados ao desenvolvimento para crianças de 3 meses a 8 anos."
+
+msgid "Our bilingual immersion approach provides a seamless experience in both English and Portuguese, creating natural language acquisition. We follow Montessori-inspired principles that respect each child's development pace while encouraging independence, curiosity, and a love for learning in children from infancy through early elementary years."
+msgstr "Nossa abordagem de imersão bilíngue proporciona uma experiência integrada em inglês e português, criando aquisição natural de linguagem. Seguimos princípios inspirados em Montessori que respeitam o ritmo de desenvolvimento de cada criança, incentivando a independência, curiosidade e amor pelo aprendizado em crianças desde a primeira infância até os primeiros anos elementares."
+
+msgid "Infant Program"
+msgstr "Programa para Bebês"
+
+msgid "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace. We focus on responsive caregiving that builds trust and security while promoting language, motor, and social development through gentle guidance and bilingual interaction."
+msgstr "Nosso programa acolhedor para bebês proporciona um ambiente caloroso e seguro onde os bebês se desenvolvem em seu próprio ritmo. Focamos em cuidados responsivos que constroem confiança e segurança enquanto promovemos o desenvolvimento da linguagem, motor e social por meio de orientação gentil e interação bilíngue."
+
+msgid "Low teacher-to-child ratios for individualized care"
+msgstr "Baixas proporções professor-aluno para cuidados individualizados"
+
+msgid "Sensory-rich environments that stimulate development"
+msgstr "Ambientes ricos em estímulos sensoriais que estimulam o desenvolvimento"
+
+msgid "Daily communication with families about milestones and care"
+msgstr "Comunicação diária com as famílias sobre marcos de desenvolvimento e cuidados"
+
+msgid "Practical life activities that develop independence"
+msgstr "Atividades práticas que desenvolvem a independência"
+
+msgid "Language-rich environment with songs, stories, and conversation in both languages"
+msgstr "Ambiente rico em linguagem com músicas, histórias e conversas em ambos os idiomas"
+
+msgid "Supportive toilet learning when developmentally ready"
+msgstr "Aprendizado de uso do banheiro com suporte quando estiver desenvolvimentalmente pronto"
+
+msgid "Hands-on learning experiences in mathematics, language, science, and culture"
+msgstr "Experiências práticas de aprendizado em matemática, linguagem, ciência e cultura"
+
+msgid "Daily opportunities for creative expression through art, music, and movement"
+msgstr "Oportunidades diárias para expressão criativa através de arte, música e movimento"
+
+msgid "Social-emotional development through collaborative projects and conflict resolution"
+msgstr "Desenvolvimento socioemocional através de projetos colaborativos e resolução de conflitos"
+
+msgid "Advanced literacy and numeracy development in both Portuguese and English"
+msgstr "Desenvolvimento avançado de alfabetização e matemática em português e inglês"
+
+msgid "Project-based learning that integrates science, technology, engineering, arts, and mathematics"
+msgstr "Aprendizado baseado em projetos que integra ciência, tecnologia, engenharia, artes e matemática"
+
+msgid "Ready to Give Your Child the Bilingual Advantage?"
+msgstr "Pronto para Dar ao Seu Filho a Vantagem Bilíngue?"
+
+msgid "Research shows that the critical period for language acquisition happens before age 8. Don't miss this window of opportunity. Schedule a visit to tour our center, meet our teachers, and learn more about how our unique bilingual Montessori-inspired approach can benefit your child's cognitive, social, and linguistic development."
+msgstr "Pesquisas mostram que o período crítico para aquisição de linguagem acontece antes dos 8 anos. Não perca essa janela de oportunidade. Agende uma visita para conhecer nosso centro, encontrar nossos professores e aprender mais sobre como nossa abordagem bilíngue única inspirada em Montessori pode beneficiar o desenvolvimento cognitivo, social e linguístico do seu filho."
+
+msgid "Ready to <b>Begin?</b>"
+msgstr "Pronto para <b>Começar?</b>"

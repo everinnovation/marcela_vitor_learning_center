@@ -1,0 +1,1066 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Marcela Vitor Learning Center\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-15 00:56+0000\n"
+"PO-Revision-Date: 2025-08-14 12:00-0300\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese Brazilian\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Welcome"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Visit Schedules"
+msgstr ""
+
+msgid "Resume Submissions"
+msgstr ""
+
+msgid "Django Admin"
+msgstr ""
+
+msgid "Back to Website"
+msgstr ""
+
+msgid "All rights reserved."
+msgstr ""
+
+msgid "Message from"
+msgstr ""
+
+msgid "at"
+msgstr ""
+
+msgid "Read"
+msgstr ""
+
+msgid "Unread"
+msgstr ""
+
+msgid "Sender Information"
+msgstr ""
+
+msgid "Full Name"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Message Details"
+msgstr ""
+
+msgid "Subject"
+msgstr ""
+
+msgid "Message"
+msgstr ""
+
+msgid "Back to List"
+msgstr ""
+
+msgid "Mark as Read"
+msgstr ""
+
+msgid "Mark as Unread"
+msgstr ""
+
+msgid "Edit Message"
+msgstr ""
+
+msgid "Contact Messages"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Date"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Status"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "View"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "No contact messages found."
+msgstr ""
+
+msgid "Try removing the filter to see all messages."
+msgstr ""
+
+msgid "Admin Panel"
+msgstr ""
+
+msgid ""
+"In addition to this Django admin interface, you can use our custom admin "
+"panel for a more user-friendly experience:"
+msgstr ""
+
+msgid "Go to Custom Admin Panel"
+msgstr ""
+
+msgid "Upcoming Visits"
+msgstr ""
+
+msgid "Completed Visits"
+msgstr ""
+
+msgid "Cancelled Visits"
+msgstr ""
+
+msgid "Upcoming Visits (Next 7 Days)"
+msgstr ""
+
+msgid "Time"
+msgstr ""
+
+msgid "No upcoming visits for the next 7 days."
+msgstr ""
+
+msgid "View all visits"
+msgstr ""
+
+msgid "Recent Resume Submissions"
+msgstr ""
+
+msgid "Submitted"
+msgstr ""
+
+msgid "No resume submissions yet."
+msgstr ""
+
+msgid "View all resumes"
+msgstr ""
+
+msgid "Resume for"
+msgstr ""
+
+msgid "Submitted on"
+msgstr ""
+
+msgid "Personal Information"
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Professional Information"
+msgstr ""
+
+msgid "Field of Expertise"
+msgstr ""
+
+msgid "Years of Experience"
+msgstr ""
+
+msgid "Language Skills"
+msgstr ""
+
+msgid "Native Language"
+msgstr ""
+
+msgid "English Level"
+msgstr ""
+
+msgid "Portuguese Level"
+msgstr ""
+
+msgid "Additional Information"
+msgstr ""
+
+msgid "No additional information provided."
+msgstr ""
+
+msgid "Resume File"
+msgstr ""
+
+msgid "Download"
+msgstr ""
+
+msgid "No resume file uploaded."
+msgstr ""
+
+msgid "Edit Resume"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Expertise"
+msgstr ""
+
+msgid "Languages"
+msgstr ""
+
+msgid "years experience"
+msgstr ""
+
+msgid "Native"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+msgid "Portuguese"
+msgstr ""
+
+msgid "No resume submissions found."
+msgstr ""
+
+msgid "Visit by"
+msgstr ""
+
+msgid "Visitor Information"
+msgstr ""
+
+msgid "Visit Details"
+msgstr ""
+
+msgid "Visit Date"
+msgstr ""
+
+msgid "Time Slot"
+msgstr ""
+
+msgid "Number of Children"
+msgstr ""
+
+msgid "Children Ages"
+msgstr ""
+
+msgid "Special Requests"
+msgstr ""
+
+msgid "No special requests provided."
+msgstr ""
+
+msgid "System Information"
+msgstr ""
+
+msgid "Created"
+msgstr ""
+
+msgid "Last Updated"
+msgstr ""
+
+msgid "Google Calendar Event ID"
+msgstr ""
+
+msgid "Scheduled"
+msgstr ""
+
+msgid "Completed"
+msgstr ""
+
+msgid "Cancelled"
+msgstr ""
+
+msgid "Date & Time"
+msgstr ""
+
+msgid "Children"
+msgstr ""
+
+msgid "children"
+msgstr ""
+
+msgid "Ages"
+msgstr ""
+
+msgid "No visit schedules found."
+msgstr ""
+
+msgid "Try removing the status filter to see all visits."
+msgstr ""
+
+msgid "About Us"
+msgstr ""
+
+msgid "ABOUT US"
+msgstr ""
+
+msgid ""
+"Welcome to Massachusetts' only Portuguese-English bilingual learning center. "
+"Our child-centered curriculum, inspired by Montessori principles and diverse "
+"educational philosophies, blends Brazilian warmth with American innovation, "
+"creating an extraordinary foundation for your child's global future."
+msgstr ""
+
+msgid "<b>A Dream Born </b> from Love"
+msgstr ""
+
+msgid ""
+"When we moved to Massachusetts, we searched everywhere for a place that "
+"would truly embrace our daughters' bilingual, bicultural identity. We "
+"visited many wonderful schools, but none felt like home for children growing "
+"up between two worlds. As we watched Megan and Maisie navigate between "
+"Portuguese at home and English everywhere else, we realized we needed to "
+"create the school we wished existed."
+msgstr ""
+
+msgid ""
+"Marcela Vitor Learning Center was born from our love for our children and "
+"our vision of a place where Brazilian warmth meets American innovation, "
+"where Portuguese and English flow naturally together, and where every child "
+"can thrive in a truly multicultural environment. We didn't just open a "
+"school - we created the community we wanted for our own daughters."
+msgstr ""
+
+msgid "Our <b>Unique Approach</b>"
+msgstr ""
+
+msgid ""
+"What makes Marcela Vitor Learning Center truly special is our commitment to "
+"providing Massachusetts' only Portuguese-English bilingual education program "
+"with Montessori-inspired principles. We believe in the power of language "
+"immersion at an early age, creating an environment where children naturally "
+"absorb both languages while engaging in meaningful, hands-on learning "
+"experiences."
+msgstr ""
+
+msgid "Bilingual Immersion"
+msgstr ""
+
+msgid ""
+"Our educators are fluent in both Portuguese and English, providing a natural "
+"language-learning environment through daily activities, stories, songs, and "
+"conversations. Children develop bilingual skills without formal instruction, "
+"absorbing vocabulary, pronunciation, and cultural nuances organically."
+msgstr ""
+
+msgid "Montessori-Inspired Learning"
+msgstr ""
+
+msgid ""
+"We incorporate key Montessori principles including child-led learning, "
+"prepared environments with hands-on materials, mixed-age groupings, "
+"uninterrupted work periods, and respect for each child's developmental "
+"timeline. These principles support independence, concentration, and "
+"intrinsic motivation."
+msgstr ""
+
+msgid "Meet <b>Our Founders</b>"
+msgstr ""
+
+msgid ""
+"Our Learning Center was founded by a passionate husband-and-wife team with "
+"deep expertise in child development, education, and business leadership. "
+"Their personal journey as parents inspired the creation of Massachusetts' "
+"only Portuguese-English bilingual learning center."
+msgstr ""
+
+msgid "Marcela Vitor"
+msgstr ""
+
+msgid ""
+"Marcela is a certified bilingual speech-language pathologist with over 9 "
+"years of experience in Massachusetts public schools. Her expertise in child "
+"development, language acquisition, and special education brings a research-"
+"based approach to our curriculum."
+msgstr ""
+
+msgid ""
+"Born and raised in Brazil, Marcela holds a Master's degree in Communication "
+"Disorders and has completed specialized training in Montessori methods, "
+"bilingual education, and early childhood development. Her personal "
+"experience raising bilingual children in the United States fuels her passion "
+"for creating an environment where children can embrace both languages and "
+"cultures."
+msgstr ""
+
+msgid "Rodolfo Vitor"
+msgstr ""
+
+msgid ""
+"Rodolfo brings over 15 years of business leadership and operations "
+"management experience to the Learning Center. His strategic vision and "
+"dedication to excellence ensure that our educational environment maintains "
+"the highest standards of quality, safety, and innovation."
+msgstr ""
+
+msgid ""
+"With a background in business administration and project management, Rodolfo "
+"oversees the operational aspects of the center while sharing in the "
+"educational vision. His commitment to creating a welcoming, multicultural "
+"community stems from his own journey of raising bilingual children and "
+"building bridges between Brazilian and American cultures."
+msgstr ""
+
+msgid "Research-Based <b>Excellence in Bilingual Education</b>"
+msgstr ""
+
+msgid ""
+"Our educational approach is grounded in extensive research on bilingual "
+"development and early childhood education. We combine the best practices "
+"from multiple educational philosophies to create a unique learning "
+"experience."
+msgstr ""
+
+msgid "Cognitive Benefits"
+msgstr ""
+
+msgid ""
+"Research shows bilingual children develop enhanced executive function, "
+"problem-solving skills, and creative thinking abilities. Our curriculum "
+"leverages these natural advantages."
+msgstr ""
+
+msgid "Critical Period"
+msgstr ""
+
+msgid ""
+"Studies demonstrate that children under 8 years old have a unique "
+"neurological capacity for language acquisition. Our program is designed to "
+"maximize this critical window of opportunity."
+msgstr ""
+
+msgid "Cultural Awareness"
+msgstr ""
+
+msgid ""
+"Research confirms that early exposure to multiple languages fosters greater "
+"cultural sensitivity and openness to diversity. Our children develop the "
+"foundation for true global citizenship."
+msgstr ""
+
+msgid "Family <b>Testimonials</b>"
+msgstr ""
+
+msgid ""
+"Hear from our community of families about their experiences at "
+"Massachusetts' only Portuguese-English bilingual learning center."
+msgstr ""
+
+msgid ""
+"As a Brazilian-American family, we were thrilled to find a learning center "
+"where our daughter could develop her Portuguese alongside English. She's now "
+"4 and switches effortlessly between both languages. The teachers are "
+"incredible—warm, patient, and truly dedicated. It's not just education; it's "
+"a community that celebrates our heritage."
+msgstr ""
+
+msgid "Ana & Mark Thompson"
+msgstr ""
+
+msgid "Parents of Sophia, age 4"
+msgstr ""
+
+msgid ""
+"We're not a Brazilian family, but we wanted our children to grow up "
+"bilingual. The opportunity to learn Portuguese in such a nurturing "
+"environment has been incredible. The Montessori-inspired approach means our "
+"son is thriving academically while developing confidence and independence. "
+"He's learning so much more than just language."
+msgstr ""
+
+msgid "Jennifer & David Miller"
+msgstr ""
+
+msgid "Parents of Lucas, age 3"
+msgstr ""
+
+msgid ""
+"Our 7-month-old has been in the infant program for two months, and we "
+"couldn't be happier. The teachers truly understand baby development and "
+"provide such individualized care. They speak to him in both languages "
+"throughout the day, and we're already seeing his responsiveness to "
+"Portuguese words. The environment is so nurturing—it feels like an extension "
+"of our family."
+msgstr ""
+
+msgid "Carolina & James Wilson"
+msgstr ""
+
+msgid "Parents of Benjamin, 7 months"
+msgstr ""
+
+msgid "Calendar"
+msgstr ""
+
+msgid "School Calendar"
+msgstr ""
+
+msgid ""
+"View our school calendar to see upcoming events, scheduled visits, and "
+"availability."
+msgstr ""
+
+msgid "You can also subscribe to our calendar using the link below:"
+msgstr ""
+
+msgid "Subscribe to Calendar"
+msgstr ""
+
+msgid ""
+"We're excited to connect with you about Massachusetts' only Portuguese-"
+"English bilingual learning center for children ages 3 months to 8 years. "
+"Whether you have questions about our programs, enrollment process, or would "
+"like to schedule a visit, we're here to help!"
+msgstr ""
+
+msgid ""
+"We'd love to hear from you about our bilingual Portuguese-English programs "
+"for children ages 3 months to 8 years. Fill out the form below to schedule a "
+"tour of our child-centered, Montessori-inspired learning environment, and "
+"we'll get back to you as soon as possible."
+msgstr ""
+
+msgid "The Bilingual Advantage at Marcela Vitor Learning Center"
+msgstr ""
+
+msgid "Massachusetts' Only"
+msgstr ""
+
+msgid ""
+"We are the only learning center in Massachusetts offering a true Portuguese-"
+"English bilingual environment for children from 3 months to 8 years old."
+msgstr ""
+
+msgid "Child-Centered"
+msgstr ""
+
+msgid ""
+"Our Montessori-inspired approach respects each child's unique developmental "
+"journey while fostering independence, curiosity, and love for learning."
+msgstr ""
+
+msgid "Research-Based"
+msgstr ""
+
+msgid ""
+"Our program is grounded in research showing that children under 8 have a "
+"unique neurological capacity for language acquisition and cognitive "
+"development."
+msgstr ""
+
+msgid "BRIGHT BEGINNINGS!"
+msgstr ""
+
+msgid "Where Child-Centered Learning Meets Multicultural Excellence"
+msgstr ""
+
+msgid "JOIN US!"
+msgstr ""
+
+msgid ""
+"Discover the transformative power of authentic bilingual education at "
+"Marcela Vitor Learning Center, the only Portuguese-English immersion program "
+"in Massachusetts."
+msgstr ""
+
+msgid "LEARN MORE"
+msgstr ""
+
+msgid "ENROLLMENT OPEN FOR 2025-2026!"
+msgstr ""
+
+msgid "SCHEDULE A VISIT"
+msgstr ""
+
+msgid "mo"
+msgstr ""
+
+msgid "yrs"
+msgstr ""
+
+msgid "Immersion"
+msgstr ""
+
+msgid "In Massachusetts"
+msgstr ""
+
+msgid "Only One"
+msgstr ""
+
+msgid "Methodology"
+msgstr ""
+
+msgid "Licensed by"
+msgstr ""
+
+msgid "MA EEC"
+msgstr ""
+
+msgid "A <b>Bilingual</b> Advantage for Your Child"
+msgstr ""
+
+msgid ""
+"At Marcela Vitor Learning Center, we believe every child possesses unlimited "
+"potential. Our unique blend of educational philosophies—drawing inspiration "
+"from Montessori principles, Reggio Emilia approaches, and modern early "
+"childhood research—combined with bilingual immersion creates an environment "
+"where children don't just learn—they flourish."
+msgstr ""
+
+msgid ""
+"As Massachusetts' exclusive Portuguese-English learning center, we offer "
+"something no other program can: authentic cultural bridge-building that "
+"prepares your child for an interconnected world."
+msgstr ""
+
+msgid "Our Educational <b>Philosophy</b>"
+msgstr ""
+
+msgid ""
+"We emphasize child-led discovery, hands-on learning, and respect for each "
+"child's natural development."
+msgstr ""
+
+msgid "Reggio Emilia Project-Based Learning"
+msgstr ""
+
+msgid "We view children as capable researchers and our environment as the \\"
+msgstr ""
+
+msgid "Authentic Bilingual Immersion"
+msgstr ""
+
+msgid ""
+"Our program is true cultural immersion, where children acquire both "
+"languages naturally through meaningful interactions."
+msgstr ""
+
+msgid "Play-Based Learning Philosophy"
+msgstr ""
+
+msgid ""
+"We understand that play is a child's work. Our curriculum integrates "
+"purposeful play that develops social skills, emotional regulation, and "
+"creativity."
+msgstr ""
+
+msgid "Social-Emotional Development Focus"
+msgstr ""
+
+msgid ""
+"We prioritize emotional intelligence alongside academic growth, helping "
+"children develop empathy and resilience."
+msgstr ""
+
+msgid "Family Partnership Approach"
+msgstr ""
+
+msgid ""
+"We believe education is most effective when families and schools work "
+"together, maintaining open and transparent communication."
+msgstr ""
+
+msgid "OUR <b>PROGRAMS</b>"
+msgstr ""
+
+msgid ""
+"From infants to school-age, our bilingual Portuguese-English programs are "
+"designed to nurture the whole child in a Montessori-inspired environment."
+msgstr ""
+
+msgid "VIEW ALL PROGRAMS"
+msgstr ""
+
+msgid "INFANT PROGRAM"
+msgstr ""
+
+msgid "Ages 3 - 15 months"
+msgstr ""
+
+msgid ""
+"Our nurturing infant program provides a warm, safe environment where babies "
+"develop at their own pace with responsive bilingual caregiving."
+msgstr ""
+
+msgid "TODDLER PROGRAM"
+msgstr ""
+
+msgid "Ages 15 months - 3 years"
+msgstr ""
+
+msgid ""
+"Our toddler program embraces exploration and growing independence with "
+"activities that develop self-help skills and bilingual language abilities."
+msgstr ""
+
+msgid "PRESCHOOL PROGRAM"
+msgstr ""
+
+msgid "Ages 3-5 years"
+msgstr ""
+
+msgid ""
+"Our preschool program fosters a love of learning through exploration and "
+"discovery with Montessori-inspired materials and strong bilingual "
+"development."
+msgstr ""
+
+msgid "SCHOOL-AGE PROGRAM"
+msgstr ""
+
+msgid "Ages 5-8 years"
+msgstr ""
+
+msgid ""
+"Our school-age program continues the bilingual immersion experience while "
+"supporting academic growth aligned with Massachusetts curriculum standards."
+msgstr ""
+
+msgid "Ready to <b>Begin?</b>"
+msgstr ""
+
+msgid ""
+"Contact us today to schedule your tour and discover why families throughout "
+"Massachusetts choose Marcela Vitor Learning Center for their children's most "
+"important years. Together, we'll build the foundation for your child's "
+"brilliant future."
+msgstr ""
+
+msgid "Schedule a Tour"
+msgstr ""
+
+msgid "Programs"
+msgstr ""
+
+msgid "OUR PROGRAMS"
+msgstr ""
+
+msgid ""
+"As Massachusetts' only Portuguese-English bilingual learning center with "
+"Montessori-inspired educational principles, we offer developmentally "
+"appropriate programs for children ages 3 months to 8 years."
+msgstr ""
+
+msgid "Our <b>Child-Centered Approach</b>"
+msgstr ""
+
+msgid ""
+"Our bilingual immersion approach provides a seamless experience in both "
+"English and Portuguese, creating natural language acquisition. We follow "
+"Montessori-inspired principles that respect each child's development pace "
+"while encouraging independence, curiosity, and a love for learning in "
+"children from infancy through early elementary years."
+msgstr ""
+
+msgid "Infant Program"
+msgstr ""
+
+msgid ""
+"Our nurturing infant program provides a warm, safe environment where babies "
+"develop at their own pace. We focus on responsive caregiving that builds "
+"trust and security while promoting language, motor, and social development "
+"through gentle guidance and bilingual interaction."
+msgstr ""
+
+msgid "Low teacher-to-child ratios for individualized care"
+msgstr ""
+
+msgid "Sensory-rich environments that stimulate development"
+msgstr ""
+
+msgid "Daily communication with families about milestones and care"
+msgstr ""
+
+msgid "Toddler Program"
+msgstr ""
+
+msgid ""
+"Our toddler program embraces this age of exploration and growing "
+"independence. Through carefully designed environments and activities, "
+"toddlers develop self-help skills, language abilities in both English and "
+"Portuguese, and positive social interactions."
+msgstr ""
+
+msgid "Practical life activities that develop independence"
+msgstr ""
+
+msgid ""
+"Language-rich environment with songs, stories, and conversation in both "
+"languages"
+msgstr ""
+
+msgid "Supportive toilet learning when developmentally ready"
+msgstr ""
+
+msgid "Preschool Program"
+msgstr ""
+
+msgid ""
+"Our preschool program fosters a love of learning through exploration and "
+"discovery. Children engage with Montessori-inspired materials across "
+"curriculum areas while developing strong bilingual skills and cultural "
+"appreciation."
+msgstr ""
+
+msgid ""
+"Hands-on learning experiences in mathematics, language, science, and culture"
+msgstr ""
+
+msgid ""
+"Daily opportunities for creative expression through art, music, and movement"
+msgstr ""
+
+msgid ""
+"Social-emotional development through collaborative projects and conflict "
+"resolution"
+msgstr ""
+
+msgid "School-Age Program"
+msgstr ""
+
+msgid ""
+"Our school-age program builds on the strong foundation established in our "
+"early childhood programs, continuing the bilingual immersion experience "
+"while supporting academic growth aligned with Massachusetts curriculum "
+"standards."
+msgstr ""
+
+msgid ""
+"Advanced literacy and numeracy development in both Portuguese and English"
+msgstr ""
+
+msgid ""
+"Project-based learning that integrates science, technology, engineering, "
+"arts, and mathematics"
+msgstr ""
+
+msgid ""
+"Cultural studies that build global awareness and appreciation for diversity"
+msgstr ""
+
+msgid ""
+"After-school and vacation programs that extend the bilingual learning "
+"experience"
+msgstr ""
+
+msgid "Ready to Give Your Child the Bilingual Advantage?"
+msgstr ""
+
+msgid ""
+"Research shows that the critical period for language acquisition happens "
+"before age 8. Don't miss this window of opportunity. Schedule a visit to "
+"tour our center, meet our teachers, and learn more about how our unique "
+"bilingual Montessori-inspired approach can benefit your child's cognitive, "
+"social, and linguistic development."
+msgstr ""
+
+msgid "Schedule a Visit"
+msgstr ""
+
+msgid "Resume Upload"
+msgstr ""
+
+msgid "Submitting your resume..."
+msgstr ""
+
+msgid "SUBMIT YOUR <b>RESUME</b>"
+msgstr ""
+
+msgid "Join our talent pool by submitting your resume today!"
+msgstr ""
+
+msgid "Submit Your <b>Application</b>"
+msgstr ""
+
+msgid "City"
+msgstr ""
+
+msgid "State"
+msgstr ""
+
+msgid "Zip Code"
+msgstr ""
+
+msgid "SUBMIT RESUME"
+msgstr ""
+
+msgid "Please fill in all required fields (Name, Email, Phone)"
+msgstr ""
+
+msgid "Please enter a valid email address"
+msgstr ""
+
+msgid "SUBMITTING..."
+msgstr ""
+
+msgid "Scheduling your visit..."
+msgstr ""
+
+msgid "SCHEDULE A <b>VISIT</b>"
+msgstr ""
+
+msgid "Plan your visit to our daycare and see what makes us special!"
+msgstr ""
+
+msgid "Plan Your <b>Visit</b>"
+msgstr ""
+
+msgid ""
+"We'd love to show you our facilities and answer all your questions. Select "
+"your preferred date and time for a visit."
+msgstr ""
+
+msgid "Children's Ages"
+msgstr ""
+
+msgid "Preferred Visit Date"
+msgstr ""
+
+msgid "Preferred Time Slot"
+msgstr ""
+
+msgid "Special Requests or Questions"
+msgstr ""
+
+msgid "SCHEDULE VISIT"
+msgstr ""
+
+msgid "Visit Duration"
+msgstr ""
+
+msgid ""
+"Visits typically last about 45-60 minutes, giving you plenty of time to tour "
+"our facilities and ask questions."
+msgstr ""
+
+msgid "Bring Your Children"
+msgstr ""
+
+msgid ""
+"We encourage you to bring your children along so they can experience our "
+"environment and activities firsthand."
+msgstr ""
+
+msgid "What to Expect"
+msgstr ""
+
+msgid ""
+"During your visit, you'll tour our classrooms, play areas, and meet some of "
+"our dedicated teachers and staff."
+msgstr ""
+
+msgid "Select a time slot"
+msgstr ""
+
+msgid "No available slots"
+msgstr ""
+
+msgid "Please fill in all required fields"
+msgstr ""
+
+msgid "Please enter a valid phone number"
+msgstr ""
+
+msgid "SCHEDULING..."
+msgstr ""
+
+msgid ""
+"Every child shines here. Bilingual learning, play, and care in a loving "
+"community."
+msgstr ""
+
+msgid "Quick Links"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Philosophy"
+msgstr ""
+
+msgid "Teachers"
+msgstr ""
+
+msgid "Boston, MA"
+msgstr ""
+
+msgid "Careers"
+msgstr ""
+
+msgid "Marcela Vitor Admin"
+msgstr ""
+
+msgid "Welcome to Marcela Vitor Learning Center Admin"
+msgstr ""
+
+msgid "Mark selected messages as read"
+msgstr ""
+
+msgid "Mark selected messages as unread"
+msgstr ""
+
+msgid "Example: 2, 4, 6"
+msgstr ""
+
+msgid "Admin Dashboard"
+msgstr ""
+
+msgid "Resume Details"
+msgstr ""
+
+msgid "There was an error saving your resume. Please try again."
+msgstr ""
+
+msgid "New resume submitted by {}"
+msgstr ""
+
+msgid ""
+"Thank you for submitting your resume! We will review it and get in touch if "
+"there is a match."
+msgstr ""
+
+msgid ""
+"Your resume was saved, but we couldn't send the notification email. We'll "
+"still review your application."
+msgstr ""
+
+msgid "Please correct the errors below and try again."
+msgstr ""
+
+msgid ""
+"Your visit has been scheduled successfully! We've sent a confirmation email "
+"with all the details. We'll see you soon."
+msgstr ""
+
+msgid ""
+"Your visit has been scheduled successfully! There was an issue sending the "
+"confirmation email, but we'll see you soon."
+msgstr ""
+
+msgid ""
+"Your visit has been scheduled and we've sent you a confirmation email. "
+"However, there was an issue with the calendar integration. Our team will "
+"contact you to confirm the appointment."
+msgstr ""
+
+msgid ""
+"Your visit has been scheduled, but there were issues with both the calendar "
+"integration and sending the confirmation email. Our team will contact you to "
+"confirm the appointment."
+msgstr ""
+
+msgid ""
+"There was an error scheduling your visit. Please try again or contact us "
+"directly."
+msgstr ""
+
+msgid "Please correct the errors in the form."
+msgstr ""

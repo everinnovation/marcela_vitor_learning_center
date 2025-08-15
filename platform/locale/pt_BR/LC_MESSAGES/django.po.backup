@@ -830,69 +830,47 @@ msgstr "Excelência <b>Baseada em Pesquisa na Educação Bilíngue</b>"
 
 msgid "Family <b>Testimonials</b>"
 msgstr "<b>Depoimentos</b> de Famílias"
-
 msgid "Resume Upload"
 msgstr "Envio de Currículo"
-
+--
 msgid "SUBMIT YOUR <b>RESUME</b>"
 msgstr "ENVIE SEU <b>CURRÍCULO</b>"
-
+--
 msgid "Join our talent pool by submitting your resume today!"
 msgstr "Junte-se ao nosso banco de talentos enviando seu currículo hoje!"
-
+--
 msgid "Submit Your <b>Application</b>"
 msgstr "Envie Sua <b>Candidatura</b>"
-
+--
 msgid "City"
 msgstr "Cidade"
-
+--
 msgid "State"
 msgstr "Estado"
-
+--
 msgid "Zip Code"
 msgstr "CEP"
-
+--
 msgid "Native Language"
 msgstr "Língua Materna"
-
+--
 msgid "Portuguese Level"
 msgstr "Nível de Português"
-
+--
 msgid "English Level"
 msgstr "Nível de Inglês"
-
+--
 msgid "Field of Expertise"
 msgstr "Área de Especialização"
-
+--
 msgid "Years of Experience"
 msgstr "Anos de Experiência"
-
+--
 msgid "Resume File"
 msgstr "Arquivo do Currículo"
-
+--
 msgid "SUBMIT RESUME"
 msgstr "ENVIAR CURRÍCULO"
-
-msgid "Calendar"
-msgstr "Calendário"
-
-msgid "School Calendar"
-msgstr "Calendário Escolar"
-
-msgid "View our school calendar to see upcoming events, scheduled visits, and availability."
-msgstr "Veja nosso calendário escolar para conferir próximos eventos, visitas agendadas e disponibilidade."
-
-msgid "You can also subscribe to our calendar using the link below:"
-msgstr "Você também pode se inscrever em nosso calendário usando o link abaixo:"
-
-msgid "Subscribe to Calendar"
-msgstr "Inscrever-se no Calendário"
-
+--
 msgid "SUBMITTING..."
 msgstr "ENVIANDO..."
-
-msgid "Submitting your resume..."
-msgstr "Enviando seu currículo..."
-
-msgid "Please fill in all required fields (Name, Email, Phone)"
-msgstr "Por favor, preencha todos os campos obrigatórios (Nome, E-mail, Telefone)"

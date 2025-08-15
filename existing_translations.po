@@ -1,0 +1,204 @@
+# Menu items
+msgid "Home"
+msgstr "Início"
+
+msgid "About Us"
+msgstr "Sobre Nós"
+
+msgid "The School"
+msgstr "A Escola"
+
+msgid "Programs"
+msgstr "Programas"
+
+msgid "Contact Us"
+msgstr "Contato"
+
+# Home page sections
+msgid "BRIGHT BEGINNINGS!"
+msgstr "COMEÇOS BRILHANTES!"
+
+msgid "Every great journey starts with a bright beginning. Join a place where curiosity shines and every child is celebrated."
+msgstr "Toda grande jornada começa com um começo brilhante. Junte-se a um lugar onde a curiosidade brilha e cada criança é celebrada."
+
+msgid "JOIN US!"
+msgstr "JUNTE-SE A NÓS!"
+
+msgid "Discover a bilingual world full of play, learning, love, and meaningful."
+msgstr "Descubra um mundo bilíngue cheio de brincadeiras, aprendizado, amor e significado."
+
+msgid "LEARN MORE"
+msgstr "SAIBA MAIS"
+
+# Headers with HTML tags
+msgid "OUR <b>PHILOSOPHY</b>"
+msgstr "NOSSA <b>FILOSOFIA</b>"
+
+msgid "OUR <b>TEACHERS</b>"
+msgstr "NOSSOS <b>PROFESSORES</b>"
+
+msgid "OUR <b>PROGRAMS</b>"
+msgstr "NOSSOS <b>PROGRAMAS</b>"
+
+msgid "We value individual development, respecting each child's pace and interests."
+msgstr "Valorizamos o desenvolvimento individual, respeitando o ritmo e os interesses de cada criança."
+
+msgid "Our bilingual approach (Portuguese-English) follows Montessori principles, promoting learning through play, cultural awareness, and meaningful interactions."
+msgstr "Nossa abordagem bilíngue (Português-Inglês) segue os princípios Montessori, promovendo o aprendizado através de brincadeiras, consciência cultural e interações significativas."
+
+msgid "OUR TEACHERS"
+msgstr "NOSSOS PROFESSORES"
+
+msgid "Our team is made up of educators with over 5 years of experience and academic training in Massachusetts."
+msgstr "Nossa equipe é formada por educadores com mais de 5 anos de experiência e formação acadêmica em Massachusetts."
+
+msgid "The director, Marcela Vitor, is a speech-language pathologist with 9 years of experience in the state education system and a strong background in both public and private schools."
+msgstr "A diretora, Marcela Vitor, é fonoaudióloga com 9 anos de experiência no sistema educacional estadual e um forte histórico em escolas públicas e privadas."
+
+msgid "Today, she leads her own center and is personally committed to children's education."
+msgstr "Hoje, ela lidera seu próprio centro e está pessoalmente comprometida com a educação infantil."
+
+msgid "OUR PROGRAMS"
+msgstr "NOSSOS PROGRAMAS"
+
+msgid "We cater for babies from 12 months to preschool."
+msgstr "Atendemos bebês a partir de 12 meses até a pré-escola."
+
+msgid "We combine quality education and language development."
+msgstr "Combinamos educação de qualidade e desenvolvimento de linguagem."
+
+# About page
+msgid "ABOUT US"
+msgstr "SOBRE NÓS"
+
+msgid "We are a bilingual learning center dedicated to valuing every child. Here, we believe curiosity is the starting point for great achievements. Our team welcomes, encourages, and celebrates diversity, fostering a safe, inclusive, and joyful environment. Join us as we build a bright future together!"
+msgstr "Somos um centro de aprendizagem bilíngue dedicado a valorizar cada criança. Aqui, acreditamos que a curiosidade é o ponto de partida para grandes conquistas. Nossa equipe acolhe, incentiva e celebra a diversidade, promovendo um ambiente seguro, inclusivo e alegre. Junte-se a nós enquanto construímos um futuro brilhante juntos!"
+
+msgid "Our <b>Mission</b>"
+msgstr "Nossa <b>Missão</b>"
+
+msgid "To nurture the potential of each child through exploration, play, and loving guidance. Our bilingual (Portuguese-English) environment fosters independence, empathy, and joy in learning."
+msgstr "Nutrir o potencial de cada criança por meio da exploração, brincadeira e orientação amorosa. Nosso ambiente bilíngue (Português-Inglês) promove independência, empatia e alegria no aprendizado."
+
+msgid "We envision a community of confident, creative learners who honor diversity and lead with kindness and curiosity."
+msgstr "Imaginamos uma comunidade de aprendizes confiantes e criativos que honram a diversidade e lideram com bondade e curiosidade."
+
+msgid "Our <b>Vision</b>"
+msgstr "Nossa <b>Visão</b>"
+
+msgid "Meet <b>Marcela Vitor</b>"
+msgstr "Conheça <b>Marcela Vitor</b>"
+
+msgid "Marcela is a bilingual speech-language pathologist with nearly a decade of experience in Massachusetts public schools. Her mission? To create a safe, inclusive environment where children grow with love and confidence."
+msgstr "Marcela é uma fonoaudióloga bilíngue com quase uma década de experiência em escolas públicas de Massachusetts. Sua missão? Criar um ambiente seguro e inclusivo onde as crianças cresçam com amor e confiança."
+
+msgid "Her team shares this passion—each educator brings expertise and warmth, creating meaningful learning every day."
+msgstr "Sua equipe compartilha essa paixão—cada educador traz expertise e acolhimento, criando aprendizados significativos todos os dias."
+
+msgid "A <b>Bilingual</b> Advantage for Your Child"
+msgstr "Uma <b>Vantagem Bilíngue</b> para o Seu Filho"
+
+msgid "At Marcela Vitor Learning Center, we believe every child possesses unlimited potential. Our unique blend of educational philosophies—drawing inspiration from Montessori principles, Reggio Emilia approaches, and modern early childhood research—combined with bilingual immersion creates an environment where children don't just learn—they flourish."
+msgstr "No Marcela Vitor Learning Center, acreditamos que cada criança possui um potencial ilimitado. Nossa combinação única de filosofias educacionais—inspiradas nos princípios Montessori, abordagens Reggio Emilia e pesquisas modernas sobre a primeira infância—combinada com a imersão bilíngue cria um ambiente onde as crianças não apenas aprendem—elas florescem."
+
+msgid "As Massachusetts' exclusive Portuguese-English learning center, we offer something no other program can: authentic cultural bridge-building that prepares your child for an interconnected world."
+msgstr "Como centro de aprendizagem exclusivo de Português-Inglês de Massachusetts, oferecemos algo que nenhum outro programa pode: construção autêntica de pontes culturais que prepara seu filho para um mundo interconectado."
+
+msgid "1. Montessori-Inspired Learning"
+msgstr "1. Aprendizado Inspirado em Montessori"
+
+msgid "We emphasize child-led discovery, hands-on learning, and respect for each child's natural development."
+msgstr "Enfatizamos a descoberta liderada pela criança, o aprendizado prático e o respeito pelo desenvolvimento natural de cada criança."
+
+msgid "2. Reggio Emilia Project-Based Learning"
+msgstr "2. Aprendizagem Baseada em Projetos Reggio Emilia"
+
+msgid "We view children as capable researchers and our environment as the \"third teacher,\" encouraging exploration of real-world questions."
+msgstr "Vemos as crianças como pesquisadores capazes e nosso ambiente como o \"terceiro professor\", incentivando a exploração de questões do mundo real."
+
+msgid "3. Authentic Bilingual Immersion"
+msgstr "3. Imersão Bilíngue Autêntica"
+
+msgid "Our program is true cultural immersion, where children acquire both languages naturally through meaningful interactions."
+msgstr "Nosso programa é uma verdadeira imersão cultural, onde as crianças adquirem ambas as línguas naturalmente através de interações significativas."
+
+msgid "4. Play-Based Learning Philosophy"
+msgstr "4. Filosofia de Aprendizagem Baseada em Brincadeiras"
+
+msgid "We understand that play is a child's work. Our curriculum integrates purposeful play that develops social skills, emotional regulation, and creativity."
+msgstr "Entendemos que brincar é o trabalho da criança. Nosso currículo integra brincadeiras intencionais que desenvolvem habilidades sociais, regulação emocional e criatividade."
+
+msgid "5. Social-Emotional Development Focus"
+msgstr "5. Foco no Desenvolvimento Socioemocional"
+
+msgid "We prioritize emotional intelligence alongside academic growth, helping children develop empathy and resilience."
+msgstr "Priorizamos a inteligência emocional junto com o crescimento acadêmico, ajudando as crianças a desenvolverem empatia e resiliência."
+
+msgid "6. Family Partnership Approach"
+msgstr "6. Abordagem de Parceria Familiar"
+
+msgid "We believe education is most effective when families and schools work together, maintaining open and transparent communication."
+msgstr "Acreditamos que a educação é mais eficaz quando famílias e escolas trabalham juntas, mantendo uma comunicação aberta e transparente."
+
+msgid "From infants to school-age, our bilingual Portuguese-English programs are designed to nurture the whole child in a Montessori-inspired environment."
+msgstr "De bebês à idade escolar, nossos programas bilíngues Português-Inglês são projetados para nutrir a criança como um todo em um ambiente inspirado em Montessori."
+
+msgid "VIEW ALL PROGRAMS"
+msgstr "VER TODOS OS PROGRAMAS"
+
+msgid "INFANT PROGRAM"
+msgstr "PROGRAMA PARA BEBÊS"
+
+msgid "Ages 3 - 15 months"
+msgstr "Idades 3 - 15 meses"
+
+msgid "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace with responsive bilingual caregiving."
+msgstr "Nosso programa para bebês oferece um ambiente acolhedor e seguro onde os bebês se desenvolvem em seu próprio ritmo com cuidados bilíngues responsivos."
+
+msgid "TODDLER PROGRAM"
+msgstr "PROGRAMA PARA CRIANÇAS PEQUENAS"
+
+msgid "Ages 15 months - 3 years"
+msgstr "Idades 15 meses - 3 anos"
+
+msgid "Our toddler program embraces exploration and growing independence with activities that develop self-help skills and bilingual language abilities."
+msgstr "Nosso programa para crianças pequenas abraça a exploração e a crescente independência com atividades que desenvolvem habilidades de autonomia e capacidades linguísticas bilíngues."
+
+msgid "PRESCHOOL PROGRAM"
+msgstr "PROGRAMA PRÉ-ESCOLAR"
+
+msgid "Ages 3-5 years"
+msgstr "Idades 3-5 anos"
+
+msgid "Our preschool program fosters a love of learning through exploration and discovery with Montessori-inspired materials and strong bilingual development."
+msgstr "Nosso programa pré-escolar promove o amor pelo aprendizado através da exploração e descoberta com materiais inspirados em Montessori e forte desenvolvimento bilíngue."
+
+msgid "SCHOOL-AGE PROGRAM"
+msgstr "PROGRAMA PARA IDADE ESCOLAR"
+
+msgid "Ages 5-8 years"
+msgstr "Idades 5-8 anos"
+
+msgid "Our school-age program continues the bilingual immersion experience while supporting academic growth aligned with Massachusetts curriculum standards."
+msgstr "Nosso programa para idade escolar continua a experiência de imersão bilíngue enquanto apoia o crescimento acadêmico alinhado com os padrões curriculares de Massachusetts."
+
+msgid "Ready to <b>Begin?</b>"
+msgstr "Pronto para <b>Começar?</b>"
+
+msgid "Contact us today to schedule your tour and discover why families throughout Massachusetts choose Marcela Vitor Learning Center for their children's most important years. Together, we'll build the foundation for your child's brilliant future."
+msgstr "Entre em contato conosco hoje para agendar sua visita e descobrir por que famílias em todo Massachusetts escolhem o Marcela Vitor Learning Center para os anos mais importantes de seus filhos. Juntos, construiremos a base para o futuro brilhante do seu filho."
+
+msgid "Schedule a Tour"
+msgstr "Agende uma Visita"
+
+msgid "Music Classes"
+msgstr "Aulas de Música"
+
+msgid "Cultural studies that build global awareness and appreciation for diversity"
+msgstr "Estudos culturais que desenvolvem consciência global e valorização da diversidade"
+
+msgid "After-school and vacation programs that extend the bilingual learning experience"
+msgstr "Programas após a escola e de férias que ampliam a experiência de aprendizado bilíngue"
+
+msgid "Careers"
+msgstr "Carreiras"
