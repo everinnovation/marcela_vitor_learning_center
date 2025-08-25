@@ -29,10 +29,13 @@
                     {% blocktrans %}<b>A Dream Born </b> from Love{% endblocktrans %}
                 </h2>
                 <p class="text-base sm:text-lg space-grotesk-light text-gray-700 px-2 md:px-0 leading-relaxed">
-                    {% trans "When we moved to Massachusetts, we searched everywhere for a place that would truly embrace our daughters' bilingual, bicultural identity. We visited many wonderful schools, but none felt like home for children growing up between two worlds. As we watched Megan and Maisie navigate between Portuguese at home and English everywhere else, we realized we needed to create the school we wished existed." %}
+                    {% trans "Ten years ago, when we arrived in Massachusetts, we began a journey that would change not only our lives, but also the lives of many families. As a speech-language pathologist with experience in public and private schools and a degree in Early Childhood Education, and Rodolfo as a production engineer completing his second degree in Early Childhood Education, we have always deeply understood the importance of the early years in a child's development." %}
                 </p>
                 <p class="text-base sm:text-lg space-grotesk-light text-gray-700 px-2 md:px-0 leading-relaxed mt-4">
-                    {% trans "Marcela Vitor Learning Center was born from our love for our children and our vision of a place where Brazilian warmth meets American innovation, where Portuguese and English flow naturally together, and where every child can thrive in a truly multicultural environment. We didn't just open a school - we created the community we wanted for our own daughters." %}
+                    {% trans "When our daughters were born - our eldest now four years old - we began searching for a place that would truly embrace the bilingual and bicultural identity we wanted to cultivate in them. We visited many wonderful schools, but none seemed like a true home for children growing up between two worlds. As we watched Megan and Maisie naturally navigate between Portuguese at home and English everywhere else, we realized we needed to create the school we dreamed would exist." %}
+                </p>
+                <p class="text-base sm:text-lg space-grotesk-light text-gray-700 px-2 md:px-0 leading-relaxed mt-4">
+                    {% trans "The Marcela Vitor Learning Center was born from this unique convergence: our unconditional love for our daughters, our professional expertise in child development, and our dream of a place where Brazilian warmth meets American innovation, where Portuguese and English flow naturally together, and where every child can thrive in a truly multicultural environment. We didn't just open a school - we created the community we wanted for our own daughters, where every educational decision is made with the heart of parents and the mind of specialized educators" %}
                 </p>
             </div>
         </div>
@@ -84,12 +87,15 @@
                     <img src="{% static 'assets/marcela_vitor.jpeg' %}" alt="Marcela Vitor" 
                         class="rounded-full border-4 border-blue-100 h-48 w-48 object-cover shadow-md">
                 </div>
-                <h3 class="text-3xl font-medium text-blue-600 mb-2 text-center">{% trans "Marcela Vitor" %}</h3>
+                <div class="flex flex-col">
+                    <h3 class="text-3xl font-medium text-blue-600 mb-1 text-center">{% trans "Marcela Vitor" %}</h3>
+                    <h4 class="text-sm font-medium text-gray-600 mb-3 text-center">{% trans "Founder and Director" %}</h4>
+                </div>
                 <p class="text-gray-700 mb-4 px-8">
-                    {% trans "Marcela is a certified bilingual speech-language pathologist with over 9 years of experience in Massachusetts public schools. Her expertise in child development, language acquisition, and special education brings a research-based approach to our curriculum." %}
+                    {% trans 'Marcela is the founder, director, and creator of all curricula at Marcela Vitor Learning Center. As a certified bilingual speech-language pathologist with over 10 years of experience, she combines her clinical expertise with a passion for early childhood education to create unique bilingual development programs. With a degree in Speech-Language Pathology from Brazil and a second degree in Early Childhood Education from Massachusetts, Marcela holds specialized state licenses including Director II, Lead Teacher Preschool, and Teacher Infant/Toddler. She is a published author of educational resources used by schools and childcare centers throughout Massachusetts, including "Child Development Checklist" and "21 Days of Toilet Training."' %}
                 </p>
                 <p class="text-gray-700 px-8 mb-4">
-                    {% trans "Born and raised in Brazil, Marcela holds a Master's degree in Communication Disorders and has completed specialized training in Montessori methods, bilingual education, and early childhood development. Her personal experience raising bilingual children in the United States fuels her passion for creating an environment where children can embrace both languages and cultures." %}
+                    {% trans "Trained in ABA, Early Start Denver Model, Montessori Method, and Parental Coaching, Marcela has developed an innovative approach that integrates speech therapy, bilingual development, and multicultural education. Her personal experience raising bilingual daughters and her work with families from diverse cultures fuel her mission to create an environment where every child can thrive in two languages and cultures." %}
                 </p>
             </div>
             <div class="bg-white p-6 rounded-3xl text-left shadow-lg">
@@ -97,12 +103,18 @@
                     <img src="{% static 'assets/rodolfo_vitor.jpeg' %}" alt="Rodolfo Vitor" 
                         class="rounded-full border-4 border-green-100 h-48 w-48 object-cover shadow-md">
                 </div>
-                <h3 class="text-3xl font-medium text-green-600 mb-2 text-center">{% trans "Rodolfo Vitor" %}</h3>
+                <div class="flex flex-col">
+                    <h3 class="text-3xl font-medium text-green-600 mb-2 text-center">{% trans "Rodolfo Vitor" %}</h3>
+                    <h4 class="text-sm font-medium text-gray-600 mb-3 text-center">{% trans "Co-Founder and Director" %}</h4>
+                </div>
                 <p class="text-gray-700 mb-4 px-8">
-                    {% trans "Rodolfo brings over 15 years of business leadership and operations management experience to the Learning Center. His strategic vision and dedication to excellence ensure that our educational environment maintains the highest standards of quality, safety, and innovation." %}
+                    {% trans "Rodolfo is co-founder and director of Marcela Vitor Learning Center, bringing over 15 years of experience in engineering, project management, and business leadership. As a production engineer completing his second degree in Early Childhood Education, he combines strategic vision with passion for early childhood education to ensure the highest standards of quality and innovation at the center." %}
                 </p>
                 <p class="text-gray-700 px-8 mb-4">
-                    {% trans "With a background in business administration and project management, Rodolfo oversees the operational aspects of the center while sharing in the educational vision. His commitment to creating a welcoming, multicultural community stems from his own journey of raising bilingual children and building bridges between Brazilian and American cultures." %}
+                    {% trans "With proven experience managing teams of up to 60 employees in Brazil and complex projects in Massachusetts, Rodolfo oversees administrative operations, business development, and regulatory compliance. He has completed 1,080 hours of professional experience in early childhood education, working directly with infant, preschool, and mixed-age groups." %}
+                </p>
+                <p class="text-gray-700 px-8 mb-4">
+                    {% trans "His dedication to creating a welcoming and multicultural community comes from his own journey as a father of bilingual daughters, building bridges between Brazilian and American cultures. Rodolfo ensures that every operational aspect of the center reflects our educational mission, from safety and quality to excellence in family service." %}
                 </p>
             </div>
         </div>

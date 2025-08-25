@@ -35,13 +35,13 @@
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
-            <img src="{% static 'assets/baby.jpg' %}" alt="Infant Program" class="rounded-3xl shadow-lg border-4 border-blue-100 w-full h-auto object-cover">
+            <img src="{% static 'assets/baby.jpeg' %}" alt="Infant Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-[300px] md:h-[400px] object-cover object-center" style="aspect-ratio: 16/9;">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
                 {% trans "Infant Program" %}
             </h2>
-            <p class="text-xl font-medium text-blue-600 mb-4">{% trans "Ages 3 - 15 months" %}</p>
+            <p class="text-xl font-medium text-blue-600 mb-4">{% trans "Ages 3 months - 2.9 years" %}</p>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
                 {% trans "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace. We focus on responsive caregiving that builds trust and security while promoting language, motor, and social development through gentle guidance and bilingual interaction." %}
             </p>
@@ -63,47 +63,16 @@
     </div>
 </section>
 
-<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
-        <div class="md:w-1/2">
-            <img src="{% static 'assets/joy.jpg' %}" alt="Toddler Program" class="rounded-3xl shadow-lg border-4 border-yellow-100 w-full h-auto object-cover">
-        </div>
-        <div class="md:w-1/2 space-y-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
-                {% trans "Toddler Program" %}
-            </h2>
-            <p class="text-xl font-medium text-yellow-600 mb-4">{% trans "Ages 15 months - 3 years" %}</p>
-            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
-                {% trans "Our toddler program embraces this age of exploration and growing independence. Through carefully designed environments and activities, toddlers develop self-help skills, language abilities in both English and Portuguese, and positive social interactions." %}
-            </p>
-            <ul class="space-y-2 text-base sm:text-lg text-gray-700">
-                <li class="flex items-start">
-                    <span class="text-yellow-500 mr-2">•</span>
-                    {% trans "Practical life activities that develop independence" %}
-                </li>
-                <li class="flex items-start">
-                    <span class="text-yellow-500 mr-2">•</span>
-                    {% trans "Language-rich environment with songs, stories, and conversation in both languages" %}
-                </li>
-                <li class="flex items-start">
-                    <span class="text-yellow-500 mr-2">•</span>
-                    {% trans "Supportive toilet learning when developmentally ready" %}
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
             <img src="{% static 'assets/preschool.jpg' %}" alt="Preschool Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-[300px] md:h-[400px] object-cover object-center" style="aspect-ratio: 16/9;">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
-                {% trans "Preschool Program" %}
+                {% trans "Preeschool / Pre-K Program" %}
             </h2>
-            <p class="text-xl font-medium text-green-600 mb-4">{% trans "Ages 3-5 years" %}</p>
+            <p class="text-xl font-medium text-green-600 mb-4">{% trans "Ages 2.9 years - 6 years" %}</p>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
                 {% trans "Our preschool program fosters a love of learning through exploration and discovery. Children engage with Montessori-inspired materials across curriculum areas while developing strong bilingual skills and cultural appreciation." %}
             </p>
@@ -126,15 +95,15 @@
 </section>
 
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-white">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 sm:gap-12 md:gap-16">
         <div class="md:w-1/2">
-            <img src="{% static 'assets/school.jpg' %}" alt="Preschool Program" class="rounded-3xl shadow-lg border-4 border-green-100 w-full h-[300px] md:h-[400px] object-cover object-center" style="aspect-ratio: 16/9;">
+            <img src="{% static 'assets/school.jpg' %}" alt="School-Age Program" class="rounded-3xl shadow-lg border-4 border-purple-100 w-full h-[300px] md:h-[400px] object-cover" style="object-position: center; aspect-ratio: 3/4;">
         </div>
         <div class="md:w-1/2 space-y-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
                 {% trans "School-Age Program" %}
             </h2>
-            <p class="text-xl font-medium text-purple-600 mb-4">{% trans "Ages 5-8 years" %}</p>
+            <p class="text-xl font-medium text-purple-600 mb-4">{% trans "Ages 6-8 years" %}</p>
             <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
                 {% trans "Our school-age program builds on the strong foundation established in our early childhood programs, continuing the bilingual immersion experience while supporting academic growth aligned with Massachusetts curriculum standards." %}
             </p>

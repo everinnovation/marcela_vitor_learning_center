@@ -896,3 +896,75 @@ msgstr "Enviando seu currículo..."
 
 msgid "Please fill in all required fields (Name, Email, Phone)"
 msgstr "Por favor, preencha todos os campos obrigatórios (Nome, E-mail, Telefone)"
+
+msgid "Ages 3 months - 2.9 years"
+msgstr "Idades 3 meses - 2.9 anos"
+
+msgid "Preeschool / Pre-K Program"
+msgstr "Programa Pré-escolar / Pré-K"
+
+msgid "Ages 2.9 years - 6 years"
+msgstr "Idades 2.9 anos - 6 anos"
+
+msgid "Ages 6-8 years"
+msgstr "Idades 6-8 anos"
+
+msgid "Ten years ago, when we arrived in Massachusetts, we began a journey that would change not only our lives, but also the lives of many families. As a speech-language pathologist with experience in public and private schools and a degree in Early Childhood Education, and Rodolfo as a production engineer completing his second degree in Early Childhood Education, we have always deeply understood the importance of the early years in a child's development."
+msgstr "Há dez anos, quando chegamos a Massachusetts, iniciamos uma jornada que mudaria não apenas nossas vidas, mas também as vidas de muitas famílias. Como fonoaudióloga com experiência em escolas públicas e privadas e graduação em Educação Infantil, e Rodolfo como engenheiro de produção concluindo seu segundo diploma em Educação Infantil, sempre compreendemos profundamente a importância dos primeiros anos no desenvolvimento de uma criança."
+
+msgid "When our daughters were born - our eldest now four years old - we began searching for a place that would truly embrace the bilingual and bicultural identity we wanted to cultivate in them. We visited many wonderful schools, but none seemed like a true home for children growing up between two worlds. As we watched Megan and Maisie naturally navigate between Portuguese at home and English everywhere else, we realized we needed to create the school we dreamed would exist."
+msgstr "Quando nossas filhas nasceram - nossa mais velha agora tem quatro anos - começamos a procurar um lugar que realmente abraçasse a identidade bilíngue e bicultural que queríamos cultivar nelas. Visitamos muitas escolas maravilhosas, mas nenhuma parecia ser um verdadeiro lar para crianças crescendo entre dois mundos. Ao observar Megan e Maisie navegarem naturalmente entre o português em casa e o inglês em todos os outros lugares, percebemos que precisávamos criar a escola que sonhávamos que existisse."
+
+msgid "The Marcela Vitor Learning Center was born from this unique convergence: our unconditional love for our daughters, our professional expertise in child development, and our dream of a place where Brazilian warmth meets American innovation, where Portuguese and English flow naturally together, and where every child can thrive in a truly multicultural environment. We didn't just open a school - we created the community we wanted for our own daughters, where every educational decision is made with the heart of parents and the mind of specialized educators"
+msgstr "O Marcela Vitor Learning Center nasceu desta convergência única: nosso amor incondicional por nossas filhas, nossa expertise profissional em desenvolvimento infantil e nosso sonho de um lugar onde o calor brasileiro encontra a inovação americana, onde português e inglês fluem naturalmente juntos, e onde cada criança pode prosperar em um ambiente verdadeiramente multicultural. Não apenas abrimos uma escola - criamos a comunidade que queríamos para nossas próprias filhas, onde cada decisão educacional é tomada com o coração de pais e a mente de educadores especializados."
+
+msgid "Founder and Director"
+msgstr "Fundadora e Diretora"
+
+msgid "Trained in ABA, Early Start Denver Model, Montessori Method, and Parental Coaching, Marcela has developed an innovative approach that integrates speech therapy, bilingual development, and multicultural education. Her personal experience raising bilingual daughters and her work with families from diverse cultures fuel her mission to create an environment where every child can thrive in two languages and cultures."
+msgstr "Treinada em ABA, Modelo Early Start Denver, Método Montessori e Coaching Parental, Marcela desenvolveu uma abordagem inovadora que integra terapia da fala, desenvolvimento bilíngue e educação multicultural. Sua experiência pessoal criando filhas bilíngues e seu trabalho com famílias de culturas diversas alimentam sua missão de criar um ambiente onde cada criança pode prosperar em duas línguas e culturas."
+
+msgid "Co-Founder and Director"
+msgstr "Co-fundador e Diretor"
+
+msgid "Rodolfo is co-founder and director of Marcela Vitor Learning Center, bringing over 15 years of experience in engineering, project management, and business leadership. As a production engineer completing his second degree in Early Childhood Education, he combines strategic vision with passion for early childhood education to ensure the highest standards of quality and innovation at the center."
+msgstr "Rodolfo é co-fundador e diretor do Marcela Vitor Learning Center, trazendo mais de 15 anos de experiência em engenharia, gerenciamento de projetos e liderança empresarial. Como engenheiro de produção concluindo seu segundo diploma em Educação Infantil, ele combina visão estratégica com paixão pela educação infantil para garantir os mais altos padrões de qualidade e inovação no centro."
+
+msgid "With proven experience managing teams of up to 60 employees in Brazil and complex projects in Massachusetts, Rodolfo oversees administrative operations, business development, and regulatory compliance. He has completed 1,080 hours of professional experience in early childhood education, working directly with infant, preschool, and mixed-age groups."
+msgstr "Com experiência comprovada gerenciando equipes de até 60 funcionários no Brasil e projetos complexos em Massachusetts, Rodolfo supervisiona operações administrativas, desenvolvimento de negócios e conformidade regulatória. Ele completou 1.080 horas de experiência profissional em educação infantil, trabalhando diretamente com grupos de bebês, pré-escolares e idades mistas."
+
+msgid "His dedication to creating a welcoming and multicultural community comes from his own journey as a father of bilingual daughters, building bridges between Brazilian and American cultures. Rodolfo ensures that every operational aspect of the center reflects our educational mission, from safety and quality to excellence in family service."
+msgstr "Sua dedicação em criar uma comunidade acolhedora e multicultural vem de sua própria jornada como pai de filhas bilíngues, construindo pontes entre as culturas brasileira e americana. Rodolfo garante que cada aspecto operacional do centro reflita nossa missão educacional, desde segurança e qualidade até excelência no atendimento às famílias."
+
+msgid "Family Testimonials"
+msgstr "Depoimentos das Famílias"
+
+msgid "Meet Our Founders"
+msgstr "Conheça Nossos Fundadores"
+
+msgid "Our Unique Approach"
+msgstr "Nossa Abordagem Única"
+
+msgid "Research-Based Excellence in Bilingual Education"
+msgstr "Excelência Baseada em Pesquisa na Educação Bilíngue"
+
+msgid "Our Child-Centered Approach"
+msgstr "Nossa Abordagem Centrada na Criança"
+
+msgid "PDF format only"
+msgstr "Apenas formato PDF"
+
+msgid "Please upload your resume in PDF format only"
+msgstr "Por favor, carregue seu currículo apenas em formato PDF"
+
+msgid "SUBMIT YOUR RESUME"
+msgstr "ENVIE SEU CURRÍCULO"
+
+msgid "Submit Your Application"
+msgstr "Envie Sua Candidatura"
+
+msgid "Plan Your Visit"
+msgstr "Planeje Sua Visita"
+
+msgid "Marcela is the founder, director, and creator of all curricula at Marcela Vitor Learning Center. As a certified bilingual speech-language pathologist with over 10 years of experience, she combines her clinical expertise with a passion for early childhood education to create unique bilingual development programs. With a degree in Speech-Language Pathology from Brazil and a second degree in Early Childhood Education from Massachusetts, Marcela holds specialized state licenses including Director II, Lead Teacher Preschool, and Teacher Infant/Toddler. She is a published author of educational resources used by schools and childcare centers throughout Massachusetts, including \"Child Development Checklist\" and \"21 Days of Toilet Training.\""
+msgstr "Marcela é a fundadora, diretora e criadora de todos os currículos do Marcela Vitor Learning Center. Como fonoaudióloga bilíngue certificada com mais de 10 anos de experiência, ela combina sua expertise clínica com uma paixão pela educação infantil para criar programas únicos de desenvolvimento bilíngue. Com graduação em Fonoaudiologia no Brasil e segundo diploma em Educação Infantil em Massachusetts, Marcela possui licenças estaduais especializadas incluindo Diretora II, Professora Líder Pré-escolar e Professora Bebê/Criança Pequena. Ela é autora publicada de recursos educacionais usados por escolas e centros de cuidados infantis em todo Massachusetts, incluindo \"Lista de Verificação do Desenvolvimento Infantil\" e \"21 Dias de Treinamento de Toalete.\""

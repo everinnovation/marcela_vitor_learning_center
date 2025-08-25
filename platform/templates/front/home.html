@@ -172,93 +172,67 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[500px] cursor-pointer">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[540px] max-w-[400px] mx-auto w-full cursor-pointer">
                 <a href="{% url 'programs' %}" class="block">
-                    <div class="h-48 sm:h-60 md:h-72 w-full">
-                        <img src="{% static 'assets/baby.jpg' %}" alt="Infant Program" class="w-full h-full object-cover rounded-t-xl border-b-4 border-blue-100">
+                    <div class="h-64 sm:h-72 w-full">
+                        <img src="{% static 'assets/baby.jpeg' %}" alt="Infant Program" class="w-full h-full object-cover rounded-t-xl border-b-4 border-green-100">
                     </div>
                 </a>
-                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "INFANT PROGRAM" %}</h3>
-                        <p class="text-blue-600 font-medium">{% trans "Ages 3 - 15 months" %}</p>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace with responsive bilingual caregiving." %}</p>
+                <div class="p-7 flex flex-col text-center flex-grow">
+                    <a href="{% url 'programs' %}" class="block space-y-3">
+                        <h3 class="text-lg font-normal text-gray-900">{% trans "INFANT PROGRAM" %}</h3>
+                        <p class="text-blue-600 font-medium text-sm">{% trans "Ages 3 months - 2.9 years" %}</p>
+                        <p class="text-xs text-gray-600">{% trans "Our nurturing infant program provides a warm, safe environment where babies develop at their own pace with responsive bilingual caregiving." %}</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full pt-4">
-                        <a href="{% url 'programs' %}"
-                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
-                            style="max-width: 320px;">
+                        <a href="{% url 'programs' %}" class="px-3 py-1.5 text-white flex items-center justify-center text-base tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200 w-full">
                             {% trans "LEARN MORE" %}
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[500px] cursor-pointer">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[540px] max-w-[400px] mx-auto w-full cursor-pointer">
                 <a href="{% url 'programs' %}" class="block">
-                    <div class="h-48 sm:h-60 md:h-72 w-full">
-                        <img src="{% static 'assets/joy.jpg' %}" alt="Toddler Program" class="w-full h-full object-cover rounded-t-xl border-b-4 border-yellow-100">
-                    </div>
-                </a>
-                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "TODDLER PROGRAM" %}</h3>
-                        <p class="text-yellow-600 font-medium">{% trans "Ages 15 months - 3 years" %}</p>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "Our toddler program embraces exploration and growing independence with activities that develop self-help skills and bilingual language abilities." %}</p>
-                    </a>
-                    <div class="flex justify-center mt-auto w-full pt-4">
-                        <a href="{% url 'programs' %}#toddler-program"
-                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
-                            style="max-width: 320px;">
-                            {% trans "LEARN MORE" %}
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[500px] cursor-pointer">
-                <a href="{% url 'programs' %}" class="block">
-                    <div class="h-48 sm:h-60 md:h-72 w-full">
+                    <div class="h-64 sm:h-72 w-full">
                         <img src="{% static 'assets/preschool.jpg' %}" alt="Preschool Program" class="w-full h-full object-cover rounded-t-xl border-b-4 border-green-100">
                     </div>
                 </a>
-                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "PRESCHOOL PROGRAM" %}</h3>
-                        <p class="text-green-600 font-medium">{% trans "Ages 3-5 years" %}</p>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "Our preschool program fosters a love of learning through exploration and discovery with Montessori-inspired materials and strong bilingual development." %}</p>
+                <div class="p-7 flex flex-col text-center flex-grow">
+                    <a href="{% url 'programs' %}" class="block space-y-3">
+                        <h3 class="text-lg font-normal text-gray-900">{% trans "Preeschool / Pre-K Program" %}</h3>
+                        <p class="text-green-600 font-medium text-sm">{% trans "Ages 2.9 years - 6 years" %}</p>
+                        <p class="text-xs text-gray-600">{% trans "Our preschool program fosters a love of learning through exploration and discovery with Montessori-inspired materials and strong bilingual development." %}</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full pt-4">
-                        <a href="{% url 'programs' %}"
-                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
-                            style="max-width: 320px;">
+                        <a href="{% url 'programs' %}" class="px-3 py-1.5 text-white flex items-center justify-center text-base tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200 w-full">
                             {% trans "LEARN MORE" %}
                         </a>
                     </div>
                 </div>
             </div>
 
-            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[450px] sm:min-h-[500px] cursor-pointer">
+            <div class="article-card bg-white shadow-md rounded-xl overflow-hidden flex flex-col h-full min-h-[540px] max-w-[400px] mx-auto w-full cursor-pointer">
                 <a href="{% url 'programs' %}" class="block">
-                    <div class="h-48 sm:h-60 md:h-72 w-full">
+                    <div class="h-64 sm:h-72 w-full">
                         <img src="{% static 'assets/school.jpg' %}" alt="School-Age Program" class="w-full h-full object-cover rounded-t-xl border-b-4 border-purple-100">
                     </div>
                 </a>
-                <div class="p-4 sm:p-6 flex flex-col text-center flex-grow">
-                    <a href="{% url 'programs' %}" class="block space-y-3 sm:space-y-4">
-                        <h3 class="text-xl sm:text-2xl font-normal text-gray-900">{% trans "SCHOOL-AGE PROGRAM" %}</h3>
-                        <p class="text-purple-600 font-medium">{% trans "Ages 5-8 years" %}</p>
-                        <p class="text-sm sm:text-base text-gray-600">{% trans "Our school-age program continues the bilingual immersion experience while supporting academic growth aligned with Massachusetts curriculum standards." %}</p>
+                <div class="p-7 flex flex-col text-center flex-grow">
+                    <a href="{% url 'programs' %}" class="block space-y-3">
+                        <h3 class="text-lg font-normal text-gray-900">{% trans "SCHOOL-AGE PROGRAM" %}</h3>
+                        <p class="text-purple-600 font-medium text-sm">{% trans "Ages 6-8 years" %}</p>
+                        <p class="text-xs text-gray-600">{% trans "Our school-age program continues the bilingual immersion experience while supporting academic growth aligned with Massachusetts curriculum standards." %}</p>
                     </a>
                     <div class="flex justify-center mt-auto w-full pt-4">
-                        <a href="{% url 'programs' %}"
-                            class="px-4 sm:px-6 py-2 text-white flex items-center justify-center text-lg sm:text-xl w-[90%] sm:w-[80%] tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200"
-                            style="max-width: 320px;">
+                        <a href="{% url 'programs' %}" class="px-3 py-1.5 text-white flex items-center justify-center text-base tracking-widest bg-[#1053f3] rounded-xl hover:bg-[#0e49d1] transition-colors duration-200 w-full">
                             {% trans "LEARN MORE" %}
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
             </div>
         </div>
     </section>
