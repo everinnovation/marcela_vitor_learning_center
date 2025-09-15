@@ -12,11 +12,10 @@
         <img src="{% static 'assets/home_background.png' %}"
             class="absolute top-0 left-0 w-full h-full object-cover z-0" />
         <section class="relative h-[100vh] md:h-[90vh] z-20 w-full flex-grow mx-auto flex items-center justify-center">
-            <div class="flex items-start pt-2 md:items-center mb-32 md:mb-0 md:pt-0 justify-center h-[65vh] md:h-[80vh] w-full">
-                <img src="{% static 'assets/main_image_background.png' %}"
-                    class="h-full w-auto max-w-full object-cover z-10" style="max-width: none;" />
+            <div class="md:w-1/2 flex justify-center">
+                <img src="{% static 'assets/home_image.jpeg' %}" alt="Preschool Program"
+                    class="rounded-full shadow-lg border-4 border-[#FFC900] w-[400px] h-[400px] md:w-[520px] md:h-[520px] object-cover object-center hover:shadow-xl transition-shadow duration-300">
             </div>
-
             <div class="absolute left-4 sm:left-8 md:left-20 bottom-20 md:top-1/4 w-[90vw] sm:w-[70vw] md:w-[30vw] text-center md:text-left flex-shrink-0 flex flex-col justify-start z-20 px-2 md:mb-0 mb-4 md:px-0">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular" style="letter-spacing: 0.08em;">
                     {% trans "BRIGHT BEGINNINGS!" %}
