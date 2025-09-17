@@ -9,7 +9,7 @@ class BaseModel(SafeDeleteModel):
 
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
-    history = HistoricalRecords()
+    history = HistoricalRecords(inherit=True)
 
     class Meta:
         abstract = True
