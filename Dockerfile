@@ -1,15 +1,14 @@
 FROM python:3.10.5
 
 EXPOSE 8000
-WORKDIR /app
+WORKDIR /usr/src/app
 
-# Install gettext for translations
-RUN apt-get update && apt-get install -y gettext
+# Install gettext for translations and netcat for health checks
+RUN apt-get update && apt-get install -y gettext netcat-openbsd
 
-ADD requirements.txt /app/
-
+COPY requirements.txt /usr/src/app/
 RUN pip install -r requirements.txt
 
-ADD ./platform /app
+# No need to copy files as they will be mounted as volumes
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "3", "--reload", "app.wsgi:application"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

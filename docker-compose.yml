@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   learning-center-database: 
     image: postgres:latest 
@@ -11,6 +9,11 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     networks:
       - learning-center-network
 
@@ -19,14 +22,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    working_dir: /usr/src/platform
+    working_dir: /usr/src/app
     command: >
       bash -c "
+        echo 'Waiting for PostgreSQL...' &&
+        while ! nc -z learning-center-database 5432; do sleep 1; done &&
+        echo 'PostgreSQL started' &&
         python manage.py runserver ${HOSTNAME}:${PORT}
       "
     volumes:
-      - ./platform/:/usr/src/platform
-      - ./platform/media/:/usr/src/platform/media
+      - ./:/usr/src/app
+      - ./media/:/usr/src/app/media
     ports:
       - "${PORT}:${PORT}"
     environment:
@@ -35,10 +41,11 @@ services:
     env_file:
       .env
     depends_on:
-      - learning-center-database
+      learning-center-database:
+        condition: service_healthy
     networks:
       - learning-center-network
 
 networks:
   learning-center-network:
-    external: true
+    driver: bridge
