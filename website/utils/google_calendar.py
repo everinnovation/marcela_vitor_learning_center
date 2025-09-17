@@ -4,13 +4,14 @@ import datetime
 import logging
 import sys
 import traceback
+import json
 
 # Set up logging
 logger = logging.getLogger(__name__)
 
 # Path to the credentials file
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CREDENTIALS_FILE = os.path.join(BASE_DIR, 'credentials', 'google_calendar_credentials.json')
+# Removed reference to credentials file as we'll use environment variables
 
 class GoogleCalendarService:
     """Service class for interacting with Google Calendar API."""
@@ -28,16 +29,30 @@ class GoogleCalendarService:
         try:
             from google.oauth2 import service_account
             from googleapiclient.discovery import build
-            import json
             
             logger.info("Successfully imported Google API libraries")
             
-            # Check if credentials file exists
-            if not os.path.exists(CREDENTIALS_FILE):
-                logger.error(f"Google Calendar credentials file not found at {CREDENTIALS_FILE}")
+            # Check if environment variables are set
+            required_vars = [
+                'GOOGLE_CALENDAR_TYPE',
+                'GOOGLE_CALENDAR_PROJECT_ID',
+                'GOOGLE_CALENDAR_PRIVATE_KEY_ID',
+                'GOOGLE_CALENDAR_PRIVATE_KEY',
+                'GOOGLE_CALENDAR_CLIENT_EMAIL',
+                'GOOGLE_CALENDAR_CLIENT_ID',
+                'GOOGLE_CALENDAR_AUTH_URI',
+                'GOOGLE_CALENDAR_TOKEN_URI',
+                'GOOGLE_CALENDAR_AUTH_PROVIDER_CERT_URL',
+                'GOOGLE_CALENDAR_CLIENT_CERT_URL',
+                'GOOGLE_CALENDAR_UNIVERSE_DOMAIN'
+            ]
+            
+            missing_vars = [var for var in required_vars if not os.getenv(var)]
+            if missing_vars:
+                logger.error(f"Missing required environment variables: {', '.join(missing_vars)}")
                 return
             
-            logger.info(f"Found credentials file at {CREDENTIALS_FILE}")
+            logger.info("Found all required environment variables for Google Calendar API")
             
             # For service accounts, we need to specify the calendar ID explicitly
             # Using the specific calendar ID for Marcela Vitor's calendar
@@ -52,11 +67,28 @@ class GoogleCalendarService:
             
             # Load credentials and build service
             try:
-                logger.info(f"Loading credentials from {CREDENTIALS_FILE}")
-                credentials = service_account.Credentials.from_service_account_file(
-                    CREDENTIALS_FILE, scopes=scopes
+                logger.info("Creating credentials from environment variables")
+                
+                # Create credentials info dictionary from environment variables
+                credentials_info = {
+                    "type": os.getenv("GOOGLE_CALENDAR_TYPE"),
+                    "project_id": os.getenv("GOOGLE_CALENDAR_PROJECT_ID"),
+                    "private_key_id": os.getenv("GOOGLE_CALENDAR_PRIVATE_KEY_ID"),
+                    "private_key": os.getenv("GOOGLE_CALENDAR_PRIVATE_KEY").replace('\\n', '\n'),
+                    "client_email": os.getenv("GOOGLE_CALENDAR_CLIENT_EMAIL"),
+                    "client_id": os.getenv("GOOGLE_CALENDAR_CLIENT_ID"),
+                    "auth_uri": os.getenv("GOOGLE_CALENDAR_AUTH_URI"),
+                    "token_uri": os.getenv("GOOGLE_CALENDAR_TOKEN_URI"),
+                    "auth_provider_x509_cert_url": os.getenv("GOOGLE_CALENDAR_AUTH_PROVIDER_CERT_URL"),
+                    "client_x509_cert_url": os.getenv("GOOGLE_CALENDAR_CLIENT_CERT_URL"),
+                    "universe_domain": os.getenv("GOOGLE_CALENDAR_UNIVERSE_DOMAIN")
+                }
+                
+                # Create credentials from dictionary instead of file
+                credentials = service_account.Credentials.from_service_account_info(
+                    credentials_info, scopes=scopes
                 )
-                logger.info("Successfully loaded credentials from file")
+                logger.info("Successfully created credentials from environment variables")
                 
                 logger.info("Building Google Calendar service")
                 self.service = build('calendar', 'v3', credentials=credentials)
