@@ -82,7 +82,8 @@ class GoogleCalendarService:
                 private_key = private_key.replace('\\n', '\n')
                 
                 # Log key format for debugging (don't log the actual key)
-                logger.info(f"Private key format: starts with '{private_key[:10]}...' and contains {private_key.count('\\n')} newlines")
+                newline_count = private_key.count('\n')
+                logger.info(f"Private key format: starts with '{private_key[:10]}...' and contains {newline_count} newlines")
                 
                 credentials_info = {
                     "type": os.getenv("GOOGLE_CALENDAR_TYPE"),
@@ -123,7 +124,8 @@ class GoogleCalendarService:
                         # Try a different approach for handling the key format
                         try:
                             # Try reconstructing the key with proper format
-                            key_parts = private_key.split('\\n' if '\\n' in private_key else '\n')
+                            has_escaped_newlines = '\\n' in private_key
+                            key_parts = private_key.split('\\n' if has_escaped_newlines else '\n')
                             reconstructed_key = '\n'.join([part for part in key_parts if part])
                             if not reconstructed_key.startswith('-----BEGIN PRIVATE KEY-----'):
                                 reconstructed_key = '-----BEGIN PRIVATE KEY-----\n' + reconstructed_key
