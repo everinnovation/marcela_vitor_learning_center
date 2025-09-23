@@ -70,11 +70,25 @@ class GoogleCalendarService:
                 logger.info("Creating credentials from environment variables")
                 
                 # Create credentials info dictionary from environment variables
+                # Get the private key and clean it properly for all environments
+                private_key = os.getenv("GOOGLE_CALENDAR_PRIVATE_KEY", "")
+                # Remove any quotes that might be present
+                if private_key.startswith('"') and private_key.endswith('"'):
+                    private_key = private_key[1:-1]
+                elif private_key.startswith("'") and private_key.endswith("'"):
+                    private_key = private_key[1:-1]
+                
+                # Ensure newlines are properly formatted
+                private_key = private_key.replace('\\n', '\n')
+                
+                # Log key format for debugging (don't log the actual key)
+                logger.info(f"Private key format: starts with '{private_key[:10]}...' and contains {private_key.count('\\n')} newlines")
+                
                 credentials_info = {
                     "type": os.getenv("GOOGLE_CALENDAR_TYPE"),
                     "project_id": os.getenv("GOOGLE_CALENDAR_PROJECT_ID"),
                     "private_key_id": os.getenv("GOOGLE_CALENDAR_PRIVATE_KEY_ID"),
-                    "private_key": os.getenv("GOOGLE_CALENDAR_PRIVATE_KEY").replace('\\n', '\n'),
+                    "private_key": private_key,
                     "client_email": os.getenv("GOOGLE_CALENDAR_CLIENT_EMAIL"),
                     "client_id": os.getenv("GOOGLE_CALENDAR_CLIENT_ID"),
                     "auth_uri": os.getenv("GOOGLE_CALENDAR_AUTH_URI"),
@@ -85,21 +99,59 @@ class GoogleCalendarService:
                 }
                 
                 # Create credentials from dictionary instead of file
-                credentials = service_account.Credentials.from_service_account_info(
-                    credentials_info, scopes=scopes
-                )
-                logger.info("Successfully created credentials from environment variables")
-                
-                logger.info("Building Google Calendar service")
-                self.service = build('calendar', 'v3', credentials=credentials)
-                
-                # Verify calendar access
-                if self.verify_calendar_access():
-                    self.initialized = True
-                    logger.info("Google Calendar service initialized successfully with verified access")
-                else:
-                    logger.error("Google Calendar service could not verify calendar access")
-                    self.initialized = False
+                try:
+                    credentials = service_account.Credentials.from_service_account_info(
+                        credentials_info, scopes=scopes
+                    )
+                    logger.info("Successfully created credentials from environment variables")
+                    
+                    logger.info("Building Google Calendar service")
+                    self.service = build('calendar', 'v3', credentials=credentials)
+                    
+                    # Verify calendar access
+                    if self.verify_calendar_access():
+                        self.initialized = True
+                        logger.info("Google Calendar service initialized successfully with verified access")
+                    else:
+                        logger.error("Google Calendar service could not verify calendar access")
+                        self.initialized = False
+                except Exception as e:
+                    logger.error(f"Error creating credentials: {str(e)}")
+                    logger.error(f"Error type: {type(e).__name__}")
+                    if "MalformedError" in str(type(e).__name__):
+                        logger.error("The private key format appears to be incorrect. Check that it is properly formatted with newlines.")
+                        # Try a different approach for handling the key format
+                        try:
+                            # Try reconstructing the key with proper format
+                            key_parts = private_key.split('\\n' if '\\n' in private_key else '\n')
+                            reconstructed_key = '\n'.join([part for part in key_parts if part])
+                            if not reconstructed_key.startswith('-----BEGIN PRIVATE KEY-----'):
+                                reconstructed_key = '-----BEGIN PRIVATE KEY-----\n' + reconstructed_key
+                            if not reconstructed_key.endswith('-----END PRIVATE KEY-----'):
+                                reconstructed_key = reconstructed_key + '\n-----END PRIVATE KEY-----\n'
+                            
+                            logger.info("Attempting with reconstructed key format")
+                            credentials_info["private_key"] = reconstructed_key
+                            
+                            credentials = service_account.Credentials.from_service_account_info(
+                                credentials_info, scopes=scopes
+                            )
+                            logger.info("Successfully created credentials with reconstructed key")
+                            
+                            self.service = build('calendar', 'v3', credentials=credentials)
+                            
+                            if self.verify_calendar_access():
+                                self.initialized = True
+                                logger.info("Google Calendar service initialized successfully with reconstructed key")
+                            else:
+                                logger.error("Google Calendar service could not verify calendar access with reconstructed key")
+                                self.initialized = False
+                        except Exception as inner_e:
+                            logger.error(f"Error with reconstructed key approach: {str(inner_e)}")
+                            self.initialized = False
+                    else:
+                        logger.error(traceback.format_exc())
+                        self.initialized = False
             except Exception as e:
                 logger.error(f"Error initializing Google Calendar service: {str(e)}")
                 logger.error(traceback.format_exc())
