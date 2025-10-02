@@ -975,6 +975,9 @@ msgstr "Portuguese Club"
 msgid "Cultural & Educational Program"
 msgstr "Programa Cultural e Educacional"
 
+msgid "Cultural & Educational Program - Saturdays"
+msgstr "Programa Cultural e Educacional - Aos Sábados"
+
 msgid "The Portuguese Club is an educational-cultural program developed for children with connections to the Portuguese language and Brazilian culture. Our mission is to preserve and strengthen the Portuguese language heritage while providing a fun and engaging learning environment."
 msgstr "O Portuguese Club é um programa educacional-cultural desenvolvido para crianças com conexões com a língua portuguesa e a cultura brasileira. Nossa missão é preservar e fortalecer a herança da língua portuguesa, proporcionando um ambiente de aprendizagem divertido e envolvente."
 
