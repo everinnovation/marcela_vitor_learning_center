@@ -129,6 +129,54 @@
     </div>
 </section>
 
+<section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-gray-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center gap-8 sm:gap-12 md:gap-16">
+        <div class="md:w-1/2">
+            <img src="{% static 'assets/brazil.jpeg' %}" alt="Portuguese Club" class="rounded-3xl shadow-lg border-4 border-orange-100 w-full h-[300px] md:h-[400px] object-cover object-center" style="aspect-ratio: 16/9;">
+        </div>
+        <div class="md:w-1/2 space-y-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular text-[var(--school-heading-color-dark)]">
+                {% trans "Portuguese Club" %}
+            </h2>
+            <p class="text-xl font-medium text-orange-600 mb-4">{% trans "Cultural & Educational Program" %}</p>
+            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
+                {% trans "The Portuguese Club is an educational-cultural program developed for children with connections to the Portuguese language and Brazilian culture. Our mission is to preserve and strengthen the Portuguese language heritage while providing a fun and engaging learning environment." %}
+            </p>
+            <h3 class="text-xl sm:text-2xl space-grotesk-regular text-[var(--school-heading-color-dark)] pt-4">
+                {% trans "Our Teaching Team:" %}
+            </h3>
+            <p class="text-base sm:text-lg space-grotesk-light text-gray-700">
+                {% trans "Our team consists of highly qualified professionals with unique expertise in bilingual education and language development." %}
+            </p>
+            <h3 class="text-xl sm:text-2xl space-grotesk-regular text-[var(--school-heading-color-dark)] pt-4">
+                {% trans "Our Students:" %}
+            </h3>
+            <ul class="space-y-2 text-base sm:text-lg text-gray-700">
+                <li class="flex items-start">
+                    <span class="text-orange-500 mr-2">•</span>
+                    {% trans "American families who want their children to communicate with Portuguese-speaking relatives" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-orange-500 mr-2">•</span>
+                    {% trans "Brazilian/Portuguese children attending American schools who are losing their native language" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-orange-500 mr-2">•</span>
+                    {% trans "Heritage learners seeking to maintain their cultural connections" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-orange-500 mr-2">•</span>
+                    {% trans "Children with Portuguese language development needs, including speech delays or difficulties with specific sounds of the Portuguese language" %}
+                </li>
+                <li class="flex items-start">
+                    <span class="text-orange-500 mr-2">•</span>
+                    {% trans "Developing bilinguals who need to strengthen specific skills in Portuguese" %}
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section class="w-full py-12 sm:py-16 md:py-20 px-4 md:px-10 bg-[var(--school-primary-blue)] text-white">
     <div class="max-w-5xl mx-auto text-center">
         <h2 class="text-3xl sm:text-4xl md:text-5xl space-grotesk-regular mb-6">{% trans "Ready to Give Your Child the Bilingual Advantage?" %}</h2>

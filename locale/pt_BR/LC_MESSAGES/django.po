@@ -968,3 +968,36 @@ msgstr "Planeje Sua Visita"
 
 msgid "Marcela is the founder, director, and creator of all curricula at Marcela Vitor Learning Center. As a certified bilingual speech-language pathologist with over 10 years of experience, she combines her clinical expertise with a passion for early childhood education to create unique bilingual development programs. With a degree in Speech-Language Pathology from Brazil and a second degree in Early Childhood Education from Massachusetts, Marcela holds specialized state licenses including Director II, Lead Teacher Preschool, and Teacher Infant/Toddler. She is a published author of educational resources used by schools and childcare centers throughout Massachusetts, including \"Child Development Checklist\" and \"21 Days of Toilet Training.\""
 msgstr "Marcela é a fundadora, diretora e criadora de todos os currículos do Marcela Vitor Learning Center. Como fonoaudióloga bilíngue certificada com mais de 10 anos de experiência, ela combina sua expertise clínica com uma paixão pela educação infantil para criar programas únicos de desenvolvimento bilíngue. Com graduação em Fonoaudiologia no Brasil e segundo diploma em Educação Infantil em Massachusetts, Marcela possui licenças estaduais especializadas incluindo Diretora II, Professora Líder Pré-escolar e Professora Bebê/Criança Pequena. Ela é autora publicada de recursos educacionais usados por escolas e centros de cuidados infantis em todo Massachusetts, incluindo \"Lista de Verificação do Desenvolvimento Infantil\" e \"21 Dias de Treinamento de Toalete.\""
+
+msgid "Portuguese Club"
+msgstr "Portuguese Club"
+
+msgid "Cultural & Educational Program"
+msgstr "Programa Cultural e Educacional"
+
+msgid "The Portuguese Club is an educational-cultural program developed for children with connections to the Portuguese language and Brazilian culture. Our mission is to preserve and strengthen the Portuguese language heritage while providing a fun and engaging learning environment."
+msgstr "O Portuguese Club é um programa educacional-cultural desenvolvido para crianças com conexões com a língua portuguesa e a cultura brasileira. Nossa missão é preservar e fortalecer a herança da língua portuguesa, proporcionando um ambiente de aprendizagem divertido e envolvente."
+
+msgid "Our Students:"
+msgstr "Nossos Alunos:"
+
+msgid "American families who want their children to communicate with Portuguese-speaking relatives"
+msgstr "Famílias americanas que desejam que seus filhos se comuniquem com parentes que falam português"
+
+msgid "Brazilian/Portuguese children attending American schools who are losing their native language"
+msgstr "Crianças brasileiras/portuguesas frequentando escolas americanas que estão perdendo sua língua nativa"
+
+msgid "Heritage learners seeking to maintain their cultural connections"
+msgstr "Estudantes de herança que buscam manter suas conexões culturais"
+
+msgid "Children with Portuguese language development needs, including speech delays or difficulties with specific sounds of the Portuguese language"
+msgstr "Crianças com necessidades de desenvolvimento de linguagem em português, incluindo atrasos de fala ou dificuldades com sons específicos da língua portuguesa"
+
+msgid "Developing bilinguals who need to strengthen specific skills in Portuguese"
+msgstr "Bilíngues em desenvolvimento que precisam fortalecer habilidades específicas em português"
+
+msgid "Our Teaching Team:"
+msgstr "Nossa Equipe Pedagógica:"
+
+msgid "Our team consists of highly qualified professionals with unique expertise in bilingual education and language development."
+msgstr "Nossa equipe é formada por profissionais altamente qualificados com expertise única em educação bilíngue e desenvolvimento da linguagem."
