@@ -112,7 +112,7 @@ class EmailManager:
             })
             
             admin_email = getattr(settings, 'ADMIN_EMAIL', settings.DEFAULT_FROM_EMAIL)
-            contact_email = "contactmarcelavitor@gmail.com"
+            contact_email = getattr(settings, 'ADMIN_EMAIL', 'marcelavitorlearningcenter@gmail.com')
             
             customer_email = EmailMessage(
                 subject=f'Visit Confirmation - Marcela Vitor Learning Center',

@@ -2,6 +2,7 @@ from django.views.generic import TemplateView, ListView
 from django.http import JsonResponse
 from django.shortcuts import redirect
 from django.contrib import messages
+from django.conf import settings
 from django.utils.translation import gettext as _
 from ..forms.resume import ResumeForm
 from ..models.contact import ContactMessage
@@ -54,7 +55,7 @@ class ResumeView(TemplateView):
             }
 
             template_name = 'email/resume_email.html'
-            to_emails = ['contactmarcelavitor@gmail.com']
+            to_emails = [getattr(settings, 'ADMIN_EMAIL', 'marcelavitorlearningcenter@gmail.com')]
             
             try:
                 if resume.resume_file:

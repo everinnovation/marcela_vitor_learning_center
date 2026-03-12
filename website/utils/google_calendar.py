@@ -22,9 +22,9 @@ class GoogleCalendarService:
         self.initialized = False
         
         # Set the specific calendar ID for Marcela Vitor's calendar
-        self.calendar_id = 'contactmarcelavitor@gmail.com'
-        self.calendar_url = 'https://calendar.google.com/calendar/embed?src=contactmarcelavitor%40gmail.com&ctz=America%2FSao_Paulo'
-        self.calendar_ical = 'https://calendar.google.com/calendar/ical/contactmarcelavitor%40gmail.com/public/basic.ics'
+        self.calendar_id = 'marcelavitorlearningcenter@gmail.com'
+        self.calendar_url = 'https://calendar.google.com/calendar/embed?src=marcelavitorlearningcenter%40gmail.com&ctz=America%2FSao_Paulo'
+        self.calendar_ical = 'https://calendar.google.com/calendar/ical/marcelavitorlearningcenter%40gmail.com/public/basic.ics'
         
         try:
             from google.oauth2 import service_account
@@ -56,9 +56,9 @@ class GoogleCalendarService:
             
             # For service accounts, we need to specify the calendar ID explicitly
             # Using the specific calendar ID for Marcela Vitor's calendar
-            self.calendar_id = 'contactmarcelavitor@gmail.com'
-            self.calendar_url = 'https://calendar.google.com/calendar/embed?src=contactmarcelavitor%40gmail.com&ctz=America%2FSao_Paulo'
-            self.calendar_ical = 'https://calendar.google.com/calendar/ical/contactmarcelavitor%40gmail.com/public/basic.ics'
+            self.calendar_id = 'marcelavitorlearningcenter@gmail.com'
+            self.calendar_url = 'https://calendar.google.com/calendar/embed?src=marcelavitorlearningcenter%40gmail.com&ctz=America%2FSao_Paulo'
+            self.calendar_ical = 'https://calendar.google.com/calendar/ical/marcelavitorlearningcenter%40gmail.com/public/basic.ics'
             
             logger.info(f"Using calendar ID: {self.calendar_id}")
             
@@ -363,10 +363,10 @@ class GoogleCalendarService:
                 except Exception as cal_error:
                     logger.error(f"Error accessing calendar {self.calendar_id}: {str(cal_error)}")
                     
-                    # Try with contactmarcelavitor@gmail.com
+                    # Try with marcelavitorlearningcenter@gmail.com
                     try:
                         # Use the Marcela Vitor calendar ID
-                        marcela_id = 'contactmarcelavitor@gmail.com'
+                        marcela_id = 'marcelavitorlearningcenter@gmail.com'
                         logger.info(f"Trying with Marcela Vitor's calendar ID: {marcela_id}")
                         calendar = self.service.calendars().get(calendarId=marcela_id).execute()
                         logger.info(f"Successfully accessed calendar: {calendar['summary']} ({marcela_id})")

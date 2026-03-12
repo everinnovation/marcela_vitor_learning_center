@@ -199,13 +199,13 @@ CSRF_TRUSTED_ORIGINS = [
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_FROM = 'contactmarcelavitor@gmail.com'
-EMAIL_HOST_USER = 'contactmarcelavitor@gmail.com'
-EMAIL_HOST_PASSWORD = 'sorkfzlgvfcgsxoe'
+EMAIL_FROM = os.getenv('EMAIL_FROM', 'marcelavitorlearningcenter@gmail.com')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'marcelavitorlearningcenter@gmail.com')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 EMAIL_USE_TLS = True
 PASSWORD_RESET_TIMEOUT = 14400
-DEFAULT_FROM_EMAIL = 'contactmarcelavitor@gmail.com'
-ADMIN_EMAIL = 'contactmarcelavitor@gmail.com'
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'marcelavitorlearningcenter@gmail.com')
+ADMIN_EMAIL = os.getenv('ADMIN_EMAIL', 'marcelavitorlearningcenter@gmail.com')
 
 # Authentication settings
 LOGIN_URL = '/admin/login/'
